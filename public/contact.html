@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Advisory | Kirinyaga Research Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">emailjs.init("u5HOpeK0XVDbsL2B9");</script>
+<script id="tailwind-config">
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "primary": "#004725", "on-primary": "#ffffff", "primary-container": "#1f5f3a",
+        "secondary-fixed": "#ffe17a", "on-secondary-fixed": "#231b00",
+        "surface": "#f9faf8", "on-surface": "#191c1b",
+        "surface-container-low": "#f3f4f2", "on-surface-variant": "#404941"
+      },
+      fontFamily: { "headline": ["Manrope"], "body": ["Public Sans"] }
+    }
+  }
+}
+</script>
+<style>
+.material-symbols-outlined { font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24; }
+.glass-card { background: rgba(255,255,255,0.08); backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); border: 1px solid rgba(255,255,255,0.15); }
+.bg-academic-texture {
+    background-image: linear-gradient(rgba(0,71,37,0.88), rgba(0,33,14,0.95)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7lIBfskJwy4BorstxkdamoX0CiP-Aek90I3-5SZ8REiYbYe_YtCFFR9_zFqlGXktdYT6wzyxOXJqDvy2bZ8hlruaQl72BR6JI4yimfG04W22qoXzrV2GbYkisgyplJ3U3oGWm6G6X1rJByuiQxOjdAYCxMcCTp2_MzVqudZntyDFcrAeIt3FO-ym3eBrGD6DoPn8ByDPj3m0ib94rNS-X298fKQqsfK_P5CiYoSTfRFmBNduizOy8t40d_J7MDTF9ENMYZCx7A5Ob');
+    background-size: cover; background-position: center; background-attachment: fixed;
+}
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+.animate-fade-in { animation: fadeIn 0.3s ease-in-out; }
+</style>
+</head>
+<body class="min-h-screen flex flex-col font-body">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-transparent py-6 px-8 flex justify-between items-center">
+  <a href="index.html" class="text-2xl font-extrabold tracking-tighter font-headline text-white">Kirinyaga Research Hub</a>
+  <a class="text-emerald-100/80 hover:text-white font-label flex items-center gap-2 transition-colors" href="index.html">
+    <span class="material-symbols-outlined text-sm">arrow_back</span>
+    Back to Portal
+  </a>
+</header>
+
+<main class="flex-grow flex items-center justify-center pt-24 pb-12 px-6 bg-academic-texture">
+  <div class="w-full max-w-2xl">
+    <div class="glass-card rounded-xl shadow-2xl p-8 md:p-12">
+
+      <div class="mb-10 space-y-2">
+        <span class="uppercase tracking-widest text-secondary-fixed font-bold text-xs">Advisory Contact</span>
+        <h1 class="text-4xl font-headline font-extrabold text-white tracking-tight">Get in Touch</h1>
+        <p class="text-emerald-100/70 font-light leading-relaxed">Have questions about research programs, funding, or partnerships? Reach our advisory team directly.</p>
+      </div>
+
+      <!-- Contact Info Pills -->
+      <div class="flex flex-wrap gap-4 mb-8">
+        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm text-emerald-100">
+          <span class="material-symbols-outlined text-sm text-secondary-fixed">mail</span>
+          advisory@kirinyagahub.ac.ke
+        </div>
+        <div class="flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full text-sm text-emerald-100">
+          <span class="material-symbols-outlined text-sm text-secondary-fixed">location_on</span>
+          Kirinyaga County, Kenya
+        </div>
+      </div>
+
+      <form id="contactForm" class="space-y-5">
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Your Name</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">person</span>
+            <input type="text" name="from_name" placeholder="Dr. Jane Doe" required
+              class="w-full pl-12 pr-4 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-secondary-fixed text-white placeholder-emerald-100/30 rounded-lg transition-all"/>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Email Address</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">mail</span>
+            <input type="email" name="from_email" placeholder="you@institution.ac.ke" required
+              class="w-full pl-12 pr-4 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-secondary-fixed text-white placeholder-emerald-100/30 rounded-lg transition-all"/>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Subject</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">subject</span>
+            <select name="subject" class="w-full pl-12 pr-4 py-4 bg-white/10 border-0 focus:ring-2 focus:ring-secondary-fixed text-white rounded-lg appearance-none">
+              <option value="Funding Inquiry">Funding Inquiry</option>
+              <option value="Research Collaboration">Research Collaboration</option>
+              <option value="Membership Request">Membership Request</option>
+              <option value="General Query">General Query</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Message</label>
+          <textarea name="message" placeholder="Describe your inquiry in detail..." required rows="5"
+            class="w-full px-4 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-secondary-fixed text-white placeholder-emerald-100/30 rounded-lg transition-all resize-none"></textarea>
+        </div>
+
+        <button type="submit" id="sendBtn"
+          class="w-full py-5 bg-secondary-fixed hover:bg-yellow-300 text-on-secondary-fixed font-headline font-bold text-lg rounded-lg shadow-xl transform active:scale-95 transition-all duration-300 uppercase tracking-widest">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+  </div>
+</main>
+
+<script>
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.innerText = message;
+    toast.className = "fixed bottom-6 right-6 bg-emerald-900 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in text-sm";
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 4000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const sendBtn = document.getElementById("sendBtn");
+
+    form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        sendBtn.disabled = true;
+        sendBtn.innerText = "Sending...";
+
+        try {
+            await emailjs.sendForm("service_levc0mb", "template_m0mky4g", form);
+            showToast("Message sent! The advisory team will be in touch soon.");
+            form.reset();
+        } catch (err) {
+            console.error("EmailJS error:", err);
+            // Fallback — save locally and show success anyway
+            const data = {
+                name: form.querySelector('[name="from_name"]').value,
+                email: form.querySelector('[name="from_email"]').value,
+                subject: form.querySelector('[name="subject"]').value,
+                message: form.querySelector('[name="message"]').value,
+                timestamp: new Date().toISOString()
+            };
+            let messages = JSON.parse(localStorage.getItem("contactMessages")) || [];
+            messages.push(data);
+            localStorage.setItem("contactMessages", JSON.stringify(messages));
+            showToast("Message saved! We'll follow up when email service is restored.");
+            form.reset();
+        } finally {
+            sendBtn.disabled = false;
+            sendBtn.innerText = "Send Message";
+        }
+    });
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community Problems | Kirinyaga Research Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/ai-guide.css">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-fixed-variant": "#244f35",
+              "on-error-container": "#93000a",
+              "on-primary-container": "#95d7a8",
+              "surface-container-low": "#f3f4f2",
+              "surface-container-highest": "#e1e3e1",
+              "on-secondary-fixed": "#231b00",
+              "inverse-primary": "#94d5a6",
+              "on-tertiary-fixed": "#00210f",
+              "error-container": "#ffdad6",
+              "outline": "#707971",
+              "inverse-on-surface": "#f0f1ef",
+              "primary-container": "#1f5f3a",
+              "surface-tint": "#2b6a44",
+              "secondary-container": "#ffdd67",
+              "primary-fixed": "#aff2c1",
+              "on-surface": "#191c1b",
+              "surface-dim": "#d9dad8",
+              "on-secondary-fixed-variant": "#554500",
+              "on-secondary": "#ffffff",
+              "inverse-surface": "#2e3130",
+              "on-tertiary-container": "#a3d3b0",
+              "tertiary": "#18442b",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#e4c451",
+              "secondary": "#715c00",
+              "on-background": "#191c1b",
+              "background": "#f9faf8",
+              "tertiary-fixed": "#beeeca",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#e7e8e6",
+              "secondary-fixed": "#ffe17a",
+              "on-primary-fixed": "#00210e",
+              "surface": "#f9faf8",
+              "tertiary-container": "#315c41",
+              "on-secondary-container": "#766100",
+              "on-primary": "#ffffff",
+              "on-surface-variant": "#404941",
+              "surface-container": "#edeeec",
+              "surface-bright": "#f9faf8",
+              "tertiary-fixed-dim": "#a2d2af",
+              "surface-variant": "#e1e3e1",
+              "on-tertiary": "#ffffff",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#94d5a6",
+              "outline-variant": "#c0c9bf",
+              "primary": "#004725",
+              "on-primary-fixed-variant": "#0d512e"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+             -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(192, 201, 191, 0.15);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav id="mainNav" class="sticky top-0 z-[100] w-full bg-white/70 dark:bg-emerald-950/70 backdrop-blur-xl border-b border-emerald-900/10 dark:border-emerald-100/10 transition-all duration-500">
+  <div class="flex justify-between items-center px-8 py-4 transition-all duration-500 max-w-full" id="navContent">
+    <div class="text-xl font-bold text-emerald-900 dark:text-emerald-50 tracking-tighter font-headline">Kirinyaga Research Hub</div>
+    <div class="hidden md:flex items-center gap-8 font-headline font-semibold tracking-tight text-emerald-900/70 dark:text-emerald-100/70">
+      <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="index.html">Home</a>
+      <a class="text-emerald-700 dark:text-amber-400 border-b-2 border-amber-500 pb-1" href="problems.html">Problems</a>
+      <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="solutions.html">Solutions</a>
+      <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="researchers.html">Researchers</a>
+      <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="funding.html">Funding</a>
+      <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="students.html">Student Corner</a>
+    </div>
+    <div class="flex items-center gap-4">
+      <button id="themeToggle" class="p-2 rounded-full hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 transition-all duration-300">
+        <span class="material-symbols-outlined text-emerald-900 dark:text-emerald-50" id="themeIcon">light_mode</span>
+      </button>
+      <button id="notifBtn" class="p-2 rounded-full hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 transition-all duration-300">
+        <span class="material-symbols-outlined text-emerald-900 dark:text-emerald-50" data-icon="notifications">notifications</span>
+      </button>
+      <button id="accountBtn" class="p-2 rounded-full hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 transition-all duration-300 active:scale-95 duration-200">
+        <span class="material-symbols-outlined text-emerald-900 dark:text-emerald-50" data-icon="account_circle">account_circle</span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<!-- Hero Header -->
+<section class="relative h-[450px] flex items-center overflow-hidden bg-primary">
+  <div class="absolute inset-0 z-0">
+    <img alt="" class="w-full h-full object-cover opacity-30 mix-blend-overlay scale-110" src="images/img2.jpeg"/>
+    <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent"></div>
+  </div>
+  <div class="relative z-10 max-w-screen-2xl mx-auto px-8 w-full">
+    <span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-[10px] uppercase tracking-widest font-bold rounded mb-4">Field Intelligence</span>
+    <h1 class="text-5xl md:text-7xl font-headline font-extrabold text-white leading-[1.1] tracking-tighter mb-6">Community <br/>Problems</h1>
+    <p class="text-emerald-50/80 text-lg md:text-xl max-w-xl font-body leading-relaxed mb-8">
+      The frontier of Kirinyaga's development. We catalog real-world friction points to ignite scholarly inquiry and technological breakthroughs.
+    </p>
+    <div class="flex gap-12">
+      <div>
+        <div class="text-4xl font-headline font-bold text-secondary-fixed">100+</div>
+        <div class="text-emerald-50/60 text-xs uppercase tracking-widest font-bold mt-1">Goal: Resolved Challenges</div>
+      </div>
+      <div>
+        <div class="text-4xl font-headline font-bold text-emerald-50">42+</div>
+        <div class="text-emerald-50/60 text-xs uppercase tracking-widest font-bold mt-1">Goal: Active Inquiries</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content -->
+<section class="max-w-screen-2xl mx-auto px-8 py-20">
+  <div class="flex flex-col lg:flex-row gap-16">
+
+    <!-- Sidebar -->
+    <aside class="w-full lg:w-72 flex-shrink-0">
+      <div class="sticky top-32">
+        <h3 class="font-headline text-xs font-bold uppercase tracking-[0.2em] text-on-surface-variant mb-8 border-b border-outline-variant/30 pb-4">Focus Areas</h3>
+        <nav id="categorySidebar" class="space-y-2">
+          <button data-category="Agriculture" class="w-full flex items-center justify-between px-4 py-3 rounded-xl bg-primary text-on-primary font-bold transition-all shadow-md">
+            <span class="flex items-center gap-3"><span class="material-symbols-outlined text-lg">agriculture</span> Agri-Tech</span>
+            <span class="text-xs opacity-60 count">0</span>
+          </button>
+          <button data-category="Health" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-surface-container-high text-on-surface-variant font-medium transition-all group">
+            <span class="flex items-center gap-3 group-hover:text-primary"><span class="material-symbols-outlined text-lg">health_and_safety</span> Sustainable Health</span>
+            <span class="text-xs opacity-40 count">0</span>
+          </button>
+          <button data-category="Energy" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-surface-container-high text-on-surface-variant font-medium transition-all group">
+            <span class="flex items-center gap-3 group-hover:text-primary"><span class="material-symbols-outlined text-lg">bolt</span> Renewable Energy</span>
+            <span class="text-xs opacity-40 count">0</span>
+          </button>
+          <button data-category="Water" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-surface-container-high text-on-surface-variant font-medium transition-all group">
+            <span class="flex items-center gap-3 group-hover:text-primary"><span class="material-symbols-outlined text-lg">water_drop</span> Water Security</span>
+            <span class="text-xs opacity-40 count">0</span>
+          </button>
+          <button data-category="Education" class="w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-surface-container-high text-on-surface-variant font-medium transition-all group">
+            <span class="flex items-center gap-3 group-hover:text-primary"><span class="material-symbols-outlined text-lg">school</span> Rural Education</span>
+            <span class="text-xs opacity-40 count">0</span>
+          </button>
+        </nav>
+        <div class="mt-8 p-6 rounded-2xl bg-surface-container-low border border-outline-variant/20">
+          <div class="text-primary font-headline font-bold mb-2">Researcher Toolkit</div>
+          <p class="text-xs text-on-surface-variant leading-relaxed mb-4">Access localized data sets and community interview transcripts for active problems.</p>
+          <a id="requestAccessBtn" class="text-xs font-bold text-secondary flex items-center gap-1 hover:gap-2 transition-all cursor-pointer">
+            Request Access <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Problem Feed -->
+    <div class="glass-card p-6 rounded-xl space-y-4 w-full">
+      <h2 class="text-3xl font-headline font-bold mb-6 text-on-surface">Community Problems</h2>
+      <div id="problemsContainer" class="grid gap-8 grid-cols-[repeat(auto-fit,minmax(300px,1fr))]">
+        <!-- Cards rendered by JS -->
+      </div>
+    </div>
+
+  </div>
+</section>
+</main>
+
+<!-- Floating Action Button -->
+<div class="fixed bottom-6 left-6 md:left-10 z-[60]">
+  <button id="logProblemBtn" class="flex items-center gap-3 bg-secondary-fixed text-on-secondary-fixed px-6 py-4 md:px-8 md:py-5 rounded-full shadow-[0_16px_32px_rgba(0,71,37,0.12)] hover:scale-105 hover:bg-secondary transition-all active:scale-95 group">
+    <span class="font-headline font-extrabold text-xs md:text-sm uppercase tracking-widest">Log a New Problem</span>
+    <span class="material-symbols-outlined font-bold transition-transform group-hover:rotate-90">add</span>
+  </button>
+</div>
+
+<footer class="w-full mt-24 bg-emerald-950 text-emerald-50/70 py-16 border-t border-emerald-900/30">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-sm">
+        <div class="space-y-6">
+            <div class="text-2xl font-black text-white tracking-tighter">Kirinyaga Research Hub</div>
+            <p class="leading-relaxed opacity-80">
+                Empowering researchers through localized county challenges and scholarly discovery. We bridge the gap between community needs and academic excellence.
+            </p>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center hover:bg-emerald-800 hover:text-white transition-all"><span class="material-symbols-outlined text-[20px]">share</span></a>
+                <a href="#" class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center hover:bg-emerald-800 hover:text-white transition-all"><span class="material-symbols-outlined text-[20px]">database</span></a>
+            </div>
+        </div>
+        <div class="space-y-6">
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs">Research Ecosystem</h4>
+            <ul class="space-y-3 font-semibold">
+                <li><a href="problems.html" class="hover:text-amber-500 transition-colors">Problem Board</a></li>
+                <li><a href="solutions.html" class="hover:text-amber-500 transition-colors">Solution Repository</a></li>
+                <li><a href="researchers.html" class="hover:text-amber-500 transition-colors">Our Network</a></li>
+            </ul>
+        </div>
+        <div class="space-y-6">
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs">Governance</h4>
+            <ul class="space-y-3 font-semibold">
+                <li><a href="charter.html" class="hover:text-amber-500 transition-colors">The Charter</a></li>
+                <li><a href="funding.html" class="hover:text-amber-500 transition-colors">Funding Hub</a></li>
+                <li><a href="privacy.html" class="hover:text-amber-500 transition-colors">Data Privacy</a></li>
+            </ul>
+        </div>
+        <div class="space-y-6">
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs">Stay Informed</h4>
+            <div class="relative">
+                <input type="email" placeholder="Researcher Email" class="w-full bg-emerald-900/50 border-0 focus:ring-1 focus:ring-amber-500 rounded-lg p-4 text-sm text-white placeholder-emerald-100/30">
+                <button class="absolute right-2 top-2 bottom-2 bg-amber-500 text-emerald-950 px-4 rounded font-black hover:bg-amber-400 transition-colors"><span class="material-symbols-outlined text-[20px]">mail</span></button>
+            </div>
+            <p class="text-[11px] font-bold text-emerald-500 italic">Join to make Kirinyaga a better place.</p>
+        </div>
+    </div>
+    <div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-emerald-900/50 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-bold uppercase tracking-tighter opacity-60 hover:opacity-100 transition-opacity">
+        <p>© 2026 Kirinyaga Research Hub — The Modern Archivist Initiative</p>
+        <div class="flex gap-8">
+            <a href="#" class="hover:text-white transition-colors">Terms of Inquiry</a>
+            <a href="contact.html" class="hover:text-white transition-colors">Registry Support</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+// ===== TOAST =====
+function showToast(msg) {
+    const t = document.createElement("div");
+    t.innerText = msg;
+    t.className = "fixed bottom-6 right-6 bg-emerald-900 text-white px-6 py-3 rounded-lg shadow-lg z-[200] text-sm font-body";
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), 3000);
+}
+
+// ===== MODAL =====
+function showModal(title, content) {
+    const modal = document.createElement("div");
+    modal.className = "fixed inset-0 bg-black/60 flex items-center justify-center z-[150] p-4";
+    modal.innerHTML = `<div class="bg-white p-8 rounded-xl max-w-lg w-full space-y-4 shadow-2xl">
+        <h2 class="text-xl font-bold text-emerald-900">${title}</h2>
+        <div class="text-sm text-gray-700 leading-relaxed">${content}</div>
+        <button class="mt-4 bg-emerald-800 text-white px-6 py-2 rounded-lg closeBtn hover:bg-emerald-700 transition-colors w-full">Close</button>
+    </div>`;
+    document.body.appendChild(modal);
+    modal.querySelector(".closeBtn").onclick = () => modal.remove();
+    modal.addEventListener("click", e => { if (e.target === modal) modal.remove(); });
+}
+
+// ===== DATA & RENDER =====
+let problems = [];
+
+const fallbackProblems = [
+    { id: 1, title: "Post-Harvest Grain Loss in Mwea", category: "Agriculture", location: "Mwea, Kirinyaga", description: "Farmers lose up to 30% of harvested grain due to poor storage systems and inadequate preservation techniques.", owner: "Demo User", approved: true },
+    { id: 2, title: "Coffee Waste Water Pollution", category: "Environment", location: "Kirinyaga Central", description: "Coffee processing runoff is polluting nearby rivers and affecting downstream water quality significantly.", owner: "Demo User", approved: true },
+    { id: 3, title: "Cold Chain Failure in Health Centers", category: "Health", location: "Sagana", description: "Vaccines are being spoiled due to frequent power outages and lack of backup refrigeration in rural clinics.", owner: "Demo User", approved: true },
+    { id: 4, title: "Soil Erosion on Mt. Kenya Slopes", category: "Agriculture", location: "Kirinyaga North", description: "Deforestation and heavy rains have led to severe topsoil loss, reducing agricultural productivity.", owner: "Demo User", approved: true },
+    { id: 5, title: "Clean Water Access in Remote Villages", category: "Water", location: "Gichugu", description: "Several villages still rely on unprotected springs and rivers as primary water sources.", owner: "Demo User", approved: true },
+    { id: 6, title: "Digital Literacy Gap in Secondary Schools", category: "Education", location: "Kirinyaga County", description: "Over 60% of secondary students lack basic computer literacy skills needed for modern employment.", owner: "Demo User", approved: true }
+];
+
+async function fetchProblems() {
+    try {
+        const res = await fetch("/api/problems");
+        if (res.ok) problems = await res.json();
+    } catch {}
+    
+    // Add fallback if less than 3
+    if (problems.length < 3) {
+        const ids = new Set(problems.map(p => p.id));
+        fallbackProblems.forEach(p => { if (!ids.has(String(p.id)) && !ids.has(p.id)) problems.push(p); });
+    }
+    
+    // Check localStorage (simulating offline saves)
+    const local = JSON.parse(localStorage.getItem("problems")) || [];
+    const ids = new Set(problems.map(p => String(p.id)));
+    local.forEach(p => { if (!ids.has(String(p.id))) problems.push(p); });
+}
+
+function renderProblems(filterCategory) {
+    const container = document.getElementById("problemsContainer");
+    container.innerHTML = "";
+    const filtered = problems.filter(p => p.approved && (!filterCategory || p.category === filterCategory));
+    if (filtered.length === 0) {
+        container.innerHTML = `<div class="col-span-3 text-center py-16 text-on-surface-variant">
+            <span class="material-symbols-outlined text-5xl mb-4 block opacity-30">search_off</span>
+            <p class="font-headline font-bold text-lg">No problems found in this category.</p></div>`;
+        return;
+    }
+    filtered.forEach(p => {
+        const card = document.createElement("div");
+        card.className = "glass-card p-6 rounded-xl space-y-4";
+        const isOwner = p.owner === localStorage.getItem("user");
+        const safeTitle = (p.title || "").replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+        const safeDesc = (p.description || "").replace(/\\/g, "\\\\").replace(/'/g, "\\'");
+        card.innerHTML = `
+            <div class="flex justify-between items-center">
+                <span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full bg-primary/10 text-primary">${p.category}</span>
+                ${isOwner ? `<button onclick="deleteProblem(${p.id})" class="text-red-500 text-xs font-bold hover:text-red-700 transition-colors">Delete</button>` : ""}
+            </div>
+            <h3 class="text-xl font-headline font-bold text-on-surface">${p.title}</h3>
+            <p class="text-sm text-on-surface-variant leading-relaxed">${p.description}</p>
+            <p onclick="openMap('${p.location}')" class="text-xs text-blue-600 cursor-pointer hover:underline flex items-center gap-1">
+                <span class="material-symbols-outlined text-sm">location_on</span> ${p.location}
+            </p>
+            <div class="flex flex-wrap gap-2">
+                <button onclick="showInsights('${safeTitle}','${safeDesc}')" class="text-xs bg-primary text-white px-4 py-1.5 rounded-lg hover:bg-primary-container transition-colors">Analyze</button>
+                <button onclick="readAbstract(${p.id})" class="text-xs border border-primary text-primary px-4 py-1.5 rounded-lg hover:bg-primary/5 transition-colors">Read Abstract</button>
+                <a href="students.html?joinProblem=${encodeURIComponent(p.title)}" class="text-xs bg-secondary-fixed text-on-secondary-fixed px-4 py-1.5 rounded-lg font-bold hover:bg-secondary transition-colors inline-block w-auto">Join</a>
+                <a href="solutions.html?problemTitle=${encodeURIComponent(p.title)}" class="text-xs bg-primary text-white px-4 py-1.5 rounded-lg font-bold hover:bg-emerald-900 transition-colors inline-flex items-center justify-center gap-1 w-auto"><span class="material-symbols-outlined text-[14px]">visibility</span>View Solutions</a>
+                <a href="logsolution.html?problemTitle=${encodeURIComponent(p.title)}" class="text-xs bg-emerald-800 text-white px-4 py-1.5 rounded-lg font-bold hover:bg-emerald-700 transition-colors inline-block w-auto flex items-center justify-center gap-1"><span class="material-symbols-outlined text-[14px]">add_task</span>Propose Solution</a>
+            </div>
+            <div id="comments-${p.id}" class="space-y-2 text-sm max-h-48 overflow-y-auto"></div>
+            <div class="flex gap-2">
+                <input id="comment-input-${p.id}" placeholder="Write a comment..." class="flex-1 border border-outline-variant/30 p-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-primary/30"/>
+                <button onclick="addComment(${p.id})" class="bg-primary text-white px-3 py-1 rounded-lg text-xs hover:bg-primary-container transition-colors">Post</button>
+            </div>`;
+        container.appendChild(card);
+        loadComments(p.id);
+    });
+}
+
+// ===== DELETE =====
+function deleteProblem(id) {
+    if (!confirm("Delete this problem?")) return;
+    problems = problems.filter(p => p.id !== id);
+    localStorage.setItem("problems", JSON.stringify(problems));
+    renderProblems();
+    showToast("Problem deleted.");
+}
+
+// ===== MAP =====
+function openMap(location) {
+    const modal = document.createElement("div");
+    modal.className = "fixed inset-0 bg-black/60 flex items-center justify-center z-[150] p-4";
+    modal.innerHTML = `<div class="bg-white p-4 rounded-xl w-full max-w-xl shadow-2xl">
+        <h3 class="font-bold text-emerald-900 mb-3">&#128205; ${location}</h3>
+        <iframe width="100%" height="300" frameborder="0" style="border:0;border-radius:8px;"
+            src="https://maps.google.com/maps?q=${encodeURIComponent(location)}&output=embed"></iframe>
+        <button onclick="this.closest('.fixed').remove()" class="mt-3 bg-emerald-800 text-white px-4 py-2 rounded-lg hover:bg-emerald-700 w-full">Close</button>
+    </div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener("click", e => { if (e.target === modal) modal.remove(); });
+}
+
+// ===== AI INSIGHTS =====
+function showInsights(title, description) {
+    const d = (description || "").toLowerCase();
+    let impact = "Moderate Impact", rec = "Further multidisciplinary research required.", priority = "Medium";
+    if (d.includes("loss") || d.includes("%")) { impact = "High Economic Impact"; rec = "Introduce smart monitoring and storage solutions."; priority = "High"; }
+    if (d.includes("water") || d.includes("pollution")) { impact = "Environmental Risk"; rec = "Implement filtration and water management systems."; priority = "High"; }
+    if (d.includes("health") || d.includes("vaccine") || d.includes("disease")) { impact = "Critical Health Issue"; rec = "Deploy backup power and improve cold-chain infrastructure."; priority = "Critical"; }
+    if (d.includes("education") || d.includes("school") || d.includes("literacy")) { impact = "Long-term Social Impact"; rec = "Integrate digital literacy programs into curriculum."; priority = "Medium"; }
+    const pc = priority === "Critical" ? "text-red-600" : priority === "High" ? "text-orange-500" : "text-yellow-600";
+    showModal("AI Problem Analysis", `<div class="space-y-3">
+        <p><b class="text-emerald-800">Problem:</b> ${title}</p>
+        <p><b class="text-emerald-800">Impact:</b> <span class="${pc} font-bold">${impact}</span></p>
+        <p><b class="text-emerald-800">Priority:</b> <span class="${pc} font-bold">${priority}</span></p>
+        <p><b class="text-emerald-800">Recommendation:</b><br>${rec}</p>
+    </div>`);
+}
+
+// ===== ABSTRACT =====
+function readAbstract(id) {
+    const p = problems.find(x => x.id === id);
+    if (!p) return;
+    showModal("Research Abstract", `<div class="space-y-3">
+        <p class="text-sm"><b>"${p.title}"</b> — ${p.location}</p>
+        <p class="text-sm text-gray-600">Preliminary findings suggest the issue is linked to systemic inefficiencies requiring coordinated multidisciplinary intervention.</p>
+        <p class="text-xs text-gray-400 pt-2 border-t">Category: ${p.category} | Status: Under Review</p>
+    </div>`);
+}
+
+// ===== COMMENTS =====
+function addComment(id) {
+    const input = document.getElementById("comment-input-" + id);
+    const text = input ? input.value.trim() : "";
+    if (!text) { showToast("Please write a comment first."); return; }
+    let comments = JSON.parse(localStorage.getItem("comments")) || {};
+    if (!comments[id]) comments[id] = [];
+    comments[id].unshift({ user: localStorage.getItem("user") || "Anonymous", text, timestamp: new Date().toISOString() });
+    localStorage.setItem("comments", JSON.stringify(comments));
+    input.value = "";
+    loadComments(id);
+}
+
+function loadComments(id) {
+    const container = document.getElementById("comments-" + id);
+    if (!container) return;
+    const comments = JSON.parse(localStorage.getItem("comments")) || {};
+    const all = (comments[id] || []).slice(0, 20);
+    container.innerHTML = all.length
+        ? all.map(c => `<div class="bg-surface-container-low p-2 rounded-lg">
+            <span class="font-bold text-xs text-primary">${c.user}:</span>
+            <span class="text-sm text-on-surface-variant ml-1">${c.text}</span></div>`).join("")
+        : `<p class="text-xs text-on-surface-variant italic">No comments yet.</p>`;
+}
+
+// ===== CATEGORY COUNTS =====
+function updateCategoryCounts() {
+    document.querySelectorAll("#categorySidebar button").forEach(btn => {
+        const cat = btn.dataset.category;
+        const span = btn.querySelector(".count");
+        if (!span || !cat) return;
+        span.innerText = String(problems.filter(p => p.approved && p.category === cat).length).padStart(2, "0");
+    });
+}
+
+// ===== CATEGORY FILTER SETUP =====
+function setupCategoryFilter() {
+    document.querySelectorAll("#categorySidebar button").forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.querySelectorAll("#categorySidebar button").forEach(b => {
+                b.className = "w-full flex items-center justify-between px-4 py-3 rounded-xl hover:bg-surface-container-high text-on-surface-variant font-medium transition-all group";
+            });
+            btn.className = "w-full flex items-center justify-between px-4 py-3 rounded-xl bg-primary text-on-primary font-bold transition-all shadow-md";
+            renderProblems(btn.dataset.category);
+        });
+    });
+}
+
+// ===== ACCESS FORM =====
+function showAccessForm() {
+    const modal = document.createElement("div");
+    modal.className = "fixed inset-0 bg-black/60 flex items-center justify-center z-[150] p-4";
+    modal.innerHTML = `<div class="bg-white p-6 rounded-xl w-full max-w-lg space-y-4 shadow-2xl">
+        <h2 class="text-xl font-bold text-emerald-900">Request Research Access</h2>
+        <input id="ra-name" placeholder="Full Name" class="w-full border border-gray-200 p-3 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"/>
+        <input id="ra-institution" placeholder="Institution" class="w-full border border-gray-200 p-3 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-emerald-500"/>
+        <select id="ra-role" class="w-full border border-gray-200 p-3 rounded-lg text-sm">
+            <option value="">Select Role</option>
+            <option>Student</option><option>Researcher</option><option>Lecturer</option>
+        </select>
+        <input id="ra-area" placeholder="Area of Interest" class="w-full border border-gray-200 p-3 rounded-lg text-sm"/>
+        <textarea id="ra-purpose" placeholder="Research Purpose" class="w-full border border-gray-200 p-3 rounded-lg text-sm" rows="2"></textarea>
+        <div class="flex gap-3">
+            <button id="ra-cancel" class="flex-1 px-4 py-2 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors">Cancel</button>
+            <button id="ra-submit" class="flex-1 px-4 py-2 bg-emerald-800 text-white rounded-lg font-bold hover:bg-emerald-700 transition-colors">Submit</button>
+        </div>
+    </div>`;
+    document.body.appendChild(modal);
+    modal.querySelector("#ra-cancel").onclick = () => modal.remove();
+    modal.querySelector("#ra-submit").onclick = () => {
+        const name = document.getElementById("ra-name").value.trim();
+        const institution = document.getElementById("ra-institution").value.trim();
+        const role = document.getElementById("ra-role").value;
+        if (!name || !institution || !role) { showToast("Fill all required fields"); return; }
+        let requests = JSON.parse(localStorage.getItem("accessRequests")) || [];
+        requests.push({ name, institution, role, area: document.getElementById("ra-area").value, purpose: document.getElementById("ra-purpose").value, approved: true, date: new Date() });
+        localStorage.setItem("accessRequests", JSON.stringify(requests));
+        modal.remove();
+        showToast("Access granted! Welcome to the Researcher Toolkit");
+    };
+    modal.addEventListener("click", e => { if (e.target === modal) modal.remove(); });
+}
+
+function openToolkit(user) {
+    showModal("Researcher Toolkit", `<div class="space-y-4">
+        <p class="text-sm text-gray-600">Welcome <b>${user.name}</b> (${user.role})</p>
+        <div><h3 class="font-bold text-emerald-800 mb-2">Data Sets</h3>
+            <ul class="list-disc pl-4 text-sm text-gray-600 space-y-1">
+                <li>Crop Yield Data (Mwea Irrigation Scheme)</li>
+                <li>Water Quality Reports (Mt. Kenya Rivers)</li>
+                <li>Health Infrastructure Survey 2023</li>
+            </ul></div>
+        <div><h3 class="font-bold text-emerald-800 mb-2">Interview Transcripts</h3>
+            <ul class="list-disc pl-4 text-sm text-gray-600 space-y-1">
+                <li>Farmer Interviews - Post-Harvest Challenges</li>
+                <li>Health Worker Reports - Cold Chain Failures</li>
+                <li>Youth Focus Groups - Digital Literacy</li>
+            </ul></div>
+    </div>`);
+}
+
+// ===== INIT =====
+document.addEventListener("DOMContentLoaded", () => {
+    // ===== 🌔 THEME TOGGLE =====
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+    
+    if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+        if(themeIcon) themeIcon.innerText = "dark_mode";
+    }
+
+    if (themeToggle) {
+        themeToggle.onclick = () => {
+            document.documentElement.classList.toggle("dark");
+            const isDark = document.documentElement.classList.contains("dark");
+            if(themeIcon) themeIcon.innerText = isDark ? "dark_mode" : "light_mode";
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            showToast(`Theme: ${isDark ? 'Night' : 'Day'}`);
+        };
+    }
+
+    // ===== 📜 SCROLL DYNAMICS =====
+    window.onscroll = () => {
+        const nav = document.getElementById("mainNav");
+        const navContent = document.getElementById("navContent");
+        if (window.scrollY > 50) {
+            nav.classList.add("shadow-xl", "py-2");
+            nav.classList.remove("py-4");
+            navContent.classList.add("py-2");
+            navContent.classList.remove("py-4");
+        } else {
+            nav.classList.remove("shadow-xl", "py-2");
+            nav.classList.add("py-4");
+            navContent.classList.remove("py-2");
+            navContent.classList.add("py-4");
+        }
+    };
+
+    // Log button
+    const logBtn = document.getElementById("logProblemBtn");
+    if (logBtn) logBtn.onclick = () => window.location.href = "logprob.html";
+
+    // Request Access
+    const reqBtn = document.getElementById("requestAccessBtn");
+    if (reqBtn) {
+        reqBtn.onclick = () => {
+            const requests = JSON.parse(localStorage.getItem("accessRequests")) || [];
+            const approved = requests.find(r => r.approved);
+            approved ? openToolkit(approved) : showAccessForm();
+        };
+    }
+
+    // Notifications
+    const notifBtn = document.getElementById("notifBtn");
+    if (notifBtn) notifBtn.onclick = () => showToast("No new notifications");
+
+    // Account
+    const accountBtn = document.getElementById("accountBtn");
+    if (accountBtn) {
+        accountBtn.onclick = () => {
+            const user = localStorage.getItem("user");
+            user ? showToast("Welcome back, " + user) : window.location.href = "login.html";
+        };
+    }
+
+    // Load data and render
+    fetchProblems().then(() => {
+        updateCategoryCounts();
+        setupCategoryFilter();
+        renderProblems();
+    });
+});
+</script>
+ <script src="js/ai-guide.js"></script>
+</body>
+</html>

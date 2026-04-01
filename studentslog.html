@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kirinyaga Student Portal - Sign In / Register</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&family=Public+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<style>
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.glass-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.bg-student-texture {
+    background-image: linear-gradient(rgba(0,33,14,0.95), rgba(0,71,37,0.85)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZkgZzhue3a4nIe0qiveHL2NAw0eLfRurkHstPxuaou9dQZmgxXmq7CXvx4WsWLLB39pC-JdM6W7cZKbdZ15E7OCZlIUiBCsajeDJ0KPWAEgIAJjrPPIKY9P371la0oLbp11qBiGPzjNrvsPjyNkseIw3yyr485D4WB-7Bl6dFxra-NZQcyc0IyW9Tthplhw4h_Cxh5_ZCYSHEZaauny_QHdBXtwZ94IrAO06CHuAdv8_vGKfnEERLzkyiGpDnL7e8U4dyUOTbi6oa');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-transparent py-6 px-8 flex justify-between items-center">
+  <div class="flex items-center gap-3">
+    <span class="text-2xl font-extrabold tracking-tighter font-headline text-white">Kirinyaga Research Hub</span>
+  </div>
+  <a class="text-emerald-100/80 hover:text-white font-label flex items-center gap-2 transition-colors" href="students.html">
+    <span class="material-symbols-outlined text-sm">arrow_back</span>
+    Back to Student Corner
+  </a>
+</header>
+
+<main class="flex-grow flex items-center justify-center pt-24 pb-12 px-6 bg-student-texture">
+<div class="w-full max-w-2xl">
+
+  <div class="glass-card rounded-xl overflow-hidden shadow-2xl p-8 md:p-12 border-t-4 border-yellow-400">
+
+    <div class="mb-10 space-y-2 text-center md:text-left">
+      <span class="label-md uppercase tracking-widest text-yellow-400 font-bold">Future Leaders Program</span>
+      <h1 class="text-4xl font-headline font-extrabold text-white tracking-tight">Student Portal Access</h1>
+      <p class="text-emerald-100/70 font-light leading-relaxed">Sign in or create an account to track your opportunities, save your forms, and participate in discussions.</p>
+    </div>
+
+    <!-- TABS -->
+    <div class="flex gap-4 mb-8 border-b border-white/10 pb-2">
+       <button id="tabLogin" class="text-yellow-400 font-bold uppercase tracking-widest text-sm border-b-2 border-yellow-400 pb-2">Sign In</button>
+       <button id="tabRegister" class="text-white/50 hover:text-white font-bold uppercase tracking-widest text-sm pb-2 transition-colors">Register</button>
+    </div>
+
+    <form id="authForm" class="space-y-6">
+
+      <!-- Name (Only visible on Register) -->
+      <div id="nameField" class="space-y-2 hidden">
+        <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Full Name</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">person</span>
+          <input id="fullname" class="w-full pl-12 pr-4 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-yellow-400 text-white placeholder-emerald-100/30 rounded-lg transition-all" placeholder="John Doe" type="text"/>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="space-y-2">
+        <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Student Email</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">school</span>
+          <input id="email" class="w-full pl-12 pr-4 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-yellow-400 text-white placeholder-emerald-100/30 rounded-lg transition-all" placeholder="student@myuniversity.ac.ke" type="email" required/>
+        </div>
+      </div>
+
+      <!-- Password -->
+      <div class="space-y-2">
+        <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Password</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">lock</span>
+          <input id="password" class="w-full pl-12 pr-12 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-yellow-400 text-white placeholder-emerald-100/30 rounded-lg transition-all" placeholder="••••••••••••" type="password" required/>
+          <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-emerald-300/50 hover:text-white transition-colors" onclick="togglePassword()">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <button id="submitBtn" type="submit" class="w-full py-5 bg-yellow-400 hover:bg-yellow-500 text-zinc-900 font-headline font-bold text-lg rounded-lg shadow-xl shadow-black/20 transform active:scale-95 transition-all duration-300 mt-4 uppercase tracking-widest">
+        Sign In to Portal
+      </button>
+
+    </form>
+
+  </div>
+</div>
+</main>
+
+<script>
+// UI Toggles
+let isRegisterMode = false;
+const tabLogin = document.getElementById("tabLogin");
+const tabRegister = document.getElementById("tabRegister");
+const nameField = document.getElementById("nameField");
+const submitBtn = document.getElementById("submitBtn");
+
+tabLogin.addEventListener("click", () => {
+    isRegisterMode = false;
+    tabLogin.className = "text-yellow-400 font-bold uppercase tracking-widest text-sm border-b-2 border-yellow-400 pb-2";
+    tabRegister.className = "text-white/50 hover:text-white font-bold uppercase tracking-widest text-sm pb-2 transition-colors";
+    nameField.classList.add("hidden");
+    submitBtn.innerText = "Sign In to Portal";
+});
+
+tabRegister.addEventListener("click", () => {
+    isRegisterMode = true;
+    tabRegister.className = "text-yellow-400 font-bold uppercase tracking-widest text-sm border-b-2 border-yellow-400 pb-2";
+    tabLogin.className = "text-white/50 hover:text-white font-bold uppercase tracking-widest text-sm pb-2 transition-colors";
+    nameField.classList.remove("hidden");
+    submitBtn.innerText = "Create Student Profile";
+});
+
+// PASSWORD TOGGLE
+function togglePassword() {
+  const input = document.getElementById("password");
+  input.type = input.type === "password" ? "text" : "password";
+}
+
+// LOGIN / REGISTER FORM
+function showToast(msg, duration = 3000) {
+    const t = document.createElement("div");
+    t.innerText = msg;
+    t.className = "fixed bottom-6 right-6 bg-emerald-900 border border-emerald-500 text-white px-6 py-3 rounded-lg shadow-lg z-50 text-sm";
+    document.body.appendChild(t);
+    setTimeout(() => t.remove(), duration);
+}
+
+document.getElementById("authForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const email = document.getElementById("email").value.trim();
+  const rawName = document.getElementById("fullname").value.trim();
+
+  // Basic fallback simulation for creating a simple student profile visually.
+  let name = email.split("@")[0].replace(/[._]/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+  if (isRegisterMode && rawName) {
+      name = rawName;
+  }
+
+  showToast("Authenticating...");
+  submitBtn.disabled = true;
+
+  setTimeout(() => {
+    localStorage.setItem("user", name);
+    localStorage.setItem("userRole", "Student");
+    showToast("Success! Welcome, " + name + "!", 5000);
+    setTimeout(() => window.location.href = "students.html", 1000);
+  }, 800);
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kirinyaga Research Hub - Registration</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;700;800&family=Public+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<style>
+.material-symbols-outlined {
+    font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+.glass-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255,255,255,0.15);
+}
+.bg-academic-texture {
+    background-image: linear-gradient(rgba(0,71,37,0.85), rgba(0,33,14,0.95)), url('https://lh3.googleusercontent.com/aida-public/AB6AXuD7lIBfskJwy4BorstxkdamoX0CiP-Aek90I3-5SZ8REiYbYe_YtCFFR9_zFqlGXktdYT6wzyxOXJqDvy2bZ8hlruaQl72BR6JI4yimfG04W22qoXzrV2GbYkisgyplJ3U3oGWm6G6X1rJByuiQxOjdAYCxMcCTp2_MzVqudZntyDFcrAeIt3FO-ym3eBrGD6DoPn8ByDPj3m0ib94rNS-X298fKQqsfK_P5CiYoSTfRFmBNduizOy8t40d_J7MDTF9ENMYZCx7A5Ob');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+</style>
+</head>
+<body class="bg-surface text-on-surface font-body min-h-screen flex flex-col">
+
+<!-- Header -->
+<header class="fixed top-0 w-full z-50 bg-transparent py-6 px-8 flex justify-between items-center">
+  <div class="flex items-center gap-3">
+    <span class="text-2xl font-extrabold tracking-tighter font-headline text-white">Kirinyaga Research Hub</span>
+  </div>
+  <a class="text-emerald-100/80 hover:text-white font-label flex items-center gap-2 transition-colors" href="index.html">
+    <span class="material-symbols-outlined text-sm">arrow_back</span>
+    Back to Portal
+  </a>
+</header>
+
+<main class="flex-grow flex items-center justify-center pt-24 pb-12 px-6 bg-academic-texture">
+<div class="w-full max-w-2xl">
+
+  <div class="glass-card rounded-xl overflow-hidden shadow-2xl p-8 md:p-12">
+
+    <div class="mb-10 space-y-2">
+      <span class="label-md uppercase tracking-widest text-secondary-fixed font-bold">Institutional Access</span>
+      <h1 class="text-4xl font-headline font-extrabold text-white tracking-tight">Create Research Account</h1>
+      <p class="text-emerald-100/70 font-light leading-relaxed">Join the digital ecosystem for scholars, researchers, and academic partners in Kirinyaga.</p>
+    </div>
+
+    <form id="registerForm" class="space-y-6">
+
+      <!-- Full Name -->
+      <div class="space-y-2">
+        <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Full Name</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">person</span>
+          <input id="name" class="w-full pl-12 pr-4 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-secondary-fixed text-white placeholder-emerald-100/30 rounded-lg transition-all" placeholder="Dr. Jane Doe" type="text" required/>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- Institution -->
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Academic Institution</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">school</span>
+            <input id="institution" class="w-full pl-12 pr-4 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-secondary-fixed text-white placeholder-emerald-100/30 rounded-lg transition-all" placeholder="University of Kirinyaga" type="text" required/>
+          </div>
+        </div>
+
+        <!-- Role -->
+        <div class="space-y-2">
+          <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Academic Role</label>
+          <div class="relative">
+            <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">clinical_notes</span>
+            <select id="role" class="w-full pl-12 pr-4 py-4 bg-white/10 border-0 focus:ring-2 focus:ring-secondary-fixed text-white appearance-none rounded-lg transition-all cursor-pointer" required>
+              <option value="Researcher">Researcher</option>
+              <option value="Student">Student</option>
+              <option value="Partner">Partner</option>
+            </select>
+            <span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-emerald-300/50 pointer-events-none">expand_more</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="space-y-2">
+        <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Institutional Email (.ac.ke)</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">mail</span>
+          <input id="email" class="w-full pl-12 pr-4 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-secondary-fixed text-white placeholder-emerald-100/30 rounded-lg transition-all" placeholder="jane.doe@kyu.ac.ke" type="email" required/>
+        </div>
+        <p class="text-[0.7rem] font-medium text-secondary-fixed flex items-center gap-1.5 px-1 uppercase tracking-tighter">
+          <span class="material-symbols-outlined text-[12px]">info</span>
+          Only .ac.ke emails accepted
+        </p>
+      </div>
+
+      <!-- Password -->
+      <div class="space-y-2">
+        <label class="block text-sm font-semibold text-emerald-50 tracking-wide">Secure Password</label>
+        <div class="relative">
+          <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-emerald-300/50">lock</span>
+          <input id="password" class="w-full pl-12 pr-12 py-4 bg-white/5 border-0 focus:ring-2 focus:ring-secondary-fixed text-white placeholder-emerald-100/30 rounded-lg transition-all" placeholder="••••••••••••" type="password" required/>
+          <button type="button" class="absolute right-4 top-1/2 -translate-y-1/2 text-emerald-300/50 hover:text-white transition-colors" onclick="togglePassword()">
+            <span class="material-symbols-outlined">visibility</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Terms -->
+      <div class="flex items-start gap-3 pt-2">
+        <input class="mt-1 w-4 h-4 rounded bg-white/10 border-emerald-500/30 text-secondary focus:ring-secondary-fixed" id="terms" type="checkbox" required/>
+        <label class="text-xs text-emerald-100/60 leading-normal" for="terms">
+          I agree to the <a class="text-secondary-fixed underline hover:text-white transition-colors" href="#">Digital Ethics Protocol</a> and <a class="text-secondary-fixed underline hover:text-white transition-colors" href="#">Data Privacy Policy</a>.
+        </label>
+      </div>
+
+      <button type="submit" class="w-full py-5 bg-secondary-fixed hover:bg-secondary-container text-on-secondary-fixed font-headline font-bold text-lg rounded-lg shadow-xl shadow-primary/20 transform active:scale-95 transition-all duration-300 mt-4 uppercase tracking-widest">
+        Register Account
+      </button>
+
+    </form>
+
+    <p class="text-sm text-emerald-100/50 mt-4">
+      Already have an account? <a href="login.html" class="text-white font-bold underline">Sign In</a>
+    </p>
+
+  </div>
+</div>
+</main>
+
+<script>
+// ===== TOAST =====
+function showToast(msg, type = "success") {
+  const colors = { success: "bg-emerald-900", error: "bg-red-700", info: "bg-blue-800" };
+  const t = document.createElement("div");
+  t.innerText = msg;
+  t.className = `fixed bottom-6 right-6 ${colors[type]||"bg-emerald-900"} text-white px-6 py-3 rounded-xl shadow-2xl z-[300] text-sm font-semibold max-w-xs`;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 4000);
+}
+
+// ===== PASSWORD TOGGLE =====
+function togglePassword() {
+  const input = document.getElementById("password");
+  const btn = input.nextElementSibling?.querySelector('.material-symbols-outlined');
+  input.type = input.type === "password" ? "text" : "password";
+  if (btn) btn.innerText = input.type === "password" ? "visibility" : "visibility_off";
+}
+
+// ===== REGISTER FORM =====
+document.getElementById("registerForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const institution = document.getElementById("institution").value.trim();
+  const role = document.getElementById("role").value;
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  if (!name || !email || !password) { showToast("Please fill in all required fields.", "error"); return; }
+  if (!email.includes("@")) { showToast("Please enter a valid email address.", "error"); return; }
+  if (password.length < 6) { showToast("Password must be at least 6 characters.", "error"); return; }
+
+  const btn = e.submitter;
+  if (btn) { btn.disabled = true; btn.textContent = "Creating Account..."; }
+
+  try {
+    const res = await fetch("/api/register", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ name, institution, role, email, password })
+    });
+    const result = await res.json();
+    if (res.ok) {
+      showToast("Account created! Redirecting to login...", "success");
+      setTimeout(() => window.location.href = "login.html", 1500);
+    } else {
+      showToast(result.message || "Registration failed. Please try again.", "error");
+    }
+  } catch (err) {
+    showToast("Could not reach server. Please check your connection.", "error");
+    console.error(err);
+  } finally {
+    if (btn) { btn.disabled = false; btn.textContent = "Register Account"; }
+  }
+});
+</script>
+
+</body>
+</html>

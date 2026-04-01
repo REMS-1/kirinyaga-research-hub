@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Student Corner | Scholarly Atelier</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-surface": "#191c1b",
+                        "primary": "#004725",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#e4c451",
+                        "outline-variant": "#c0c9bf",
+                        "surface-container-high": "#e7e8e6",
+                        "on-secondary-container": "#766100",
+                        "surface-container": "#edeeec",
+                        "secondary": "#715c00",
+                        "on-tertiary-container": "#a3d3b0",
+                        "on-primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#554500",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-surface-variant": "#404941",
+                        "surface-container-highest": "#e1e3e1",
+                        "on-background": "#191c1b",
+                        "surface-container-low": "#f3f4f2",
+                        "background": "#f9faf8",
+                        "surface-tint": "#2b6a44",
+                        "on-secondary-fixed": "#231b00",
+                        "primary-container": "#1f5f3a",
+                        "on-primary-fixed": "#00210e",
+                        "surface-variant": "#e1e3e1",
+                        "inverse-primary": "#94d5a6",
+                        "inverse-on-surface": "#f0f1ef",
+                        "on-tertiary-fixed": "#00210f",
+                        "surface": "#f9faf8",
+                        "on-primary-fixed-variant": "#0d512e",
+                        "tertiary-fixed-dim": "#a2d2af",
+                        "on-tertiary-fixed-variant": "#244f35",
+                        "surface-dim": "#d9dad8",
+                        "tertiary-container": "#315c41",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#aff2c1",
+                        "on-primary-container": "#95d7a8",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9faf8",
+                        "secondary-fixed": "#ffe17a",
+                        "tertiary-fixed": "#beeeca",
+                        "inverse-surface": "#2e3130",
+                        "tertiary": "#18442b",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary-fixed-dim": "#94d5a6",
+                        "secondary-container": "#ffdd67",
+                        "outline": "#707971"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(192, 201, 191, 0.15)
+        }
+
+        .bg-fixed-archive {
+            background-image: linear-gradient(rgba(0, 71, 37, 0.85), rgba(0, 71, 37, 0.95)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuCFFnsrTVqybQ9MfFgdlyUFytnM5YZorWsCuWjgzIU8-kk-T9PAnRF3MpYkdPj_vF-vE_IM8cJOfQU8TnJ8d6EwVuiI_f-S6D5p1rCFC5ttHOubtTLwuqMUE1YHIP6zgZeJYQB3vSJ0n8DKDj2fZEtQyKnYSedTxu1EjTl9g3JgvJ9M8GgKAsGvm5q8o_URaVUIXKiQLjyWDIG4wM4NZwoGeQJHeyOW9Jern5ZZAv7GuJRKIjm5KtGQ02ILwIdUOCxG_vqvajoERSY4);
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center
+        }
+    </style>
+</head>
+
+<body class="bg-background font-body text-on-surface">
+    <!-- TopNavBar -->
+    <nav class="sticky top-0 z-50 w-full bg-white/60 backdrop-blur-xl border-b border-emerald-900/10 shadow-sm">
+        <div class="flex justify-between items-center px-8 py-4 max-w-full">
+            <div class="text-xl font-bold text-emerald-900 tracking-tighter font-headline">Kirinyaga Research Hub</div>
+            <div class="hidden md:flex items-center gap-8 font-headline font-semibold tracking-tight text-emerald-900/70">
+                <a class="hover:text-emerald-900 transition-all duration-300" href="index.html">Home</a>
+                <a class="hover:text-emerald-900 transition-all duration-300" href="problems.html">Problems</a>
+                <a class="hover:text-emerald-900 transition-all duration-300" href="solutions.html">Solutions</a>
+                <a class="hover:text-emerald-900 transition-all duration-300" href="researchers.html">Researchers</a>
+                <a class="hover:text-emerald-900 transition-all duration-300" href="funding.html">Funding</a>
+                <a class="hover:text-emerald-900 transition-all duration-300" href="students.html">Student Corner</a>
+            </div>
+            <div class="flex items-center gap-4">
+                <button class="p-2 rounded-full hover:bg-emerald-50/50 transition-all duration-300">
+                    <span class="material-symbols-outlined text-emerald-900">notifications</span>
+                </button>
+                <button class="p-2 rounded-full hover:bg-emerald-50/50 transition-all duration-300">
+                    <span class="material-symbols-outlined text-emerald-900">account_circle</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+    <!-- Main Content Canvas -->
+    <main class="min-h-screen pt-16 bg-fixed-archive" data-alt="Atmospheric dark green scholarly archive background">
+        <div class="max-w-[1440px] mx-auto px-8 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <!-- Sidebar: User Stats & Problem Stream -->
+            <aside class="lg:col-span-3 space-y-6 order-2 lg:order-1">
+                <!-- User Contribution Card -->
+                <div class="glass-card p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <img alt="User avatar" class="w-12 h-12 rounded-full border-2 border-secondary"
+                            data-alt="Portrait of a male student"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4UFM617ehQDPdAPdvrF8bEkaQxma53JUaMIHqAzVdG-5BH2Nn0ez9HAQqWYzgZ1xvwkJyjdHn2wiLia6T2utNhC3G0I48if9rgUHqQNAVwHqNR2hpsMoT3r7VdUvei0ixZGX2Ia3O7QMMXx2XRBB7dQY_v6AwDfWVLqiBL5pXT6TTet4F666UA61piY17oOvcfG14K56gp8oP-qLHIb9M3_gMCWCaGFVkztZlVi3d7YunBqYmc1E58RRNKKBTb7JumR_hwypNe3CH" />
+                        <div>
+                            <h3 class="font-headline font-bold text-primary">Student Corner</h3>
+                            <p class="text-xs text-on-surface-variant font-medium uppercase tracking-wider">Contributor
+                                Level 4</p>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <div class="flex justify-between text-sm font-semibold">
+                            <span class="text-primary">Impact Score</span>
+                            <span class="text-secondary">840 pts</span>
+                        </div>
+                        <div class="w-full bg-surface-container-high h-2 rounded-full overflow-hidden">
+                            <div class="bg-secondary h-full w-[84%]"></div>
+                        </div>
+                        <p class="text-[10px] text-on-surface-variant leading-relaxed">Top 5% of Kirinyaga contributors
+                            this month.</p>
+                    </div>
+                </div>
+                <!-- Problem Stream -->
+                <div class="space-y-4">
+                    <h2 class="font-headline font-bold text-white text-xl px-2">Problem Stream</h2>
+                    <div class="space-y-3">
+                        <div class="glass-card p-4 rounded-xl hover:bg-white/40 transition-all cursor-pointer group">
+                            <span
+                                class="inline-block px-2 py-0.5 rounded bg-secondary-fixed text-[10px] font-bold text-on-secondary-fixed mb-2 uppercase tracking-tighter">New
+                                Issue</span>
+                            <h4 class="font-headline font-bold text-primary text-sm group-hover:underline">Sustainable
+                                Water Filtration in Rural Zones</h4>
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="material-symbols-outlined text-xs text-primary/60">forum</span>
+                                <span class="text-[11px] text-primary/60">24 active contributors</span>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl hover:bg-white/40 transition-all cursor-pointer group">
+                            <h4 class="font-headline font-bold text-primary text-sm group-hover:underline">Digital
+                                Literacy Gap: Kirinyaga East</h4>
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="material-symbols-outlined text-xs text-primary/60">forum</span>
+                                <span class="text-[11px] text-primary/60">12 active contributors</span>
+                            </div>
+                        </div>
+                        <div class="glass-card p-4 rounded-xl hover:bg-white/40 transition-all cursor-pointer group">
+                            <h4 class="font-headline font-bold text-primary text-sm group-hover:underline">Biodiversity
+                                Mapping of Local Forest</h4>
+                            <div class="flex items-center gap-2 mt-2">
+                                <span class="material-symbols-outlined text-xs text-primary/60">forum</span>
+                                <span class="text-[11px] text-primary/60">56 active contributors</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="problems.html"
+                        class="w-full text-white/80 font-semibold text-xs py-2 border border-white/20 rounded hover:bg-white/10 transition-colors uppercase tracking-widest block text-center">View
+                        All Problems</a>
+                </div>
+            </aside>
+            <!-- Main Discussion Interface -->
+            <section class="lg:col-span-9 flex flex-col h-[calc(100vh-10rem)] order-1 lg:order-2">
+                <!-- Discussion Header -->
+                <div class="glass-card p-8 rounded-t-xl border-b-0">
+                    <div class="max-w-3xl">
+                        <span class="text-secondary font-bold text-xs uppercase tracking-[0.2em] mb-2 block"
+                            id="topicSubtitle">Discussion Thread</span>
+                        <h1 id="topicTitle"
+                            class="text-3xl md:text-4xl font-headline font-extrabold text-primary tracking-tight mb-4">
+                            Select a Topic</h1>
+                        <p id="topicDesc" class="text-on-surface-variant leading-relaxed text-lg">Join the conversation.
+                            Collaborative problems solving starts here.</p>
+                    </div>
+                </div>
+                <!-- Chat Feed -->
+                <div id="chatFeed" class="flex-grow glass-card border-y-0 overflow-y-auto p-8 space-y-8 scrollbar-hide">
+                    <!-- Dynamic Messages -->
+                </div>
+                <!-- Input Area -->
+                <div class="glass-card p-6 rounded-b-xl border-t-0">
+                    <div class="relative flex items-center gap-4">
+                        <div class="flex-grow relative">
+                            <textarea id="chatInput"
+                                class="w-full bg-surface-container-high border-none rounded-xl py-4 px-6 focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-on-surface-variant/40"
+                                placeholder="Type your contribution or share a resource..." rows="1"></textarea>
+                            <div class="absolute right-4 top-1/2 -translate-y-1/2 flex gap-2">
+                                <button class="p-2 hover:bg-primary/10 rounded-full text-primary transition-colors">
+                                    <span class="material-symbols-outlined">attach_file</span>
+                                </button>
+                            </div>
+                        </div>
+                        <button id="chatSendBtn"
+                            class="bg-primary text-on-primary w-12 h-12 rounded-xl flex items-center justify-center hover:bg-primary-container transition-transform active:scale-95 shadow-lg shadow-primary/10">
+                            <span class="material-symbols-outlined">send</span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-emerald-950 dark:bg-black w-full py-12 px-8">
+        <div class="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="space-y-4">
+                <span class="font-['Manrope'] text-lg text-white font-bold">Kirinyaga Research Hub</span>
+                <p class="font-['Public_Sans'] text-xs uppercase tracking-widest text-emerald-100/50">© 2026 Kirinyaga Research Hub. All rights reserved.</p>
+            </div>
+            <div class="flex flex-wrap gap-x-8 gap-y-4 md:justify-end">
+                <a class="font-['Public_Sans'] text-xs uppercase tracking-widest text-emerald-100/50 hover:text-yellow-200 transition-colors"
+                    href="#">Ethics Policy</a>
+                <a class="font-['Public_Sans'] text-xs uppercase tracking-widest text-emerald-100/50 hover:text-yellow-200 transition-colors"
+                    href="#">Institutional Access</a>
+                <a class="font-['Public_Sans'] text-xs uppercase tracking-widest text-emerald-100/50 hover:text-yellow-200 transition-colors"
+                    href="#">Archival Standards</a>
+                <a class="font-['Public_Sans'] text-xs uppercase tracking-widest text-yellow-500 font-bold"
+                    href="contact.html">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const currentTopic = urlParams.get('topic') || 'General Discussion';
+        const currentUser = localStorage.getItem("userName") || localStorage.getItem("user");
+
+        document.getElementById("topicTitle").innerText = currentTopic;
+        document.getElementById("topicDesc").innerText = `Join the conversation on: ${currentTopic}`;
+        document.title = `${currentTopic} | Discussions`;
+
+        let messages = [];
+
+        function getInitials(name) {
+            if (!name) return 'U';
+            return name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase();
+        }
+
+        async function loadMessages() {
+            try {
+                const res = await fetch(`/api/discussions?topic=${encodeURIComponent(currentTopic)}`);
+                if (res.ok) {
+                    messages = await res.json();
+                    renderMessages();
+                }
+            } catch { }
+        }
+
+        function renderMessages() {
+            const feed = document.getElementById("chatFeed");
+            if (!messages || messages.length === 0) {
+                feed.innerHTML = `<div class="flex h-full items-center justify-center text-on-surface-variant text-sm italic">No messages yet. Be the first to start the conversation!</div>`;
+                return;
+            }
+
+            feed.innerHTML = messages.map(m => {
+                const isMe = m.user === currentUser;
+                const timeStr = new Date(m.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                return `
+        <div class="flex items-start gap-4 ${isMe ? 'flex-row-reverse' : ''}">
+            <div class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm shrink-0 shadow-md">
+                ${getInitials(m.user)}
+            </div>
+            <div class="max-w-2xl space-y-1 text-${isMe ? 'right' : 'left'} w-full">
+                <div class="flex items-center gap-2 ${isMe ? 'flex-row-reverse' : ''}">
+                    <span class="font-bold text-primary">${m.user}</span>
+                    <span class="text-xs border border-primary/20 px-1.5 rounded text-primary/70">${m.role || 'Contributor'}</span>
+                    <span class="text-[10px] text-on-surface-variant/60 ml-1">${timeStr}</span>
+                </div>
+                <div class="glass-card ${isMe ? 'bg-primary text-white' : 'bg-white'} p-4 rounded-xl shadow-sm ${isMe ? 'rounded-tr-none' : 'rounded-tl-none'} inline-block text-left relative max-w-[85%]">
+                    <p class="${isMe ? 'text-white/90' : 'text-on-surface'} leading-relaxed text-sm">${m.text}</p>
+                </div>
+            </div>
+        </div>`;
+            }).join("");
+            feed.scrollTop = feed.scrollHeight;
+        }
+
+        document.getElementById("chatSendBtn").addEventListener("click", async () => {
+            const input = document.getElementById("chatInput");
+            const text = input.value.trim();
+            if (!text) return;
+            if (!currentUser) {
+                alert("You must log in to post a message.");
+                window.location.href = "login.html";
+                return;
+            }
+
+            const newMsg = {
+                topic: currentTopic,
+                user: currentUser,
+                role: localStorage.getItem("userRole") || "Researcher",
+                text: text
+            };
+
+            // Optimistic UI update
+            messages.push({ ...newMsg, timestamp: new Date().toISOString() });
+            renderMessages();
+            input.value = "";
+
+            try {
+                await fetch("/api/discussions", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(newMsg)
+                });
+            } catch {
+                // Silent fail offline
+            }
+        });
+
+        document.getElementById("chatInput").addEventListener("keypress", (e) => {
+            if (e.key === "Enter" && !e.shiftKey) {
+                e.preventDefault();
+                document.getElementById("chatSendBtn").click();
+            }
+        });
+
+        // Sidebar links active state mapping
+        const sidebarBtns = document.querySelectorAll("#categorySidebar button");
+        sidebarBtns.forEach(btn => {
+            if (btn.innerText.includes(currentTopic)) {
+                btn.classList.add("bg-primary", "text-on-primary");
+                btn.classList.remove("text-on-surface-variant");
+            }
+        });
+
+        loadMessages();
+    </script>
+</body>
+
+</html>

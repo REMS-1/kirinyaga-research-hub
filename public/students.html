@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Student Corner | Kirinyaga Research Hub</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;400;600;800&amp;family=Public+Sans:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/ai-guide.css">
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "cream-yellow": "#FFFBEB",
+              "emerald-scholar": "#022C22",
+              "secondary-fixed-dim": "#e4c451",
+              "on-error-container": "#93000a",
+              "surface-container-highest": "#e1e3e1",
+              "error": "#ba1a1a",
+              "background": "#f9faf8",
+              "secondary-fixed": "#ffe17a",
+              "on-secondary-fixed-variant": "#554500",
+              "surface-dim": "#d9dad8",
+              "primary": "#004725",
+              "surface-tint": "#2b6a44",
+              "primary-fixed-dim": "#94d5a6",
+              "on-background": "#191c1b",
+              "on-primary-fixed-variant": "#0d512e",
+              "on-surface": "#191c1b",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-primary-fixed": "#00210e",
+              "tertiary": "#18442b",
+              "secondary-container": "#ffdd67",
+              "inverse-surface": "#2e3130",
+              "tertiary-container": "#315c41",
+              "secondary": "#715c00",
+              "outline": "#707971",
+              "surface-container-high": "#e7e8e6",
+              "primary-container": "#1f5f3a",
+              "on-tertiary-fixed": "#00210f",
+              "on-secondary-container": "#766100",
+              "error-container": "#ffdad6",
+              "primary-fixed": "#aff2c1",
+              "on-tertiary-fixed-variant": "#244f35",
+              "on-surface-variant": "#404941",
+              "inverse-primary": "#94d5a6",
+              "inverse-on-surface": "#f0f1ef",
+              "outline-variant": "#c0c9bf",
+              "on-secondary-fixed": "#231b00",
+              "tertiary-fixed-dim": "#a2d2af",
+              "on-tertiary-container": "#a3d3b0",
+              "surface-container-lowest": "#ffffff",
+              "surface-container": "#edeeec",
+              "on-primary-container": "#95d7a8",
+              "surface-variant": "#e1e3e1",
+              "surface-container-low": "#f3f4f2",
+              "surface-bright": "#f9faf8",
+              "surface": "#f9faf8",
+              "tertiary-fixed": "#beeeca",
+              "on-error": "#ffffff",
+              "on-tertiary": "#ffffff"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(192, 201, 191, 0.15);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #004725 0%, #1f5f3a 100%);
+            
+        }
+    </style>
+</head>
+<body class="bg-cream-yellow text-emerald-scholar font-body selection:bg-amber-500 selection:text-white transition-colors duration-500">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-emerald-900/60 dark:bg-emerald-950/60 backdrop-blur-xl border-b border-white/10 shadow-xl shadow-emerald-900/5 flex justify-between items-center px-8 py-4 max-w-full font-['Manrope'] tracking-tight font-semibold">
+<div class="text-xl font-bold text-emerald-50 tracking-tighter">Kirinyaga Research Hub</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-emerald-50/80 hover:text-yellow-200 transition-colors" href="index.html">Home</a>
+<a class="text-emerald-50/80 hover:text-yellow-200 transition-colors" href="problems.html">Problems</a>
+<a class="text-emerald-50/80 hover:text-yellow-200 transition-colors" href="solutions.html">Solutions</a>
+<a class="text-emerald-50/80 hover:text-yellow-200 transition-colors" href="researchers.html">Researchers</a>
+<a class="text-emerald-50/80 hover:text-yellow-200 transition-colors" href="funding.html">Funding</a>
+<a class="text-yellow-400 border-b-2 border-yellow-400 pb-1" href="students.html">Student Corner</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-emerald-50 hover:bg-white/10 p-2 rounded-full transition-all">search</button>
+<a href="studentslog.html" class="bg-secondary-fixed text-on-secondary-fixed px-5 py-2 rounded-md hover:bg-secondary-container transition-all scale-102 active:scale-98 font-bold text-sm inline-block">Apply Now</a>
+</div>
+</nav>
+<main class="pt-20">
+<!-- Hero Section -->
+<header class="relative overflow-hidden py-24 md:py-32 hero-gradient">
+<div class="absolute inset-0 opacity-10" data-alt="Subtle geometric texture pattern background" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZkgZzhue3a4nIe0qiveHL2NAw0eLfRurkHstPxuaou9dQZmgxXmq7CXvx4WsWLLB39pC-JdM6W7cZKbdZ15E7OCZlIUiBCsajeDJ0KPWAEgIAJjrPPIKY9P371la0oLbp11qBiGPzjNrvsPjyNkseIw3yyr485D4WB-7Bl6dFxra-NZQcyc0IyW9Tthplhw4h_Cxh5_ZCYSHEZaauny_QHdBXtwZ94IrAO06CHuAdv8_vGKfnEERLzkyiGpDnL7e8U4dyUOTbi6oa');"></div>
+<div class="max-w-7xl mx-auto px-8 relative z-10">
+<div class="max-w-3xl">
+<a class="inline-flex items-center gap-2 text-primary-fixed-dim hover:text-secondary-fixed transition-colors mb-8 font-semibold uppercase tracking-widest text-xs" href="problems.html" style="margin-bottom: 2rem; display: inline-flex;">
+    <span class="material-symbols-outlined text-sm">arrow_back</span>BACK TO PROBLEMS
+</a>
+<br/>
+<span class="inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-xs font-bold tracking-widest uppercase rounded mb-6">Future Leaders Program</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-on-primary tracking-tighter leading-tight mb-8">
+                        Bridging Academia <br/>&amp; Industry
+                    </h1>
+<p class="text-xl text-on-primary-container leading-relaxed font-light mb-10 max-w-2xl">
+                        Unlock elite opportunities at the intersection of rigorous inquiry and real-world impact. Our internship ecosystem connects Kirinyaga's brightest minds with global pioneers.
+                    </p>
+</div>
+<!-- Asymmetrical overlapping element -->
+<div class="absolute -bottom-12 -right-12 w-96 h-96 bg-secondary-fixed opacity-10 rounded-full blur-3xl"></div>
+</header>
+
+
+<!-- Main Content Vertical Stack -->
+<main class="max-w-7xl mx-auto px-8 py-12 flex flex-col gap-16">
+
+<!-- Profile Top Bar -->
+<section id="profileTopBar" class="w-full">
+   <!-- JS will inject profile here -->
+</section>
+
+<!-- Internships & Opportunities -->
+<div class="w-full space-y-16">
+<section>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+<div>
+<h2 class="font-headline text-3xl font-extrabold text-primary tracking-tight">Open Opportunities</h2>
+<p class="text-on-surface-variant mt-2">Currently available positions and research opportunities.</p>
+</div>
+<div class="flex gap-4">
+<div class="relative">
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant/30 rounded-lg text-sm focus:ring-primary focus:border-primary" placeholder="Search research..." type="text"/>
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-on-surface-variant text-sm">search</span>
+</div>
+<button class="flex items-center gap-2 px-4 py-2 bg-surface-container-high rounded-lg text-sm font-semibold hover:bg-surface-container-highest transition-colors">
+<span class="material-symbols-outlined text-sm">filter_list</span>
+                            Filter
+                        </button>
+</div>
+</div>
+
+<!-- Grid Layout -->
+<div id="opportunitiesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Generated dynamically -->
+</div>
+</div>
+</section>
+
+
+<!-- Discussions Section -->
+<section class="space-y-8">
+<div>
+<h2 class="font-headline text-3xl font-extrabold text-primary tracking-tight">Active Collab Stream</h2>
+<p class="text-on-surface-variant mt-2">Live discussion on community problems and research solutions.</p>
+</div>
+<div class="space-y-6">
+<!-- Comment 1 -->
+<div class="flex gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Male student avatar in casual clothes" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmxu0RCXDaxaGzwZHiXFU2-VupQxEVYu7ZUALhFzCMLmV7Vx24yR9_DpVKaVWokZNvXgF4gyyD1jjHcOj2z4veRzjPPvOD8lpHPUB2oj-qYTgN8ElbW0dm1daTqY5b-uk5nmHUf6K6zjE67_x2uCZfbOBvhf-GEDBlkgf22gqBQ3cn52XN-DOXN6w7No97Pe4-krbKcpcfCRNhLRI6ELiJdnmXCM-MI9aHa6Kpv5bITKdCXq51FThphKG0bRAPeleo_rSOl2ucH2Hz"/>
+<div class="flex-1 space-y-3">
+<div class="bg-surface-container-low p-6 rounded-2xl relative">
+<div class="flex justify-between items-center mb-2">
+<span class="font-bold text-sm text-primary">Brian Wanjala</span>
+<span class="text-[10px] text-on-surface-variant font-medium uppercase tracking-widest">15 Min Ago</span>
+</div>
+<p class="text-sm leading-relaxed text-on-surface-variant">We are noticing a significant decrease in rice yield near Mwea Phase II. Could it be related to the new irrigation canal pH levels or just seasonal pests?</p>
+<div class="mt-4 flex gap-4">
+<button class="text-xs font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-sm">reply</span> Reply</button>
+<button class="text-xs font-bold text-primary flex items-center gap-1"><span class="material-symbols-outlined text-sm">thumb_up</span> 14</button>
+<button class="text-xs font-bold text-error flex items-center gap-1 ml-auto opacity-40 hover:opacity-100 transition-opacity"><span class="material-symbols-outlined text-sm">security</span> Moderate</button>
+</div>
+</div>
+<!-- Researcher Reply -->
+<div class="flex gap-4 ml-12">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Female researcher wearing glasses and professional attire" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVH2VyI1yxEocY0gl04G1QPBuiinCkSQ4aZeLDvwBcULvXr_jzELlb9tHxvVSgbQzzuSV5bRnZeF9T-YYQorGWsMABs6TjcMWXxCCQRqE9jTRsZmCwaXeYMTN28ABHNYoU0Xs618EIves9Cu2feQm2yZoC0JuVTCOP-YHWKQLMrOnKRY8jEcs_5Nt-hJQNMdeSG5RH0vgiVtt7M24fXJs7EJvy6duoaBMbQUzyOat4t95LgmKZbSTuEVC1OIAWGUj7jnmLrohdR52t"/>
+<div class="flex-1 bg-primary/5 p-5 rounded-2xl border-l-4 border-primary">
+<div class="flex items-center gap-3 mb-2">
+<span class="font-bold text-sm text-primary">Dr. Amara Okoro</span>
+<span class="flex items-center gap-1 bg-primary text-on-primary text-[8px] px-2 py-0.5 rounded-full font-bold uppercase tracking-widest">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">verified</span> Verified Researcher
+                                        </span>
+</div>
+<p class="text-sm leading-relaxed text-on-surface-variant font-medium">Excellent observation, Brian. We just uploaded a preliminary report on the canal chemistry. It seems there's a localized alkaline spike. Check the 'Soil Science' section for the raw data.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Comment Input -->
+<div class="glass-panel p-6 rounded-3xl flex items-center gap-6 mt-8 border border-emerald-900/10">
+    <div class="w-12 h-12 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-900">
+        <span class="material-symbols-outlined text-2xl">edit_square</span>
+    </div>
+    <input class="flex-1 bg-transparent border-0 focus:ring-0 text-sm font-medium text-emerald-950 placeholder:text-zinc-400" placeholder="Contribute to the scholarly discourse..." type="text"/>
+    <button class="bg-emerald-900 text-white px-8 py-3 rounded-xl font-bold text-sm hover:bg-emerald-700 transition-all shadow-lg active:scale-95">Publish</button>
+</div>
+</div>
+</section>
+</div>
+
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 w-full py-20 px-8 border-t border-white/10 overflow-hidden relative">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+    
+    <div class="max-w-7xl mx-auto relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="md:col-span-2 space-y-6">
+                <div class="text-2xl font-bold text-white tracking-tighter font-headline">Kirinyaga Research Hub</div>
+                <p class="text-zinc-400 text-sm leading-relaxed max-w-sm font-body">
+                    Empowering the next generation of Kirinyaga researchers through peer-reviewed excellence, elite mentorship, and global industry connectivity.
+                </p>
+                <div class="flex gap-4">
+                    <button class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-amber-500 transition-all"><span class="material-symbols-outlined">share</span></button>
+                    <button class="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-amber-500 transition-all"><span class="material-symbols-outlined">hub</span></button>
+                </div>
+            </div>
+            
+            <div class="space-y-6">
+                <h4 class="text-amber-500 font-bold uppercase tracking-widest text-xs">Scholarly Resources</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Thesis Archiving</a></li>
+                    <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Grant Writing Hub</a></li>
+                    <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Ethics Committee</a></li>
+                    <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Peer Review Access</a></li>
+                </ul>
+            </div>
+            
+            <div class="space-y-6">
+                <h4 class="text-amber-500 font-bold uppercase tracking-widest text-xs">Connectivity</h4>
+                <ul class="space-y-4">
+                    <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Institutional Access</a></li>
+                    <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Community Outreach</a></li>
+                    <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Privacy Protocol</a></li>
+                    <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm">Terms of Research</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+            <p class="text-zinc-500 text-xs">© 2024 Kirinyaga Research Hub. Scholarly Digital Atelier. All Rights Reserved.</p>
+            <div class="flex gap-8">
+                <span class="flex items-center gap-2 text-zinc-500 text-xs"><span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span> Systems Active</span>
+                <span class="text-zinc-500 text-xs">v4.2.0-Alpha</span>
+            </div>
+        </div>
+    </div>
+</footer>
+<script>
+    // Constants
+    const fallbackOpportunities = [
+        { id: 1, title: "AI Ethics Fellow", org: "DeepMind Research Africa", loc: "Nairobi, Kenya (Hybrid)", time: "6 Months", link: "https://deepmind.google/about/" },
+        { id: 2, title: "Sustainable Logistics Intern", org: "Maersk Innovations", loc: "Copenhagen, Denmark", time: "12 Weeks", link: "https://www.maersk.com/careers" },
+        { id: 3, title: "Agritech Systems Designer", org: "Hello Tractor", loc: "Kirinyaga, Kenya (On-site)", time: "4 Months", link: "https://hellotractor.com/" }
+    ];
+
+    let opportunities = [];
+
+    async function fetchOpportunities() {
+        try {
+            const res = await fetch("/api/opportunities");
+            if (res.ok) opportunities = await res.json();
+        } catch {}
+        if (opportunities.length === 0) {
+            opportunities = [...fallbackOpportunities];
+        }
+    }
+
+    function renderOpportunities() {
+        const grid = document.getElementById("opportunitiesGrid");
+        grid.innerHTML = "";
+        
+        const tiers = ['Archival Discovery', 'Field Synthesis', 'Elite Inquiry', 'Community Impact'];
+        const rewards = ['+25 Knowledge', '+50 Authority', 'Peer Verified', 'County Medal'];
+
+        opportunities.forEach((opp, index) => {
+            const reward = rewards[index % rewards.length];
+            const difficulty = index % 3 === 0 ? 'Advanced' : (index % 3 === 1 ? 'Intermediate' : 'Foundational');
+            const diffColor = difficulty === 'Advanced' ? 'bg-amber-100 text-amber-700 border-amber-200' : (difficulty === 'Intermediate' ? 'bg-emerald-100 text-emerald-700 border-emerald-200' : 'bg-slate-100 text-slate-700 border-slate-200');
+
+            grid.innerHTML += `
+            <div class="p-10 rounded-3xl hover-lift border border-emerald-900/5 group flex flex-col h-full bg-white/40 backdrop-blur-2xl transition-all duration-700 reveal">
+                <div class="flex justify-between items-start mb-8">
+                    <span class="px-3 py-1 ${diffColor} border text-[10px] font-bold uppercase tracking-widest rounded-full">${difficulty} Quest</span>
+                    <span class="text-emerald-900/40 font-bold text-[10px] uppercase tracking-widest">${reward}</span>
+                </div>
+                
+                <h3 class="font-headline text-2xl font-bold text-emerald-950 mb-2 group-hover:text-amber-600 transition-colors">${opp.title}</h3>
+                <p class="text-zinc-600 text-sm font-semibold mb-6 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-sm text-amber-500">hub</span> ${opp.org || "Kirinyaga Hub"}
+                </p>
+                
+                <div class="grid grid-cols-2 gap-4 mb-8 pt-6 border-t border-emerald-900/5">
+                    <div class="flex flex-col text-left">
+                        <span class="text-[9px] text-zinc-400 uppercase font-bold tracking-widest">Location</span>
+                        <span class="text-xs font-bold text-emerald-900">${opp.loc || "Remote"}</span>
+                    </div>
+                    <div class="flex flex-col text-left">
+                        <span class="text-[9px] text-zinc-400 uppercase font-bold tracking-widest">Duration</span>
+                        <span class="text-xs font-bold text-emerald-900">${opp.time || "Flexible"}</span>
+                    </div>
+                </div>
+
+                <div class="mt-auto pt-6 flex items-center gap-4">
+                    <a href="${opp.link || '#'}" target="${opp.link ? '_blank' : '_self'}" class="flex-1 bg-emerald-900 text-white py-4 rounded-xl font-bold text-center text-xs hover:bg-amber-600 transition-all shadow-lg active:scale-95">Accept Quest</a>
+                    <button class="w-12 h-12 rounded-xl bg-white border border-emerald-100 flex items-center justify-center text-emerald-900 hover:bg-emerald-900 hover:text-white transition-all"><span class="material-symbols-outlined text-xl">share</span></button>
+                </div>
+            </div>
+            `;
+        });
+    }
+
+    function showApplyModal(roleName) {
+        const modal = document.createElement("div");
+        modal.className = "fixed inset-0 bg-black/60 flex items-center justify-center z-[150] p-4";
+        modal.innerHTML = `
+            <div class="bg-white p-8 rounded-xl w-full max-w-lg shadow-2xl">
+                <h2 class="text-xl font-bold text-emerald-900 mb-4 border-b pb-2">Apply: ${roleName}</h2>
+                <input id="app-name" placeholder="Full Name" class="w-full border p-3 rounded mb-3 text-sm focus:ring-emerald-500" />
+                <input id="app-major" placeholder="Major / Degree / Role" class="w-full border p-3 rounded mb-3 text-sm focus:ring-emerald-500" />
+                <textarea id="app-reason" placeholder="Why do you want to join this context?" class="w-full border p-3 rounded mb-3 text-sm focus:ring-emerald-500" rows="3"></textarea>
+                
+                <div class="border-2 border-dashed border-gray-300 p-4 text-center rounded mb-4 cursor-pointer hover:bg-emerald-50 hover:border-emerald-300 transition" onclick="this.querySelector('input').click()">
+                    <span class="material-symbols-outlined text-primary mb-1 text-3xl">upload_file</span>
+                    <p class="text-xs font-bold text-primary">Upload CV / Proposal Doc (Optional)</p>
+                    <input type="file" class="hidden" onchange="this.parentElement.querySelector('p').innerText = this.files[0].name + ' attached!'" />
+                </div>
+                
+                <div class="flex gap-3">
+                    <button class="flex-1 bg-gray-100 p-2 rounded font-bold hover:bg-gray-200" onclick="this.closest('.fixed').remove()">Cancel</button>
+                    <button class="flex-1 bg-emerald-800 text-white p-2 rounded font-bold hover:bg-emerald-700" id="btnSubmit">Submit to Hub</button>
+                </div>
+            </div>`;
+            
+        document.body.appendChild(modal);
+
+        modal.querySelector("#btnSubmit").onclick = async () => {
+             const appData = {
+                 role: roleName,
+                 name: document.getElementById("app-name").value,
+                 major: document.getElementById("app-major").value,
+                 reason: document.getElementById("app-reason").value
+             };
+             
+             if(!appData.name) {
+                 alert("Name is required!");
+                 return;
+             }
+             
+             try {
+                await fetch("/api/applications", { method: "POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(appData) });
+                
+                // Increase local dynamic points for the user
+                let myForms = parseInt(localStorage.getItem("myForms") || "0");
+                localStorage.setItem("myForms", myForms + 1);
+                
+             } catch(e) {}
+             
+             modal.remove();
+             alert("Application submitted successfully!");
+             // clear URL so it doesn't pop up again
+             window.history.replaceState({}, document.title, window.location.pathname);
+        };
+    }
+
+    function toggleStats() {
+        const div = document.getElementById("statsDiv");
+        const isHidden = div.classList.contains("hidden");
+        div.classList.toggle("hidden", !isHidden);
+        document.getElementById("btnToggleStats").innerText = isHidden ? "Hide Stats" : "Show Stats";
+    }
+
+    window.toggleStats = toggleStats; // ensure global scope
+
+    function renderProfile() {
+        const profileTopBar = document.getElementById("profileTopBar");
+        const user = localStorage.getItem("user");
+        const formsCount = parseInt(localStorage.getItem("myForms") || "0");
+        const points = formsCount * 125 + 50; // Dynamic points formula
+        
+        if (user) {
+            profileTopBar.innerHTML = `
+            <div class="flex flex-col md:flex-row items-center justify-between bg-surface-container-low border border-outline-variant/30 rounded-2xl p-6 shadow-sm">
+                <div class="flex items-center gap-6">
+                    <div class="relative">
+                        <div class="w-16 h-16 rounded-full bg-primary text-white flex items-center justify-center text-2xl font-bold shadow-md">
+                            ${user.charAt(0).toUpperCase()}
+                        </div>
+                        <div class="absolute bottom-0 right-0 bg-secondary-fixed text-on-secondary-fixed w-5 h-5 rounded-full flex items-center justify-center border border-white">
+                            <span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="font-headline text-xl font-bold text-primary">${user}</h3>
+                        <p class="text-on-surface-variant text-sm font-medium">Kirinyaga Research Contributor</p>
+                    </div>
+                </div>
+                <div class="flex flex-col md:flex-row gap-6 mt-4 md:mt-0 items-center">
+                    <div id="statsDiv" class="flex gap-6 items-center">
+                        <div class="text-center">
+                            <div class="text-lg font-extrabold text-primary font-headline">${points}</div>
+                            <div class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tight">Points Earned</div>
+                        </div>
+                        <div class="text-center border-l pl-6 border-outline-variant/30">
+                            <div class="text-lg font-extrabold text-primary font-headline">${formsCount}</div>
+                            <div class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tight">Active Forms</div>
+                        </div>
+                    </div>
+                    <div class="ml-4 flex flex-col gap-2">
+                        <button id="btnToggleStats" onclick="toggleStats()" class="px-5 py-2 bg-primary/10 text-primary border border-primary/20 rounded-lg font-bold text-xs hover:bg-primary/20 transition-colors">Hide Stats</button>
+                    </div>
+                </div>
+            </div>`;
+        } else {
+            profileTopBar.innerHTML = `
+            <div class="flex flex-col md:flex-row items-center justify-between bg-primary/5 border border-primary/20 rounded-2xl p-6 shadow-sm">
+                <div class="flex items-center gap-4 text-primary">
+                    <span class="material-symbols-outlined text-4xl">account_circle</span>
+                    <div>
+                        <h3 class="font-headline text-lg font-bold">You are browsing as a Guest</h3>
+                        <p class="text-on-surface-variant text-sm">Create a profile to gain points, track submitted forms, and save applications.</p>
+                    </div>
+                </div>
+                <a href="studentslog.html" class="mt-4 md:mt-0 px-6 py-2.5 bg-primary text-white rounded-lg font-bold text-sm hover:bg-primary/90 transition-colors shadow-md flex gap-2 items-center"><span class="material-symbols-outlined text-[16px]">person_add</span> Create Profile / Login</a>
+            </div>`;
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        renderProfile();
+        fetchOpportunities().then(() => {
+            // Check for join url
+            const params = new URLSearchParams(window.location.search);
+            const joinName = params.get("joinProblem");
+            if (joinName) {
+                // Pre-inject the problem as an internal local opportunity if not exists
+                if (!opportunities.find(o => o.title === `Problem: ${joinName}`)) {
+                    opportunities.unshift({
+                        title: `Problem: ${joinName}`,
+                        org: "Kirinyaga Internal Hub",
+                        loc: "Open Data Collaborative",
+                        time: "Ongoing",
+                        link: null // internal
+                    });
+                }
+                renderOpportunities();
+                showApplyModal(`Problem: ${joinName}`);
+            } else {
+                renderOpportunities();
+            }
+        });
+    });
+</script>
+ <script src="js/ai-guide.js"></script>
+</body>
+</html>

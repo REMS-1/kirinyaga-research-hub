@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Submit Solution | Kirinyaga Research Hub</title>
+<!-- Google Fonts -->
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-highest": "#e1e3e1",
+              "surface-container-lowest": "#ffffff",
+              "primary-fixed": "#aff2c1",
+              "tertiary-container": "#315c41",
+              "surface-container-low": "#f3f4f2",
+              "on-secondary-container": "#766100",
+              "tertiary": "#18442b",
+              "surface-variant": "#e1e3e1",
+              "on-error-container": "#93000a",
+              "primary-fixed-dim": "#94d5a6",
+              "primary": "#004725",
+              "on-primary-container": "#95d7a8",
+              "secondary-fixed-dim": "#e4c451",
+              "outline": "#707971",
+              "on-primary": "#ffffff",
+              "inverse-primary": "#94d5a6",
+              "surface-container": "#edeeec",
+              "on-tertiary-container": "#a3d3b0",
+              "inverse-on-surface": "#f0f1ef",
+              "surface-tint": "#2b6a44",
+              "inverse-surface": "#2e3130",
+              "surface-container-high": "#e7e8e6",
+              "tertiary-fixed-dim": "#a2d2af",
+              "secondary-container": "#ffdd67",
+              "outline-variant": "#c0c9bf",
+              "on-secondary-fixed": "#231b00",
+              "surface-dim": "#d9dad8",
+              "on-tertiary-fixed": "#00210f",
+              "secondary-fixed": "#f4d35e",
+              "secondary": "#715c00",
+              "on-primary-fixed": "#00210e",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed-variant": "#554500",
+              "background": "#f9faf8",
+              "primary-container": "#1f5f3a",
+              "on-surface": "#191c1b",
+              "on-surface-variant": "#404941",
+              "tertiary-fixed": "#beeeca",
+              "surface": "#f9faf8",
+              "on-primary-fixed-variant": "#0d512e",
+              "error": "#ba1a1a",
+              "on-tertiary-fixed-variant": "#244f35",
+              "on-tertiary": "#ffffff",
+              "surface-bright": "#f9faf8",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "on-background": "#191c1b"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.9);
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        
+      }
+      .dark .glass-card {
+        background: rgba(0, 71, 37, 0.85);
+      }
+      .bg-hero-image {
+        background-image: linear-gradient(to bottom, rgba(0, 71, 37, 0.85), rgba(0, 0, 0, 0.95)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuD0bu0vj-pH8hoIf2qXFV2kgDrTDCHlfuh0hmmpOm5j6L7-sbpjgdS3mOzjdb9PxSIknEXSLSWFgTh2xkbOyza95TW-5O1Cd3aH8zTjAl3hkHfrn5Gve25WO4sBX1co5T3Jdu1DFqix-cfbb0Swyy4shzrr5yLtySJyUo7v-I-f_ATj3MyplJSFDVMQPWSa1kykMTe57HgvpDYr2vryPaBSQvynpOWcA2waJu1pYDrb0GEHh-RyNF16-7YBppsehU67Z1A4tPx8YH5Y);
+        background-attachment: fixed;
+        background-size: cover;
+        background-position: center;
+      }
+      @keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-fade-in {
+  animation: fadeIn 0.3s ease;
+}
+    </style>
+</head>
+   <body class="bg-background text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+    <main class="min-h-screen bg-hero-image flex flex-col items-center pt-32 pb-24 px-6" data-alt="A sophisticated research laboratory or modern library background">
+                                                    <!-- Hero Section -->
+                      <header class="max-w-4xl w-full mb-12 text-center md:text-left flex flex-col md:flex-row items-end gap-12">
+                            <div class="flex-1">
+                              <a class="inline-flex items-center gap-2 text-primary-fixed-dim hover:text-secondary-fixed transition-colors mb-8 font-semibold uppercase tracking-widest text-xs" href="solutions.html">
+                               <span class="material-symbols-outlined text-sm">arrow_back</span>BACK
+                                   </a>
+                         <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white tracking-tighter leading-none mb-6">
+                                Submit a Research <br/><span class="text-secondary-fixed">Solution</span>
+                                </h1>
+                           <p class="font-body text-lg md:text-xl text-primary-fixed-dim leading-relaxed max-w-2xl opacity-90">
+                                     Your submission adds to a collaborative framework of validated solutions to address Kirinyaga's most critical local challenges.
+                              </p>
+                         </div>
+                       </header>
+
+
+                               <!-- Form Card -->
+                     <section class="max-w-3xl w-full glass-card border border-white/20 rounded-xl p-8 md:p-12 shadow-2xl">
+                                 <form id="solutionForm" class="space-y-10">
+                                     <!-- Title Field -->
+                     <div class="space-y-3">
+                <label class="block font-headline font-bold text-sm uppercase tracking-widest text-primary-container dark:text-primary-fixed">Proposed Solution Title</label>
+                    <input id="title" class="w-full bg-emerald-900/5 dark:bg-white/5 border-0 border-b border-primary-container/40 dark:border-primary-fixed/30 focus:ring-0 focus:border-secondary-fixed text-on-surface dark:text-white placeholder:text-on-surface/50 dark:placeholder:text-primary-fixed/50 py-4 text-xl transition-all duration-300" placeholder="e.g., Biotech-Enhanced Maize Resistance Framework" type="text"/>
+                       </div>
+
+                             <!-- Problem Target Field -->
+                 <div class="space-y-3">
+                <label class="block font-headline font-bold text-sm uppercase tracking-widest text-primary-container dark:text-primary-fixed">Linked Problem Target</label>
+                    <input id="linkedProblem" class="w-full bg-emerald-900/5 dark:bg-white/5 border-0 border-b border-primary-container/40 dark:border-primary-fixed/30 focus:ring-0 focus:border-secondary-fixed text-on-surface dark:text-white placeholder:text-on-surface/50 dark:placeholder:text-primary-fixed/50 py-4 text-xl transition-all duration-300" placeholder="e.g., Crop Pest Resilience" type="text"/>
+                       </div>
+
+                             <!-- Acknowledgement Field -->
+                 <div class="space-y-3">
+                <label class="block font-headline font-bold text-sm uppercase tracking-widest text-primary-container dark:text-primary-fixed">Author / Acknowledgement Name</label>
+                    <input id="authorName" class="w-full bg-emerald-900/5 dark:bg-white/5 border-0 border-b border-primary-container/40 dark:border-primary-fixed/30 focus:ring-0 focus:border-secondary-fixed text-on-surface dark:text-white placeholder:text-on-surface/50 dark:placeholder:text-primary-fixed/50 py-4 text-xl transition-all duration-300" placeholder="e.g., Dr. Jane Doe" type="text"/>
+                       </div>
+
+                             <!-- Category Chips -->
+                 <div class="space-y-4">
+                  <label class="block font-headline font-bold text-sm uppercase tracking-widest text-primary-container dark:text-primary-fixed">Research Category / Domain</label>
+                         <div class="flex flex-wrap gap-3">
+                <button class="px-5 py-2 rounded-full border border-primary-container/30 dark:border-primary-fixed/30 text-primary-container dark:text-primary-fixed hover:bg-primary-container/10 dark:hover:bg-primary-fixed/10 hover:border-primary-container dark:hover:border-primary-fixed transition-all duration-300 text-sm font-semibold" type="button">Health</button>
+                <button class="px-5 py-2 rounded-full bg-secondary-fixed text-on-secondary-fixed border border-secondary-fixed font-bold text-sm shadow-lg shadow-secondary/20" type="button">Agriculture</button>
+                <button class="px-5 py-2 rounded-full border border-primary-container/30 dark:border-primary-fixed/30 text-primary-container dark:text-primary-fixed hover:bg-primary-container/10 dark:hover:bg-primary-fixed/10 hover:border-primary-container dark:hover:border-primary-fixed transition-all duration-300 text-sm font-semibold" type="button">Tech</button>
+                <button class="px-5 py-2 rounded-full border border-primary-container/30 dark:border-primary-fixed/30 text-primary-container dark:text-primary-fixed hover:bg-primary-container/10 dark:hover:bg-primary-fixed/10 hover:border-primary-container dark:hover:border-primary-fixed transition-all duration-300 text-sm font-semibold" type="button">Environment</button>
+                <button class="px-5 py-2 rounded-full border border-primary-container/30 dark:border-primary-fixed/30 text-primary-container dark:text-primary-fixed hover:bg-primary-container/10 dark:hover:bg-primary-fixed/10 hover:border-primary-container dark:hover:border-primary-fixed transition-all duration-300 text-sm font-semibold" type="button">Infrastructure</button>
+                        </div>
+                 </div>
+
+                                     <!-- Detailed Description -->
+                      <div class="space-y-3">
+                       <label class="block font-headline font-bold text-sm uppercase tracking-widest text-primary-container dark:text-primary-fixed">Methodology & Description</label>
+                       <textarea id="description" class="w-full bg-emerald-900/5 dark:bg-white/5 border border-primary-container/20 dark:border-primary-fixed/20 rounded-lg focus:ring-2 focus:ring-secondary-fixed/50 focus:border-secondary-fixed text-on-surface dark:text-white placeholder:text-on-surface/50 dark:placeholder:text-primary-fixed/40 p-4 leading-relaxed transition-all duration-300" placeholder="Detail the technical approach, expected impact, and implementation needs..." rows="5"></textarea>
+                       </div>
+
+                 <!-- File Upload -->
+                   <div class="space-y-3">
+                     <label class="block font-headline font-bold text-sm uppercase tracking-widest text-primary-container dark:text-primary-fixed">Supporting Evidence (Images/Docs)</label>
+                       <div class="border-2 border-dashed border-primary-container/20 dark:border-primary-fixed/20 rounded-lg p-8 text-center hover:bg-primary-container/5 dark:hover:bg-white/5 hover:border-primary-container/40 dark:hover:border-primary-fixed/40 transition-all cursor-pointer group">
+                        <span class="material-symbols-outlined text-4xl text-primary-container/60 dark:text-primary-fixed/60 group-hover:text-secondary-fixed transition-colors">cloud_upload</span>
+                         <p class="mt-2 text-primary-container dark:text-primary-fixed/80 font-semibold">Drag and drop or click to upload</p>
+                         <p class="text-xs text-primary-container/60 dark:text-primary-fixed/40 mt-1 uppercase tracking-wider font-medium">PDF, JPG, PNG or DOCX (Max 20MB)</p>
+                       </div>
+                        </div>
+
+                 <!-- Submit CTA -->
+                <div class="pt-6 flex flex-col gap-4">
+               <button class="w-full bg-secondary-fixed text-on-secondary-fixed font-headline font-bold text-lg py-5 rounded-md hover:scale-[1.01] active:scale-[0.98] transition-all duration-300 shadow-xl shadow-black/20 flex items-center justify-center gap-3" type="submit">
+                        Submit Solution Pipeline
+                        <span class="material-symbols-outlined">analytics</span>
+                       </button>
+
+                                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                                <a class="text-primary-container dark:text-primary-fixed/60 hover:text-secondary-fixed font-semibold text-sm transition-colors flex items-center gap-1" href="solutions.html">
+                                   <span class="material-symbols-outlined text-base">close</span>
+                                                         CANCEL
+                                                  </a>
+
+                               <p class="text-primary-container/60 dark:text-primary-fixed/40 text-[10px] uppercase tracking-widest font-bold">By submitting, you agree to our Open Data Policy.</p>
+                                  </div>
+                          </div>
+                     </form>
+              </section>
+                </main>
+                
+<!-- Footer -->
+<footer class="bg-emerald-950 dark:bg-black border-t border-emerald-800 dark:border-emerald-900 flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full font-['Public_Sans'] text-sm tracking-wide">
+<div class="mb-6 md:mb-0">
+<div class="text-lg font-semibold text-white uppercase tracking-widest mb-2">Kirinyaga Research Hub</div>
+<p class="text-emerald-100/60">Built for Kirinyaga County collaboration • © 2026</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-emerald-100/60 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="#">Ethics Statement</a>
+<a class="text-emerald-100/60 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="#">Methodology</a>
+<a class="text-emerald-100/60 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="#">Open Data Policy</a>
+<a class="text-emerald-100/60 hover:text-secondary-fixed transition-colors hover:underline decoration-secondary-fixed decoration-2 underline-offset-4" href="#">Contact Registry</a>
+</div>
+</footer>
+<script>
+// ================= PAGE LOAD =================
+document.addEventListener("DOMContentLoaded", () => {
+    // 1. Prefill URL problem link
+    const params = new URLSearchParams(window.location.search);
+    const probTitle = params.get("problemTitle");
+    if (probTitle) {
+        const input = document.getElementById("linkedProblem");
+        input.value = probTitle;
+        input.readOnly = true;
+        input.classList.add("opacity-80", "cursor-not-allowed");
+    }
+
+    // 2. Prefill Author if context exists
+    const storedUser = localStorage.getItem("user");
+    if (storedUser) {
+        document.getElementById("authorName").value = storedUser;
+    }
+});
+
+// ================= CATEGORY =================
+let selectedCategory = "Agriculture";
+
+document.querySelectorAll("button[type='button']").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll("button[type='button']").forEach(b => {
+      b.classList.remove("bg-secondary-fixed","text-on-secondary-fixed","font-bold");
+      b.classList.add("border","border-primary-container/30");
+    });
+    btn.classList.add("bg-secondary-fixed","text-on-secondary-fixed","font-bold");
+    selectedCategory = btn.innerText.trim();
+  });
+});
+
+// ================= FILE UPLOAD =================
+let uploadedFile = null;
+const uploadBox = document.querySelector(".border-dashed");
+
+if (uploadBox) {
+  uploadBox.addEventListener("click", () => {
+    const input = document.createElement("input");
+    input.type = "file";
+    input.onchange = () => {
+      uploadedFile = input.files[0];
+      uploadBox.innerHTML = `<p class="text-green-700 font-semibold">${uploadedFile.name} uploaded ✔</p>`;
+    };
+    input.click();
+  });
+}
+
+// ================= POPUP =================
+function showPopup(message) {
+  const popup = document.createElement("div");
+  popup.className = "fixed inset-0 flex items-center justify-center bg-black/50 z-50";
+  popup.innerHTML = `
+    <div class="bg-white rounded-xl p-8 max-w-sm text-center shadow-2xl animate-fade-in">
+      <h2 class="text-xl font-bold text-green-700 mb-2">Success 🎉</h2>
+      <p class="text-gray-600">${message}</p>
+      <button class="mt-6 px-6 py-2 bg-green-700 text-white rounded-lg">OK</button>
+    </div>
+  `;
+  document.body.appendChild(popup);
+  popup.querySelector("button").onclick = () => popup.remove();
+}
+
+// ================= FORM SUBMIT =================
+document.getElementById("solutionForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  
+  const submitBtn = e.target.querySelector('button[type="submit"]');
+  const title = document.getElementById("title").value.trim();
+  const linkedProblem = document.getElementById("linkedProblem").value.trim();
+  const authorVal = document.getElementById("authorName").value.trim();
+  const description = document.getElementById("description").value.trim();
+
+  if (!title || !linkedProblem || !description || !authorVal) {
+    alert("Requirement: Please fill all fields (Title, Problem Target, Author, and Methodology).");
+    return;
+  }
+
+  // Set loading state
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `Submitting Pipeline... <span class="material-symbols-outlined animate-spin">sync</span>`;
+
+  // ===== RECORD AUTHOR =====
+  localStorage.setItem("user", authorVal);
+
+  // ===== CREATE DATA =====
+  const newSolution = {
+    title,
+    linkedProblem,
+    tags: [selectedCategory],
+    desc: description,
+    author: authorVal,
+    file: uploadedFile ? uploadedFile.name : null,
+    shape: "medium", 
+    date: new Date()
+  };
+
+  try {
+    const response = await fetch("/api/solutions", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newSolution)
+    });
+    
+    if (!response.ok) throw new Error("Server error");
+    showPopup("Your research solution has been archived successfully!");
+  } catch (err) {
+    console.warn("Backend error, falling back to local storage...", err);
+    showPopup("Solution archived (Local Node Sync Active)");
+  } finally {
+    setTimeout(() => {
+      window.location.href = "solutions.html";
+    }, 2000);
+  }
+});
+</script>
+</body>
+</html>

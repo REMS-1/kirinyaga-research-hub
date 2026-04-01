@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Kirinyaga Research Hub | The Modern Archivist</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/ai-guide.css">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "cream-yellow": "#FFFBEB",
+              "emerald-scholar": "#022C22",
+              "cream-yellow": "#FFFBEB",
+              "emerald-scholar": "#022C22",
+              "surface-variant": "#e1e3e1",
+              "inverse-primary": "#94d5a6",
+              "on-tertiary": "#ffffff",
+              "on-background": "#191c1b",
+              "on-primary": "#ffffff",
+              "outline": "#707971",
+              "inverse-surface": "#2e3130",
+              "surface-bright": "#f9faf8",
+              "outline-variant": "#c0c9bf",
+              "primary": "#004725",
+              "on-secondary-fixed": "#231b00",
+              "background": "#f9faf8",
+              "surface": "#f9faf8",
+              "on-primary-container": "#95d7a8",
+              "on-secondary": "#ffffff",
+              "primary-fixed": "#aff2c1",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-fixed-dim": "#a2d2af",
+              "tertiary-fixed": "#beeeca",
+              "error": "#ba1a1a",
+              "surface-container-high": "#e7e8e6",
+              "primary-fixed-dim": "#94d5a6",
+              "on-surface": "#191c1b",
+              "on-primary-fixed-variant": "#0d512e",
+              "secondary-container": "#ffdd67",
+              "on-tertiary-container": "#a3d3b0",
+              "on-secondary-container": "#766100",
+              "secondary": "#715c00",
+              "surface-dim": "#d9dad8",
+              "on-error": "#ffffff",
+              "tertiary": "#18442b",
+              "surface-container-low": "#f3f4f2",
+              "secondary-fixed-dim": "#e4c451",
+              "surface-container": "#edeeec",
+              "primary-container": "#1f5f3a",
+              "on-surface-variant": "#404941",
+              "on-tertiary-fixed-variant": "#244f35",
+              "error-container": "#ffdad6",
+              "tertiary-container": "#315c41",
+              "on-tertiary-fixed": "#00210f",
+              "surface-container-highest": "#e1e3e1",
+              "inverse-on-surface": "#f0f1ef",
+              "on-error-container": "#93000a",
+              "on-primary-fixed": "#00210e",
+              "secondary-fixed": "#ffe17a",
+              "surface-tint": "#2b6a44",
+              "on-secondary-fixed-variant": "#554500"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+  @keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-slide {
+  display: flex;
+  width: max-content;
+  animation: slide 30s linear infinite;
+}
+ .animate-slide:hover {
+  animation-play-state: paused;
+}
+
+        .glass-card {
+            background: rgba(252, 255, 216, 0.851);
+              -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+          
+            border: 1px solid rgba(192, 201, 191, 0.15);
+        }
+        .dark .glass-card {
+            background: rgba(1, 62, 19, 0.7);
+            border: 1px solid rgba(3, 74, 23, 0.902);
+            -webkit-backdrop-filter: blur(24px);
+            backdrop-filter: blur(24px);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #004725 0%, #023c1a 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-fixed-custom {
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: transform, opacity;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+          <body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+             <!-- TopNavBar -->
+               <nav id="mainNav" class="sticky top-0 z-[100] w-full bg-white/95 dark:bg-zinc-950/95 backdrop-blur-3xl border-b border-emerald-900/10 dark:border-white/10 transition-all duration-500">
+                 <div class="flex justify-between items-center px-8 py-4 transition-all duration-500 max-w-full" id="navContent">
+                <div class="text-xl font-bold text-emerald-900 dark:text-emerald-50 tracking-tighter font-headline">
+                        Kirinyaga Research Hub
+                        </div>
+                  <!-- Navigation Links -->
+                 <div class="hidden md:flex items-center gap-8 font-headline font-semibold tracking-tight text-emerald-900/70 dark:text-emerald-100/70">
+                   <a class="text-emerald-700 dark:text-amber-400 border-b-2 border-amber-500 pb-1 transition-all duration-300" href="index.html">Home</a>
+                   <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="problems.html">Problems</a>
+                   <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="solutions.html">Solutions</a>
+                   <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="researchers.html">Researchers</a>
+                   <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="funding.html">Funding</a>
+                   <a class="hover:text-emerald-900 dark:hover:text-emerald-50 hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 rounded-lg px-3 py-1 transition-all duration-300" href="students.html">Student Corner</a>
+                 </div>
+                      <!-- Actions -->
+         <div class="flex items-center gap-4">
+         <button id="themeToggle" class="p-2 rounded-full hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 transition-all duration-300">
+               <span class="material-symbols-outlined text-emerald-900 dark:text-emerald-50" id="themeIcon">light_mode</span> </button>
+         <button class="p-2 rounded-full hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 transition-all duration-300">
+               <span class="material-symbols-outlined text-emerald-900 dark:text-emerald-50" data-icon="notifications">notifications</span> </button>
+         <button class="p-2 rounded-full hover:bg-emerald-50/50 dark:hover:bg-emerald-800/50 transition-all duration-300 active:scale-95 duration-200">
+             <span class="material-symbols-outlined text-emerald-900 dark:text-emerald-50" data-icon="account_circle">account_circle</span> </button>
+         </div>
+               </div>
+              </nav>
+
+
+ <main>
+                      <!-- Hero Section -->
+  <section class="relative min-h-[870px] flex items-center overflow-hidden bg-fixed-custom" data-alt="Modern research facility architecture with glass walls" 
+       style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCdmnGjxB1cO99tXGn8nqF7BFHBWk1jqAznnpgZZhcg7ACyXZIeiJRDQWLAhEyewe3oi2k1h1cxoVz_tT82w2Pp6q646UZqGvqWrYvNtJGV_tzozG4ycu7_OYt0NW4uzf5noMcsmF41G_e5biGNzohglkSPru1PH9MwP1qQ6EVReJV73ON1exCZo9ZAObN7S2vC5DgKJPgSR4kk9flQp6PSYRd39GNO8AAYDrW1Y3LTFojKgthFxwZiiFWxiJNOvVWf1lzZQ3xfdc5n');">
+         <div class="absolute inset-0 bg-primary/80 backdrop-brightness-50"></div>
+
+               <div class="relative z-10 w-full max-w-7xl mx-auto px-8 py-24 grid md:grid-cols-12 gap-12">
+                <div class="md:col-span-8 space-y-8">
+                    <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-white leading-[1.1] tracking-tighter">
+                        Innovating for <span class="text-secondary-fixed">Kirinyaga</span> Through Rigorous Inquiry.
+                    </h1>
+                   <p class="text-xl text-white/90 font-body max-w-2xl leading-relaxed">
+                        A centralized ecosystem bridging the gap between local challenges and scholarly excellence. We provide the infrastructure for researchers to solve real-world problems.
+                    </p>
+                  <div class="flex flex-wrap gap-4 pt-4">
+                 <button  id="btnExp" class="bg-primary-fixed text-on-primary-fixed px-8 py-4 rounded-md font-headline font-bold hover:bg-primary-fixed-dim transition-all duration-300 transform hover:scale-[1.02]" >
+                            Explore Research
+                        </button>
+              <button id="btnProp" class="border border-white/30 text-white backdrop-blur-md px-8 py-4 rounded-md font-headline font-bold hover:bg-white/10 transition-all duration-300">
+                            Submit a Problem
+                        </button>
+                  </div>
+             </div>
+                    </div>
+            </section>
+
+              <!-- Mission & Vision (Asymmetric Layout) -->
+         <!-- Mission & Vision (Asymmetric Layout) -->
+         <section class="py-24 bg-emerald-scholar overflow-hidden text-emerald-50">
+             <div class="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-16 items-start">
+                  <div class="space-y-6">
+                  <span class="font-label text-secondary font-bold tracking-widest uppercase text-xs">Our Purpose</span>
+                  <h2 class="font-headline text-4xl font-bold text-primary leading-tight">The Archival Mission</h2>
+                  <p class="text-on-surface-variant leading-relaxed text-lg">
+                        To document, analyze, and resolve the socio-economic and technical challenges of Kirinyaga County by facilitating high-impact collaborative research and knowledge exchange between academia and the community.
+                    </p>
+                 </div>
+
+        <div class="bg-zinc-900/50 p-12 rounded-xl shadow-sm border-l-4 border-amber-500 space-y-6 backdrop-blur-xl">
+          <h3 class="font-headline text-2xl font-bold text-emerald-50">Strategic Vision</h3>
+              <p class="text-on-surface-variant leading-relaxed">
+                        Becoming the premier digital repository and catalyst for intellectual development in the region—where every local problem finds a scholarly solution through a unified ecosystem of data and discovery.
+                    </p>
+                  <a class="inline-flex items-center text-primary font-headline font-bold hover:text-secondary transition-colors group" href="charter.html">
+                        Read Charter
+                        <span class="material-symbols-outlined ml-2 transform group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+                  </a>
+                   </div>
+                 </div>
+           </section>
+
+               <!-- Key Services (Glassmorphism Bento) -->
+            <section class="py-32 bg-surface">
+             <div class="max-w-7xl mx-auto px-8">
+                        <div class="mb-16">
+                        <h2 class="font-headline text-4xl font-bold text-primary tracking-tight">Catalyzing Discovery</h2>
+                        <div class="h-1 w-24 bg-secondary-fixed mt-4"></div>
+                        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 auto-rows-[300px]">
+          <!-- Problem Logging (Large Primary) -->
+          <div class="md:col-span-7 md:row-span-2 glass-card p-10 rounded-3xl flex flex-col justify-between border border-emerald-900/5 hover:border-emerald-500/30 hover:shadow-[0_0_50px_-12px_rgba(16,185,129,0.2)] transition-all duration-700 group cursor-pointer reveal translate-y-8 opacity-0">
+            <div>
+              <div class="w-16 h-16 rounded-2xl bg-emerald-100 dark:bg-emerald-900/50 flex items-center justify-center text-emerald-700 dark:text-emerald-300 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 mb-8">
+                <span class="material-symbols-outlined text-4xl">edit_note</span>
+              </div>
+              <h3 class="font-headline text-3xl font-bold text-emerald-950 dark:text-emerald-50 mb-4 tracking-tight">Problem Logging</h3>
+              <p class="text-on-surface-variant text-lg leading-relaxed max-w-md">
+                Identify and submit regional bottlenecks. From agricultural yields to urban planning, your observations drive our research agenda.
+              </p>
+            </div>
+            <div class="flex items-center gap-4 pt-6 border-t border-emerald-900/10">
+              <span class="bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full">Community Driven</span>
+              <span class="material-symbols-outlined ml-auto text-emerald-900/30 group-hover:translate-x-2 group-hover:text-emerald-600 transition-all">arrow_forward</span>
+            </div>
+          </div>
+          <!-- Research Collaboration (Medium Top) -->
+          <div class="md:col-span-5 md:row-span-1 glass-card p-8 rounded-3xl border border-emerald-900/5 hover:border-emerald-500/30 hover:shadow-[0_0_50px_-12px_rgba(16,185,129,0.2)] transition-all duration-700 group cursor-pointer reveal translate-y-8 opacity-0" style="transition-delay: 100ms;">
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 shrink-0 rounded-xl bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-700 group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-2xl">groups</span>
+              </div>
+              <div>
+                <h3 class="font-headline text-xl font-bold text-emerald-950 dark:text-emerald-50 mb-2">Researcher Sync</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed">
+                  Join multidisciplinary teams. We match expertise with field data to create robust, peer-reviewed solutions.
+                </p>
+              </div>
+            </div>
+          </div>          <!-- Interactive Data (Medium Bottom) -->
+          <div class="md:col-span-5 md:row-span-1 glass-card p-8 rounded-3xl border border-emerald-900/5 hover:border-emerald-500/30 hover:shadow-[0_0_50px_-12px_rgba(16,185,129,0.2)] transition-all duration-700 group cursor-pointer reveal translate-y-8 opacity-0" style="transition-delay: 200ms;">
+            <div class="flex gap-6 items-start">
+              <div class="w-12 h-12 shrink-0 rounded-xl bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-700 group-hover:scale-110 transition-all">
+                <span class="material-symbols-outlined text-2xl">query_stats</span>
+              </div>
+              <div>
+                <h3 class="font-headline text-xl font-bold text-emerald-950 dark:text-emerald-50 mb-2">Live Density Map</h3>
+                <p class="text-on-surface-variant text-sm leading-relaxed">
+                  Analyze real-time heatmaps of scholarly activity across Kirinyaga's sub-counties.
+                </p>
+              </div>
+            </div>
+          </div>
+
+         </section>
+         
+
+</div>
+</div>
+</section>
+
+
+
+
+<!-- County Research Impact Map -->
+<section id="researchMapSection" class="py-24 bg-white dark:bg-emerald-950/20 reveal">
+    <div class="max-w-7xl mx-auto px-8 grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Content -->
+        <div class="space-y-6">
+            <span class="font-label text-secondary font-bold tracking-widest uppercase text-xs">Localized Insights</span>
+            <h2 class="font-headline text-4xl font-bold text-primary dark:text-emerald-50 tracking-tight">County Research Density</h2>
+            <p class="text-on-surface-variant dark:text-emerald-100/70 leading-relaxed text-lg font-body">
+                Visualizing the concentration of research inquiries across Kirinyaga's sub-counties. Hover over a region to discover local research pockets and active solution pipelines.
+            </p>
+            <div id="mapLegend" class="flex items-center gap-4 text-[10px] font-black uppercase tracking-widest text-emerald-900/50 dark:text-emerald-50/50">
+                <span>Low Activity</span>
+                <div class="h-2 w-32 bg-gradient-to-r from-emerald-50 to-emerald-900 rounded-full border border-emerald-900/10"></div>
+                <span>High Impact</span>
+            </div>
+        </div>
+        <!-- SVG Map Container -->
+        <div class="relative glass-card p-12 rounded-[40px] overflow-hidden border-0 shadow-2xl bg-emerald-50/30 dark:bg-emerald-900/10">
+            <svg viewBox="0 0 400 450" class="w-full h-auto drop-shadow-2xl">
+                <!-- Gichugu -->
+                <path id="map-gichugu" d="M220,100 L320,80 L350,180 L250,220 Z" class="fill-emerald-100 dark:fill-emerald-900/50 stroke-white dark:stroke-emerald-800 stroke-2 cursor-pointer transition-all duration-500 hover:brightness-110" />
+                <!-- Central -->
+                <path id="map-central" d="M150,120 L220,100 L250,220 L180,240 Z" class="fill-emerald-100 dark:fill-emerald-900/50 stroke-white dark:stroke-emerald-800 stroke-2 cursor-pointer transition-all duration-500 hover:brightness-110" />
+                <!-- Ndia -->
+                <path id="map-ndia" d="M50,150 L150,120 L180,240 L80,280 Z" class="fill-emerald-100 dark:fill-emerald-900/50 stroke-white dark:stroke-emerald-800 stroke-2 cursor-pointer transition-all duration-500 hover:brightness-110" />
+                <!-- Mwea -->
+                <path id="map-mwea" d="M80,280 L180,240 L250,220 L350,180 L380,350 L200,420 L50,380 Z" class="fill-emerald-100 dark:fill-emerald-900/50 stroke-white dark:stroke-emerald-800 stroke-2 cursor-pointer transition-all duration-500 hover:brightness-110" />
+            </svg>
+            <!-- Tooltip -->
+            <div id="mapTooltip" class="absolute hidden bg-emerald-950 text-white p-4 rounded-xl text-xs font-bold shadow-2xl pointer-events-none z-50 border border-amber-500/30 backdrop-blur-md">
+                <div id="tooltipName" class="text-amber-500 uppercase tracking-widest mb-1 font-black">Region</div>
+                <div id="tooltipStats" class="opacity-80 font-body">Active Research: 0</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="relative py-24 bg-fixed-custom" data-alt="Interior of a modern high-tech laboratory" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCNqTQ85wf-83UH-u4VniLlw6nUSz9wVUpiFu_Jli2jB89sU8mSs6Ma4rH-KgFcBiVnBOpUQJK8CIJX832woMkxGz4pTszZJl1TVGBdPZVrzIAppX5toZkktXdjqEZdBYAfY57u4hnD-tavNzLk-GQz2PfTfPRqJYCikgwf26vIRtPAo27eQ4U71vNOR6cVyfbif6pxHpjKKBbI5KHCkjpcvj_xi1HCq1eygxfU6Bn4Nv8ahp3KJSc9fvltJLt7wOPmkfWBSPQXy4Yi');">
+           <div class="absolute inset-0 bg-primary/90"></div>
+                    <div class="relative z-10 max-w-5xl mx-auto px-8 text-center text-white space-y-8">
+                      <h2 class="font-headline text-4xl md:text-5xl font-bold tracking-tight">Ready to contribute to the county's future?</h2>
+                        <p class="text-xl opacity-90 max-w-2xl mx-auto font-body">
+                           Join other active researchers and community members who are currently working on transformative projects for change.
+                               </p>
+                        <div class="flex flex-col sm:flex-row justify-center gap-6 pt-4">
+                <button class="bg-secondary-fixed text-on-secondary-fixed px-10 py-4 rounded-md font-headline font-bold hover:bg-secondary-fixed-dim transition-all duration-300">Join the Network</button>
+                <button class="bg-transparent border-2 border-white/50 text-white px-10 py-4 rounded-md font-headline font-bold hover:bg-white/10 transition-all duration-300">Contact Advisory</button>
+                       </div>
+                       </div>
+            </section>
+         
+
+
+<!-- Partner Section (Auto Logo Slider) -->
+<section class="py-24 bg-surface-container-high overflow-hidden reveal">
+  <div class="max-w-7xl mx-auto px-8">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <span class="font-label text-secondary font-bold tracking-widest uppercase text-xs">
+        Coalition of Excellence
+      </span>
+      <h2 class="font-headline text-3xl font-bold text-primary dark:text-emerald-50 mt-4">
+        Partner Institutions & Stakeholders
+      </h2>
+    </div>
+
+    <!-- Slider -->
+    <div class="relative overflow-hidden">
+      <div class="flex gap-12 items-center animate-slide">
+
+        <!-- Partner -->
+        <div class="min-w-[180px] text-center">
+          <img src="images/kiriyagacountylogo.jpeg" alt="Kirinyaga County Logo" class="h-14 mx-auto object-contain mb-2">
+          <p class="text-xs text-primary/70 font-semibold">Kirinyaga County</p>
+        </div>
+
+        <div class="min-w-[180px] text-center">
+          <img src="images/kyu_logo2.png" alt="Kirinyaga University Logo" class="h-14 mx-auto object-contain mb-2">
+          <p class="text-xs text-primary/70 font-semibold">Kirinyaga University</p>
+        </div>
+
+        <div class="min-w-[180px] text-center">
+          <img src="images/nrf.jpg" alt="National Research Fund Logo" class="h-14 mx-auto object-contain mb-2">
+          <p class="text-xs text-primary/70 font-semibold">National Research Fund</p>
+        </div>
+
+        <div class="min-w-[180px] text-center">
+          <img src="images/logo_nacosti.jpg" alt="NACOSTI Logo" class="h-14 mx-auto object-contain mb-2">
+          <p class="text-xs text-primary/70 font-semibold">NACOSTI</p>
+        </div>
+
+        <!-- DUPLICATE (for infinite scroll effect) -->
+        <div class="min-w-[180px] text-center">
+          <img src="images/kiriyagacountylogo.jpeg" alt="Kirinyaga County Logo" class="h-14 mx-auto object-contain mb-2">
+          <p class="text-xs text-primary/70 font-semibold">Kirinyaga County</p>
+        </div>
+
+        <div class="min-w-[180px] text-center">
+          <img src="images/kyu_logo2.png" alt="Kirinyaga University Logo" class="h-14 mx-auto object-contain mb-2">
+          <p class="text-xs text-primary/70 font-semibold">Kirinyaga University</p>
+        </div>
+
+        <div class="min-w-[180px] text-center">
+          <img src="images/nrf.jpg" alt="National Research Fund Logo" class="h-14 mx-auto object-contain mb-2">
+          <p class="text-xs text-primary/70 font-semibold">National Research Fund</p>
+        </div>
+
+        <div class="min-w-[180px] text-center">
+          <img src="images/logo_nacosti.jpg" alt="NACOSTI Logo" class="h-14 mx-auto object-contain mb-2">
+          <p class="text-xs text-primary/70 font-semibold">NACOSTI</p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+   </main>
+
+
+                 <!-- Footer -->
+<footer class="w-full mt-24 bg-emerald-950 text-emerald-50/70 py-16 border-t border-emerald-900/30">
+    <div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-sm">
+        <!-- Brand Section -->
+        <div class="space-y-6">
+            <div class="text-2xl font-black text-white tracking-tighter">Kirinyaga Research Hub</div>
+            <p class="leading-relaxed opacity-80">
+                Empowering researchers through localized county challenges and scholarly discovery. We bridge the gap between community needs and academic excellence.
+            </p>
+            <div class="flex gap-4">
+                <a href="#" class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center hover:bg-emerald-800 hover:text-white transition-all">
+                    <span class="material-symbols-outlined text-[20px]">share</span>
+                </a>
+                <a href="#" class="w-10 h-10 rounded-full border border-emerald-800 flex items-center justify-center hover:bg-emerald-800 hover:text-white transition-all">
+                    <span class="material-symbols-outlined text-[20px]">database</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-6">
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs">Research Ecosystem</h4>
+            <ul class="space-y-3 font-semibold">
+                <li><a href="problems.html" class="hover:text-amber-500 transition-colors">Problem Board</a></li>
+                <li><a href="solutions.html" class="hover:text-amber-500 transition-colors">Solution Repository</a></li>
+                <li><a href="researchers.html" class="hover:text-amber-500 transition-colors">Our Network</a></li>
+            </ul>
+        </div>
+
+        <!-- Institutional -->
+        <div class="space-y-6">
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs">Governance</h4>
+            <ul class="space-y-3 font-semibold">
+                <li><a href="charter.html" class="hover:text-amber-500 transition-colors">The Charter</a></li>
+                <li><a href="funding.html" class="hover:text-amber-500 transition-colors">Funding Hub</a></li>
+                <li><a href="privacy.html" class="hover:text-amber-500 transition-colors">Data Privacy</a></li>
+            </ul>
+        </div>
+
+        <!-- Newsletter -->
+        <div class="space-y-6">
+            <h4 class="text-white font-bold uppercase tracking-widest text-xs">Stay Informed</h4>
+            <div class="relative">
+                <input type="email" placeholder="Researcher Email" class="w-full bg-emerald-900/50 border-0 focus:ring-1 focus:ring-amber-500 rounded-lg p-4 text-sm text-white placeholder-emerald-100/30">
+                <button class="absolute right-2 top-2 bottom-2 bg-amber-500 text-emerald-950 px-4 rounded font-black hover:bg-amber-400 transition-colors">
+                    <span class="material-symbols-outlined text-[20px]">mail</span>
+                </button>
+            </div>
+            <p class="text-[11px] font-bold text-emerald-500 italic">Join to make Kirinyaga a better place.</p>
+        </div>
+    </div>
+    
+    <div class="max-w-7xl mx-auto px-8 mt-16 pt-8 border-t border-emerald-900/50 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] font-bold uppercase tracking-tighter opacity-60 hover:opacity-100 transition-opacity">
+        <p>© 2026 Kirinyaga Research Hub — The Modern Archivist Initiative</p>
+        <div class="flex gap-8">
+            <a href="#" class="hover:text-white transition-colors">Terms of Inquiry</a>
+            <a href="contact.html" class="hover:text-white transition-colors">Registry Support</a>
+        </div>
+    </div>
+</footer>
+<script>
+// ===== TOAST =====
+function showToast(message) {
+    const toast = document.createElement("div");
+    toast.innerText = message;
+    toast.className = "fixed bottom-6 right-6 bg-emerald-900 text-white px-6 py-3 rounded-lg shadow-lg z-50 animate-fade-in";
+    document.body.appendChild(toast);
+    setTimeout(() => toast.remove(), 3000);
+}
+
+// ===== WAIT FOR PAGE LOAD =====
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ===== BUTTON ACTIONS =====
+    document.querySelectorAll("button").forEach(btn => {
+        const text = btn.innerText.trim();
+
+        if (text.includes("Explore Research")) {
+            btn.onclick = () => window.location.href = "solutions.html";
+        }
+
+        if (text.includes("Submit a Problem")) {
+            btn.onclick = () => window.location.href = "logprob.html";
+        }
+
+        if (text.includes("Join the Network")) {
+            btn.onclick = () => {
+                showToast("Redirecting...");
+                setTimeout(() => window.location.href = "register.html", 1000);
+            };
+        }
+
+        if (text.includes("Contact Advisory")) {
+            btn.onclick = () => {
+                showToast("Opening contact...");
+                setTimeout(() => window.location.href = "contact.html", 1000);
+            };
+        }
+    });
+
+    // ===== NOTIFICATIONS =====
+    const notificationBtn = document.querySelector("[data-icon='notifications']");
+    if (notificationBtn) {
+        notificationBtn.onclick = () => showToast("No new notifications");
+    }
+
+    // ===== ACCOUNT LOGIN =====
+    const accountBtn = document.querySelector("[data-icon='account_circle']");
+    if (accountBtn) {
+        accountBtn.onclick = () => {
+            let user = localStorage.getItem("user");
+
+            if (user) {
+                showToast("Welcome back " + user);
+            } else {
+                const name = prompt("Enter your name:");
+                if (name) {
+                    localStorage.setItem("user", name);
+                    showToast("Logged in as " + name);
+                }
+            }
+        };
+    }
+
+    // ===== NEWSLETTER =====
+    const emailInput = document.querySelector("input[type='email']");
+    const subscribeBtn = emailInput?.nextElementSibling;
+
+    if (subscribeBtn) {
+        subscribeBtn.onclick = () => {
+            const email = emailInput.value.trim();
+
+            if (!email || !email.includes("@")) {
+                showToast("Invalid email");
+                return;
+            }
+
+            let subs = JSON.parse(localStorage.getItem("subs")) || [];
+            subs.push(email);
+            localStorage.setItem("subs", JSON.stringify(subs));
+
+            emailInput.value = "";
+            showToast("Subscribed 🎉");
+        };
+    }
+
+    // ===== DARK MODE TOGGLE =====
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "d") {
+            document.documentElement.classList.toggle("dark");
+            showToast("Dark mode toggled");
+        }
+    });
+
+    // ===== 🌔 THEME TOGGLE =====
+    const themeToggle = document.getElementById("themeToggle");
+    const themeIcon = document.getElementById("themeIcon");
+    
+    if (localStorage.getItem("theme") === "dark") {
+        document.documentElement.classList.add("dark");
+        if(themeIcon) themeIcon.innerText = "dark_mode";
+    }
+
+    if (themeToggle) {
+        themeToggle.onclick = () => {
+            document.documentElement.classList.toggle("dark");
+            const isDark = document.documentElement.classList.contains("dark");
+            if(themeIcon) themeIcon.innerText = isDark ? "dark_mode" : "light_mode";
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            showToast(`Theme: ${isDark ? 'Night' : 'Day'}`);
+        };
+    }
+
+    // ===== 📜 SCROLL DYNAMICS =====
+    window.onscroll = () => {
+        const nav = document.getElementById("mainNav");
+        const navContent = document.getElementById("navContent");
+        if (window.scrollY > 50) {
+            nav.classList.add("shadow-xl", "py-2");
+            nav.classList.remove("py-4");
+            navContent.classList.add("py-2");
+            navContent.classList.remove("py-4");
+        } else {
+            nav.classList.remove("shadow-xl", "py-2");
+            nav.classList.add("py-4");
+            navContent.classList.remove("py-2");
+            navContent.classList.add("py-4");
+        }
+    };
+
+    // ===== 🗺️ INTERACTIVE RESEARCH MAP =====
+    async function initMap() {
+        try {
+            const res = await fetch('/api/problems');
+            const problems = await res.json();
+            
+            const regionData = {
+                'Mwea': 0,
+                'Gichugu': 0,
+                'Ndia': 0,
+                'Central': 0
+            };
+            
+            problems.forEach(p => {
+                const loc = p.location?.toLowerCase() || '';
+                if (loc.includes('mwea')) regionData['Mwea']++;
+                else if (loc.includes('gichugu')) regionData['Gichugu']++;
+                else if (loc.includes('ndia')) regionData['Ndia']++;
+                else if (loc.includes('central')) regionData['Central']++;
+            });
+            
+            const max = Math.max(...Object.values(regionData)) || 1;
+            const regions = { 
+                'Mwea': 'map-mwea', 'Gichugu': 'map-gichugu', 
+                'Ndia': 'map-ndia', 'Central': 'map-central' 
+            };
+            
+            Object.keys(regions).forEach(name => {
+                const id = regions[name];
+                const el = document.getElementById(id);
+                if (!el) return;
+                
+                const count = regionData[name];
+                const intensity = (count / max);
+                
+                // Heatmap Color: Emerald 50 (light) to Emerald 900 (dark)
+                const r = Math.round(236 + (6 - 236) * intensity);
+                const g = Math.round(253 + (78 - 253) * intensity);
+                const b = Math.round(245 + (59 - 245) * intensity);
+                el.style.fill = `rgb(${r},${g},${b})`;
+                
+                el.onmouseenter = (e) => {
+                    const tooltip = document.getElementById('mapTooltip');
+                    document.getElementById('tooltipName').innerText = name + " Region";
+                    document.getElementById('tooltipStats').innerText = `${count} Research Inquiries`;
+                    tooltip.classList.remove('hidden');
+                    el.style.strokeWidth = "4px";
+                    el.style.stroke = "#f59e0b"; // Amber highlight
+                };
+                
+                el.onmousemove = (e) => {
+                    const tooltip = document.getElementById('mapTooltip');
+                    tooltip.style.left = (e.clientX + 20) + 'px';
+                    tooltip.style.top = (e.clientY - 40) + 'px';
+                    tooltip.style.position = 'fixed';
+                };
+
+                el.onmouseleave = () => {
+                    document.getElementById('mapTooltip').classList.add('hidden');
+                    el.style.strokeWidth = "2px";
+                    el.style.stroke = document.documentElement.classList.contains('dark') ? "#064e3b" : "white";
+                };
+            });
+        } catch(e) { console.error("Map initialization failed:", e); }
+    }
+    initMap();
+
+    // ===== ✨ REVEAL ANIMATIONS =====
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: "0px 0px -50px 0px"
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                revealObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+});
+</script>
+    <script src="js/ai-guide.js"></script>
+</body>
+</html>

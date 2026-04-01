@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Eligibility | Kirinyaga Research Hub</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#aff2c1",
+              "secondary-fixed": "#ffe17a",
+              "on-tertiary": "#ffffff",
+              "on-tertiary-fixed": "#00210f",
+              "on-error-container": "#93000a",
+              "error-container": "#ffdad6",
+              "on-primary-fixed": "#00210e",
+              "tertiary-fixed-dim": "#a2d2af",
+              "surface-container-low": "#f3f4f2",
+              "inverse-primary": "#94d5a6",
+              "on-surface-variant": "#404941",
+              "secondary": "#715c00",
+              "outline": "#707971",
+              "primary": "#004725",
+              "surface-container": "#edeeec",
+              "secondary-container": "#ffdd67",
+              "on-secondary-container": "#766100",
+              "tertiary-container": "#315c41",
+              "inverse-on-surface": "#f0f1ef",
+              "surface": "#f9faf8",
+              "primary-fixed-dim": "#94d5a6",
+              "secondary-fixed-dim": "#e4c451",
+              "surface-bright": "#f9faf8",
+              "on-background": "#191c1b",
+              "on-surface": "#191c1b",
+              "surface-container-high": "#e7e8e6",
+              "background": "#f9faf8",
+              "tertiary": "#18442b",
+              "primary-container": "#1f5f3a",
+              "on-error": "#ffffff",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-highest": "#e1e3e1",
+              "outline-variant": "#c0c9bf",
+              "surface-dim": "#d9dad8",
+              "on-secondary-fixed": "#231b00",
+              "on-secondary": "#ffffff",
+              "surface-tint": "#2b6a44",
+              "on-tertiary-fixed-variant": "#244f35",
+              "on-primary": "#ffffff",
+              "on-tertiary-container": "#a3d3b0",
+              "on-primary-container": "#95d7a8",
+              "on-secondary-fixed-variant": "#554500",
+              "tertiary-fixed": "#beeeca",
+              "inverse-surface": "#2e3130",
+              "error": "#ba1a1a",
+              "on-primary-fixed-variant": "#0d512e",
+              "surface-variant": "#e1e3e1"
+            },
+            fontFamily: {
+              "headline": ["Manrope"],
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            letter-spacing: normal;
+            word-wrap: normal;
+            white-space: nowrap;
+            direction: ltr;
+        }
+        .glass-header {
+            background: rgba(0, 71, 37, 0.6);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-emerald-950/60 backdrop-blur-xl flex justify-between items-center px-8 h-20 max-w-full shadow-[0_16px_32px_rgba(0,71,37,0.06)]">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tighter text-emerald-50 font-['Manrope']">Kirinyaga Research Hub</span>
+</div>
+</header>
+
+<!-- Main Content -->
+<main class="lg:ml-64 pt-32 pb-24 px-6 md:px-12 lg:px-24">
+<div class="max-w-4xl mx-auto">
+<!-- Breadcrumbs / Action Bar -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-12">
+<button class="flex items-center gap-2 text-primary font-semibold hover:underline decoration-secondary-fixed decoration-2 underline-offset-4">
+<span class="material-symbols-outlined">arrow_back</span>
+<span>Back to Funding</span>
+</button>
+<div class="flex items-center gap-3">
+<span class="text-label-md text-stone-400 mr-2 uppercase tracking-widest text-[10px]">Share eligibility:</span>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-primary hover:bg-primary-fixed-dim transition-colors" title="WhatsApp">
+<span class="material-symbols-outlined">chat</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-primary hover:bg-primary-fixed-dim transition-colors" title="LinkedIn">
+<span class="material-symbols-outlined">work</span>
+</button>
+<button class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low text-primary hover:bg-primary-fixed-dim transition-colors" title="Email">
+<span class="material-symbols-outlined">mail</span>
+</button>
+<div class="w-px h-6 bg-stone-200 mx-1"></div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full border border-outline-variant text-stone-600 hover:bg-stone-100 transition-colors" title="Print Page">
+<span class="material-symbols-outlined">print</span>
+</button>
+</div>
+</div>
+<!-- Header Section -->
+<section class="mb-16">
+<div class="mb-2 inline-block px-3 py-1 bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold tracking-widest uppercase rounded">Research Policy 2024</div>
+<h1 class="text-4xl md:text-6xl font-headline font-extrabold tracking-tighter text-primary leading-tight mb-6">
+                    Eligibility Framework for <br class="hidden md:block"/> Institutional Grants
+                </h1>
+<p class="text-xl text-stone-600 font-body leading-relaxed max-w-2xl">
+                    Our grants support groundbreaking research that aligns with the sustainable development goals of the Kirinyaga region and the broader academic community.
+                </p>
+</section>
+<!-- Eligibility Grid -->
+<div class="grid gap-12">
+<!-- Who is Eligible -->
+<article class="p-8 md:p-12 bg-white rounded-xl shadow-[0_16px_32px_rgba(0,71,37,0.06)] border-l-4 border-primary">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-primary-fixed-dim flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<h2 class="text-2xl md:text-3xl font-headline font-bold text-primary">Who is Eligible</h2>
+</div>
+<ul class="space-y-6 text-stone-700 font-body text-lg">
+<li class="flex items-start gap-4">
+<span class="w-2 h-2 mt-2.5 rounded-full bg-secondary shrink-0"></span>
+<span>Full-time faculty members at recognized institutions with a proven track record of scholarly publication.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="w-2 h-2 mt-2.5 rounded-full bg-secondary shrink-0"></span>
+<span>Doctoral candidates in their final year of study, provided they have an institutional endorsement.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="w-2 h-2 mt-2.5 rounded-full bg-secondary shrink-0"></span>
+<span>Independent researchers with a minimum of 5 years of specialized experience in their respective fields.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="w-2 h-2 mt-2.5 rounded-full bg-secondary shrink-0"></span>
+<span>Registered Non-Profit Organizations (NGOs) focused on regional socioeconomic research.</span>
+</li>
+</ul>
+</article>
+<!-- Ineligibility Criteria -->
+<article class="p-8 md:p-12 bg-stone-50 rounded-xl border border-stone-100">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined">block</span>
+</div>
+<h2 class="text-2xl md:text-3xl font-headline font-bold text-on-surface">Ineligibility Criteria</h2>
+</div>
+<div class="grid md:grid-cols-2 gap-8">
+<div class="space-y-4">
+<h3 class="font-headline font-bold text-primary text-sm uppercase tracking-widest">Operational Exclusions</h3>
+<ul class="space-y-3 text-stone-600 font-body">
+<li>Current employees of the Kirinyaga Research Hub.</li>
+<li>Researchers with outstanding technical reports from previous grants.</li>
+<li>For-profit commercial entities and private firms.</li>
+</ul>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline font-bold text-primary text-sm uppercase tracking-widest">Project Exclusions</h3>
+<ul class="space-y-3 text-stone-600 font-body">
+<li>Projects lacking a clear regional impact or data.</li>
+<li>Research that duplicates existing government-funded studies.</li>
+<li>Capital expenditure requests unrelated to research.</li>
+</ul>
+</div>
+</div>
+</article>
+<!-- How to Determine -->
+<article class="p-8 md:p-12 bg-primary-container text-white rounded-xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-20 -mt-20"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-4 mb-8">
+<div class="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
+<span class="material-symbols-outlined">analytics</span>
+</div>
+<h2 class="text-2xl md:text-3xl font-headline font-bold">How to Determine Eligibility</h2>
+</div>
+<p class="mb-10 text-emerald-50 text-lg max-w-2xl leading-relaxed">
+                            Before beginning your application, use our self-assessment tool to ensure your project meets the baseline requirements for the current funding cycle.
+                        </p>
+<div class="grid md:grid-cols-3 gap-6 mb-8">
+<div class="p-5 bg-white/10 rounded-lg border border-white/10">
+<span class="text-secondary-fixed font-bold text-2xl block mb-2">01</span>
+<h4 class="font-bold mb-2">Check Domain</h4>
+<p class="text-xs text-emerald-100/70">Ensure your topic falls within the Hub’s priorities.</p>
+</div>
+<div class="p-5 bg-white/10 rounded-lg border border-white/10">
+<span class="text-secondary-fixed font-bold text-2xl block mb-2">02</span>
+<h4 class="font-bold mb-2">Status Audit</h4>
+<p class="text-xs text-emerald-100/70">Verify your academic or institutional standing.</p>
+</div>
+<div class="p-5 bg-white/10 rounded-lg border border-white/10">
+<span class="text-secondary-fixed font-bold text-2xl block mb-2">03</span>
+<h4 class="font-bold mb-2">Impact Review</h4>
+<p class="text-xs text-emerald-100/70">Evaluate the potential for regional advancement.</p>
+</div>
+</div>
+<button class="px-8 py-4 bg-secondary-fixed text-on-secondary-fixed font-bold rounded-md hover:scale-105 transition-transform">Start Self-Assessment</button>
+</div>
+</article>
+</div>
+<!-- Footer Quote -->
+<footer class="mt-24 text-center border-t border-stone-200 pt-16">
+<p class="font-headline italic text-2xl text-stone-400 max-w-3xl mx-auto leading-relaxed">
+                    "Rigorous research is the bedrock of societal evolution. We ensure only the most promising inquiries receive the stewardship they deserve."
+                </p>
+<p class="mt-6 text-stone-500 font-bold uppercase tracking-widest text-xs">— Board of Governance, Kirinyaga Research Hub</p>
+</footer>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 pb-safe bg-emerald-900/90 backdrop-blur-2xl text-emerald-200/60 z-50 rounded-t-3xl shadow-2xl">
+<button class="flex flex-col items-center justify-center p-2">
+<span class="material-symbols-outlined" data-icon="monetization_on">monetization_on</span>
+<span class="text-[10px] font-medium font-['Public_Sans']">Funding</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-emerald-800 text-yellow-400 rounded-xl p-2">
+<span class="material-symbols-outlined" data-icon="verified">verified</span>
+<span class="text-[10px] font-medium font-['Public_Sans']">Eligibility</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="text-[10px] font-medium font-['Public_Sans']">Alerts</span>
+</button>
+<button class="flex flex-col items-center justify-center p-2">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="text-[10px] font-medium font-['Public_Sans']">Profile</span>
+</button>
+</nav>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    // ================= BACK BUTTON =================
+    const backBtn = document.querySelector("[data-action='back']");
+    if (backBtn) {
+        backBtn.addEventListener("click", () => {
+            window.location.href = "funding.html";
+        });
+    }
+
+    // ================= SHARE =================
+    const pageUrl = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent("Check out this Research Eligibility Framework");
+
+    document.querySelector("[data-share='whatsapp']")?.addEventListener("click", () => {
+        window.open(`https://wa.me/?text=${text}%20${pageUrl}`, "_blank");
+    });
+
+    document.querySelector("[data-share='linkedin']")?.addEventListener("click", () => {
+        window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`, "_blank");
+    });
+
+    document.querySelector("[data-share='email']")?.addEventListener("click", () => {
+        window.location.href = `mailto:?subject=Research Eligibility&body=${text}%20${pageUrl}`;
+    });
+
+    document.querySelector("[data-action='print']")?.addEventListener("click", () => {
+        window.print();
+    });
+
+    // ================= SELF ASSESSMENT =================
+    const assessBtn = document.querySelector("[data-action='assessment']");
+    if (assessBtn) {
+        assessBtn.addEventListener("click", showAssessmentForm);
+    }
+
+});
+
+function showAssessmentForm() {
+    const modal = document.createElement("div");
+    modal.className = "fixed inset-0 bg-black/60 flex items-center justify-center z-50";
+
+    modal.innerHTML = `
+        <div class="bg-white p-6 rounded-xl max-w-md w-full space-y-4">
+            <h2 class="text-xl font-bold">Eligibility Self-Assessment</h2>
+
+            <select id="role" class="w-full border p-2 rounded">
+                <option value="">Select your role</option>
+                <option>Student</option>
+                <option>Researcher</option>
+                <option>Lecturer</option>
+                <option>NGO</option>
+            </select>
+
+            <input id="experience" type="number" placeholder="Years of Experience" class="w-full border p-2 rounded"/>
+
+            <select id="impact" class="w-full border p-2 rounded">
+                <option value="">Project has regional impact?</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+
+            <div class="flex justify-between mt-4">
+                <button id="closeModal" class="px-4 py-2 bg-gray-300 rounded">Cancel</button>
+                <button id="submitAssessment" class="px-4 py-2 bg-primary text-white rounded">Check</button>
+            </div>
+        </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    modal.querySelector("#closeModal").onclick = () => modal.remove();
+
+    modal.querySelector("#submitAssessment").onclick = () => {
+        const role = document.getElementById("role").value;
+        const exp = parseInt(document.getElementById("experience").value) || 0;
+        const impact = document.getElementById("impact").value;
+
+        let result = "❌ Not Eligible";
+
+        if (
+            (role === "Researcher" && exp >= 5 && impact === "yes") ||
+            (role === "Lecturer" && impact === "yes") ||
+            (role === "NGO" && impact === "yes") ||
+            (role === "Student" && impact === "yes")
+        ) {
+            result = "✅ Eligible for Application";
+        }
+
+        alert(result);
+        modal.remove();
+    };
+}
+</script>
+</body>
+</html>

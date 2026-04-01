@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Researchers | Kirinyaga Research Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/ai-guide.css">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "cream": "#F5F5DC",
+                        "surface-variant": "#e1e3e1",
+                        "inverse-primary": "#94d5a6",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#191c1b",
+                        "on-primary": "#ffffff",
+                        "outline": "#707971",
+                        "inverse-surface": "#2e3130",
+                        "surface-bright": "#f9faf8",
+                        "outline-variant": "#c0c9bf",
+                        "primary": "#1f5f3a",
+                        "on-secondary-fixed": "#231b00",
+                        "background": "#f9faf8",
+                        "surface": "#f9faf8",
+                        "on-primary-container": "#95d7a8",
+                        "on-secondary": "#ffffff",
+                        "primary-fixed": "#aff2c1",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#a2d2af",
+                        "tertiary-fixed": "#beeeca",
+                        "error": "#ba1a1a",
+                        "surface-container-high": "#e7e8e6",
+                        "primary-fixed-dim": "#94d5a6",
+                        "on-surface": "#191c1b",
+                        "on-primary-fixed-variant": "#0d512e",
+                        "secondary-container": "#f4d35e",
+                        "on-tertiary-container": "#a3d3b0",
+                        "on-secondary-container": "#766100",
+                        "secondary": "#715c00",
+                        "surface-dim": "#d9dad8",
+                        "on-error": "#ffffff",
+                        "tertiary": "#18442b",
+                        "surface-container-low": "#f3f4f2",
+                        "secondary-fixed-dim": "#e4c451",
+                        "surface-container": "#edeeec",
+                        "primary-container": "#1f5f3a",
+                        "on-surface-variant": "#404941",
+                        "on-tertiary-fixed-variant": "#244f35",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#315c41",
+                        "on-tertiary-fixed": "#00210f",
+                        "surface-container-highest": "#e1e3e1",
+                        "inverse-on-surface": "#f0f1ef",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed": "#00210e",
+                        "secondary-fixed": "#f4d35e",
+                        "surface-tint": "#2b6a44",
+                        "on-secondary-fixed-variant": "#554500"
+                    },
+                    fontFamily: {
+                        "headline": ["Manrope", "sans-serif"],
+                        "body": ["Public Sans", "sans-serif"],
+                        "label": ["Public Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(245, 245, 220, 0.85);
+            -webkit-backdrop-filter: blur(16px);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            box-shadow: inset 0 0 0 1px rgba(228, 196, 81, 0.1);
+        }
+        .bg-archivist {
+            background-image: linear-gradient(rgba(13, 81, 46, 0.85), rgba(0, 33, 14, 0.95)), url(https://lh3.googleusercontent.com/aida-public/AB6AXuC7CQvVPPNYLKyLDEOWzF91x1Dx5L2TAURcb751AFeMR3twPjHRl-B315ywNCVomvC598MNTKYR45PhGJZPFR5uD0Oip89t5um2bU5vIHyz0MJrdMC0opYv-6OL9Nm5-g08JZIH8cviN9pGvtpC8V0VGsWJJC_h9o74y7LFdBTBwpzFV9VbAieCgKd-MU3zhEnuJc5-KobemdaoOhQS7kUWc_Sz9OZujkpZz5QziPEUhVTag3ASYi9dY3uKnFX5eKV4bR3NTIdXbwPI);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 w-full bg-white/60 dark:bg-emerald-950/60 backdrop-blur-xl border-b border-emerald-900/10 dark:border-emerald-100/10 shadow-sm flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-xl font-bold text-emerald-900 dark:text-emerald-50 tracking-tighter font-headline">
+            Kirinyaga Research Hub
+        </div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-900 dark:hover:text-emerald-50 font-['Manrope'] font-semibold tracking-tight transition-all duration-300" href="index.html">Home</a>
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-900 dark:hover:text-emerald-50 font-['Manrope'] font-semibold tracking-tight transition-all duration-300" href="problems.html">Problems</a>
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-900 dark:hover:text-emerald-50 font-['Manrope'] font-semibold tracking-tight transition-all duration-300" href="solutions.html">Solutions</a>
+<a class="text-emerald-700 dark:text-yellow-400 border-b-2 border-yellow-500 pb-1 font-['Manrope'] font-semibold tracking-tight transition-all duration-300" href="researchers.html">Researchers</a>
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-900 dark:hover:text-emerald-50 font-['Manrope'] font-semibold tracking-tight transition-all duration-300" href="funding.html">Funding</a>
+<a class="text-emerald-900/70 dark:text-emerald-100/70 hover:text-emerald-900 dark:hover:text-emerald-50 font-['Manrope'] font-semibold tracking-tight transition-all duration-300" href="students.html">Student Corner</a>
+</div>
+<div class="flex items-center gap-4 text-emerald-50">
+<button class="material-symbols-outlined p-2 hover:bg-white/5 rounded-full transition-all">notifications</button>
+<button class="material-symbols-outlined p-2 hover:bg-white/5 rounded-full transition-all">account_circle</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-24 pb-20 bg-archivist min-h-screen relative overflow-hidden">
+<!-- Hero Section -->
+<header class="relative z-10 px-8 md:px-12 py-12 lg:py-20 max-w-7xl mx-auto">
+<div class="max-w-4xl">
+<span class="text-secondary-fixed font-headline font-bold tracking-[0.2em] text-xs uppercase block mb-4">The Academic Directory</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-cream tracking-tighter leading-[0.9] mb-8">
+                    Innovators Shaping <br/> <span class="text-secondary-fixed">Kirinyaga's Future</span>
+</h1>
+<p class="text-cream/90 text-xl font-body max-w-2xl leading-relaxed">
+                    Connect with world-class researchers dedicated to solving local challenges through global expertise. From climate resilience to agritech innovation.
+                </p>
+</div>
+</header>
+<!-- Search & Filter Bar -->
+<section class="relative z-10 px-8 md:px-12 max-w-7xl mx-auto mb-16">
+<div class="glass-card p-6 rounded-2xl shadow-2xl flex flex-col md:flex-row gap-6 items-center">
+<div class="relative w-full md:flex-1">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary/60">search</span>
+<input class="w-full pl-12 pr-4 py-4 bg-white/40 border-primary/10 text-primary rounded-xl focus:ring-secondary-fixed focus:border-secondary-fixed placeholder:text-primary/60 font-medium" placeholder="Search by name, expertise, or problem domain..." type="text"/>
+</div>
+<div class="flex gap-4 w-full md:w-auto">
+<select class="bg-white/40 border-primary/10 text-primary font-bold text-xs uppercase tracking-widest rounded-xl py-4 px-6 focus:ring-0 cursor-pointer">
+<option>Specialization</option>
+<option>Agriculture</option>
+<option>Renewable Energy</option>
+<option>Data Science</option>
+</select>
+<button class="bg-primary text-white px-8 py-4 rounded-xl text-xs font-extrabold uppercase tracking-widest hover:bg-emerald-900 transition-all shadow-lg flex items-center gap-2">
+                        Filter <span class="material-symbols-outlined text-sm">filter_list</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Researcher Profiles Bento Grid -->
+<div class="relative z-10 px-8 md:px-12 max-w-7xl mx-auto">
+<div id="researcherGrid" class="grid grid-cols-1 md:grid-cols-12 gap-8">
+  <!-- Researchers will be rendered here via JS -->
+</div>
+</div>
+<!-- Stats Section -->
+<section class="relative z-10 py-20 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
+<div class="p-6">
+<div class="text-5xl font-headline font-extrabold text-secondary-fixed mb-2 drop-shadow-md">500+</div>
+<div class="text-cream uppercase tracking-widest text-[10px] font-black">Target: Expert Researchers</div>
+</div>
+<div class="p-6">
+<div class="text-5xl font-headline font-extrabold text-secondary-fixed mb-2 drop-shadow-md">100+</div>
+<div class="text-cream uppercase tracking-widest text-[10px] font-black">Goal: Resolved Challenges</div>
+</div>
+<div class="p-6">
+<div class="text-5xl font-headline font-extrabold text-secondary-fixed mb-2 drop-shadow-md">18+</div>
+<div class="text-cream uppercase tracking-widest text-[10px] font-black">Strategic Targets</div>
+</div>
+<div class="p-6">
+<div class="text-5xl font-headline font-extrabold text-secondary-fixed mb-2 drop-shadow-md">$2.1M</div>
+<div class="text-cream uppercase tracking-widest text-[10px] font-black">Funding Milestone</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-emerald-950 w-full mt-auto border-t border-emerald-900">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full font-body text-sm tracking-wide">
+<div class="mb-6 md:mb-0">
+<span class="font-headline font-bold text-emerald-50 block mb-1">Kirinyaga Research Hub</span>
+<p class="text-emerald-300/60 text-[11px] uppercase tracking-widest">© 2024 Kirinyaga Research Hub. The Modern Archivist Initiative.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="text-emerald-300/60 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 font-medium" href="#">Ethics Statement</a>
+<a class="text-emerald-300/60 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 font-medium" href="#">Submission Guidelines</a>
+<a class="text-emerald-300/60 hover:text-secondary-fixed transition-colors opacity-80 hover:opacity-100 font-medium" href="#">Privacy Registry</a>
+<a class="text-secondary-fixed font-bold tracking-widest uppercase text-xs opacity-90 hover:opacity-100" href="#">Contact Dean</a>
+</div>
+</div>
+</footer>
+
+<script>
+const fallbackResearchers = [
+    { name: "Dr. Sarah Mwangi", title: "Lead Hydro-Physicist", tags: ["Hydrology", "Sustainability"], desc: "Specializing in sustainable irrigation systems and groundwater mapping across the Kirinyaga basin.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBPJ3pRN4STOzGxqlnCMKa9iM06wOEbjlTZBnrDtTdtfsbj3MjreS5l-4Elp19qTl7XrqaORzId665QdRK1gX-xfzIgFxuOfAwC2fjKGDkCNzTdAfcTckdMQbC1UncnPMSQDxMYjdeUWFJddoh19SjJ9-y3Goq8RSKAKm6WM8lVD0NP0lpHRCUfw4HxqKuT6AdkZUFuQVMc8U5AvBuKGRaRCkSP-eLFyjzaRhJPPFGQcG1cWTOD9lSTMNlV9F104Yu9qpDeK_Ek9qRX", online: true },
+    { name: "Prof. David Kioni", title: "AI in Agriculture", tags: ["AI", "Computer Vision"], desc: "Developing computer vision models for early coffee-rust detection. Connected to Problem ID: #KIR-024.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkOBKbz-LgOa0OkiXoLcwbkNMYccIzHJ0JqyxgqBA8y_fe1TCnhf5FHFw9FqjyzR4GXXKcdYtbIYVxxiBpgINcDigje4zRWlgkSKuF8hrzs0Z-cA5n1HNOyU-IDa2JAtO_oBdxp9WxmSNFWYhBvMjlXF30NMslu9tRTB8-gDEDSt1O2gp4mqOAz5Ip75XkdRr_VkBMT6rosNSTO5kLzhUDi4LV5Fg-N9akETczW1ueRu4HqVwQXDZqY7EB89-YaWmrjleSGpLaZty4", online: false },
+    { name: "Eng. Michael Tanui", title: "Renewable Energy Systems", tags: ["Energy", "Biomass"], desc: "Optimizing biomass energy conversion from macadamia shells. 12 published journals in Afro-energy.", img: "https://lh3.googleusercontent.com/aida-public/AB6AXuAhcfmbdY0BwQXyBANwvZKrJ-2KL7ajIhJKh-SUk5Twd2CjNiKSFmc2_o2O0dQqBeBJWTANUX8HjFzEEHrpayrzMJ23vHbUT304ZnvnnNkOrXZtZxuGIwcorPE5aVU3nnH5QEeJGstTCh0zpK67VjYk9GAFO-PRkA7uOUyw8AccQVRn9REmLbsk4lzqCSb0DN_s2f0bfRYhKvFNLmoo1J6XbbcaiKnAPZf3uArI-tK9HuIpyhg8AizC9a5pw3MSPkU0V7evNA6OXegX", online: true }
+];
+
+let researchers = [];
+
+async function fetchResearchers() {
+    try {
+        const res = await fetch("/api/researchers");
+        if (res.ok) researchers = await res.json();
+    } catch {}
+
+    const userName = localStorage.getItem("userName") || localStorage.getItem("user") || "Rehema (You)";
+    const userRole = localStorage.getItem("userRole") || "Lead Independent Researcher";
+
+    // Inject logged in user as the first (large) profile
+    const currentUserProfile = {
+        name: userName,
+        title: userRole,
+        tags: ["Your Expertise", "Kirinyaga Scholar"],
+        desc: "Your dedicated workspace bridging practical local problems with academic vigor.",
+        img: "https://lh3.googleusercontent.com/aida-public/AB6AXuB4UFM617ehQDPdAPdvrF8bEkaQxma53JUaMIHqAzVdG-5BH2Nn0ez9HAQqWYzgZ1xvwkJyjdHn2wiLia6T2utNhC3G0I48if9rgUHqQNAVwHqNR2hpsMoT3r7VdUvei0ixZGX2Ia3O7QMMXx2XRBB7dQY_v6AwDfWVLqiBL5pXT6TTet4F666UA61piY17oOvcfG14K56gp8oP-qLHIb9M3_gMCWCaGFVkztZlVi3d7YunBqYmc1E58RRNKKBTb7JumR_hwypNe3CH",
+        large: true,
+        online: true,
+        isMe: true
+    };
+    
+    // Add 3 samples
+    researchers = [currentUserProfile, ...researchers, ...fallbackResearchers.slice(0, 3)];
+}
+
+function renderResearchers() {
+    const container = document.getElementById("researcherGrid");
+    container.innerHTML = "";
+
+    researchers.forEach((r, idx) => {
+        const isLarge = r.large || idx === 0;
+        const onlineDot = r.online 
+            ? `<span class="inline-block w-2.5 h-2.5 bg-green-500 rounded-full ring-2 ring-white"></span> <span class="text-[10px] text-green-600 font-bold ml-1">Online</span>` 
+            : `<span class="inline-block w-2.5 h-2.5 bg-gray-400 rounded-full ring-2 ring-white"></span> <span class="text-[10px] text-gray-500 font-bold ml-1">Offline</span>`;
+        
+        const card = document.createElement("div");
+        card.className = (isLarge ? "md:col-span-8 group" : "md:col-span-4 group");
+        
+        let tagsHtml = (r.tags || []).map(t => `<span class="bg-white/40 px-3 py-1 rounded-lg text-[10px] font-bold text-primary border border-primary/5 uppercase tracking-wider">${t}</span>`).join("");
+
+        if (isLarge) {
+            card.innerHTML = `
+                <div class="glass-card rounded-2xl p-8 h-full flex flex-col md:flex-row gap-8 items-center transition-all hover:-translate-y-1">
+                    <div class="w-full md:w-64 h-80 rounded-2xl overflow-hidden flex-shrink-0 shadow-inner border border-white/40 relative">
+                        <img alt="${r.name}" class="w-full h-full object-cover transition-all" src="${r.img}"/>
+                    </div>
+                    <div class="flex-1">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h2 class="text-3xl font-headline font-bold text-primary mb-1 flex items-center gap-3">
+                                    ${r.name}
+                                    <div class="flex items-center bg-white/60 px-2 py-0.5 rounded-full shadow-sm">${onlineDot}</div>
+                                </h2>
+                                <p class="text-secondary font-extrabold font-label uppercase tracking-widest text-[10px]">${r.title}</p>
+                            </div>
+                            ${r.isMe ? `<span class="bg-primary text-white px-3 py-1 rounded-full text-[9px] font-extrabold uppercase shadow-sm">Your Profile</span>` : `<span class="bg-secondary-fixed/20 text-primary border border-secondary-fixed/40 px-3 py-1 rounded-full text-[9px] font-extrabold uppercase">Available for Collab</span>`}
+                        </div>
+                        <p class="text-on-surface/80 font-body mb-6 text-sm leading-relaxed">${r.desc}</p>
+                        <div class="flex flex-wrap gap-2 mb-8">${tagsHtml}</div>
+                        <div class="flex flex-wrap items-center gap-4">
+                            ${r.isMe ? 
+                                `<a href="#" class="bg-primary text-white px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-emerald-900 transition-all flex items-center gap-2 shadow-md inline-block text-center">Edit Profile <span class="material-symbols-outlined text-base">edit</span></a>` : 
+                                `<a href="discussions.html?topic=Direct_Chat_${encodeURIComponent(r.name)}" class="bg-primary text-white px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-emerald-900 transition-all flex items-center gap-2 shadow-md inline-block text-center">Message <span class="material-symbols-outlined text-base">chat</span></a>
+                                 <a href="discussions.html?topic=${encodeURIComponent(r.title)}" class="bg-white/40 text-primary border border-primary/20 px-6 py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-white/60 transition-all inline-block text-center">Join Domain Chat</a>`}
+                        </div>
+                    </div>
+                </div>`;
+        } else {
+            card.innerHTML = `
+                <div class="glass-card rounded-2xl p-8 h-full flex flex-col transition-all hover:-translate-y-1 relative">
+                    <div class="absolute top-6 right-6 flex items-center bg-white/60 px-2 py-1 rounded-full shadow-sm">${onlineDot}</div>
+                    <div class="w-20 h-20 rounded-2xl overflow-hidden mb-6 border-2 border-white/60 shadow-md">
+                        <img alt="${r.name}" class="w-full h-full object-cover" src="${r.img}"/>
+                    </div>
+                    <h3 class="text-xl font-headline font-bold text-primary mb-1">${r.name}</h3>
+                    <p class="text-secondary font-extrabold font-label uppercase tracking-widest text-[9px] mb-4">${r.title}</p>
+                    <p class="text-on-surface/80 text-sm font-body mb-6 leading-relaxed flex-grow">${r.desc}</p>
+                    <div class="flex flex-col gap-3 mt-auto">
+                        <a href="discussions.html?topic=Direct_Chat_${encodeURIComponent(r.name)}" class="w-full bg-primary text-center text-white py-3 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-emerald-900 transition-all shadow-md inline-flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined text-sm">chat</span> Message
+                        </a>
+                        <a href="discussions.html?topic=${encodeURIComponent(r.title)}" class="w-full bg-white/40 text-primary border border-primary/20 text-center py-2.5 rounded-xl text-[9px] font-bold uppercase tracking-widest hover:bg-white/60 transition-all">
+                            Domain Chat
+                        </a>
+                    </div>
+                </div>`;
+        }
+        container.appendChild(card);
+        
+        // Inject the call-to-action block after the large one if not logged in
+        if (isLarge && idx === 0 && !(localStorage.getItem("userName") || localStorage.getItem("user"))) {
+            const cta = document.createElement("div");
+            cta.className = "md:col-span-8";
+            cta.innerHTML = `
+                <div class="glass-card rounded-2xl p-10 h-full bg-emerald-950 text-white relative overflow-hidden group border-emerald-800">
+                    <div class="absolute right-0 bottom-0 opacity-10 group-hover:opacity-20 transition-opacity pointer-events-none translate-x-10 translate-y-10">
+                        <span class="material-symbols-outlined text-[20rem]">psychology</span>
+                    </div>
+                    <div class="relative z-10 flex flex-col h-full">
+                        <h2 class="text-3xl font-headline font-bold mb-4 text-cream">Are you a Researcher?</h2>
+                        <p class="text-cream/70 font-body text-lg mb-8 max-w-lg">
+                            Join our directory to access unique problem sets, government grants, and interdisciplinary collaboration opportunities specific to Kirinyaga County.
+                        </p>
+                        <div class="mt-auto">
+                            <button class="bg-secondary-fixed text-on-secondary-fixed px-10 py-5 rounded-full font-headline font-black text-sm uppercase tracking-widest shadow-xl hover:scale-105 active:scale-95 transition-all flex items-center gap-4 w-max">
+                                Register Profile <span class="material-symbols-outlined text-xl">add_circle</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>`;
+            container.appendChild(cta);
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    fetchResearchers().then(renderResearchers);
+});
+</script>
+ <script src="js/ai-guide.js"></script>
+</body>
+</html>

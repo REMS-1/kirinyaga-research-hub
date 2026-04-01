@@ -1,0 +1,46 @@
+/* Kirinyaga Research Hub - Scholarly Verdant Visual System */
+:root {
+    --cream-light: #FFFBEB;
+    --emerald-deep: #022C22;
+    --emerald-primary: #004725;
+    --amber-accent: #F59E0B;
+    --text-scholar: #191c1b;
+    --text-scholar-light: #f0f1ef;
+}
+
+/* Global Transition Logic */
+* {
+    transition: background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, color 0.3s ease-in-out;
+}
+
+body {
+    background-color: var(--cream-light);
+    color: var(--text-scholar);
+}
+
+.dark body {
+    background-color: var(--emerald-deep) !important;
+    color: var(--text-scholar-light) !important;
+}
+
+/* Glassmorphism Overrides */
+.glass-panel {
+    background: rgba(255, 251, 235, 0.4);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(2, 44, 34, 0.1);
+}
+
+.dark .glass-panel {
+    background: rgba(2, 44, 34, 0.6);
+    border: 1px solid rgba(255, 251, 235, 0.1);
+}
+
+/* Interactive Hover Logic */
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+}
+
+.hover-lift:hover {
+    transform: translateY(-8px) scale(1.01);
+}

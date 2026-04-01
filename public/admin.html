@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Admin Portal | Kirinyaga Hub</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1" rel="stylesheet"/>
+<style>
+.glass-pane { background: rgba(255,255,255,0.7); 
+    -webkit-backdrop-filter: blur();
+backdrop-filter: blur(20px);
+ border: 1px solid rgba(0,71,37,0.1);
+  }
+</style>
+</head>
+<body class="bg-slate-50 font-sans text-slate-900 min-h-screen">
+<header class="bg-emerald-900 text-white p-6 shadow-xl">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <h1 class="text-2xl font-bold tracking-tighter">Admin Command Center</h1>
+        <a href="dashboard.html" class="flex items-center gap-2 text-sm bg-white/10 px-4 py-2 rounded-lg hover:bg-white/20 transition-all font-bold border border-white/20">
+            <span class="material-symbols-outlined text-[18px]">dashboard</span> Return to Dashboard
+        </a>
+    </div>
+</header>
+
+<main class="max-w-7xl mx-auto p-12 space-y-12">
+    <!-- Admin Controls Section -->
+    <section>
+        <div class="flex items-center gap-3 mb-8">
+            <span class="material-symbols-outlined text-emerald-900 text-3xl">verified_user</span>
+            <h2 class="text-3xl font-extrabold text-emerald-900 tracking-tight">Pending Submissions</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Problems Vetting -->
+            <div class="glass-pane p-8 rounded-3xl shadow-2xl">
+                <h3 class="text-lg font-bold text-emerald-900 mb-6 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[20px]">assignment</span> Community Problems
+                </h3>
+                <div id="problemsTable" class="space-y-4">
+                    <p class="text-slate-400 text-sm italic">Synchronizing with cloud...</p>
+                </div>
+            </div>
+
+            <!-- Solutions Vetting -->
+            <div class="glass-pane p-8 rounded-3xl shadow-2xl">
+                <h3 class="text-lg font-bold text-emerald-900 mb-6 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[20px]">emoji_objects</span> Proposed Solutions
+                </h3>
+                <div id="solutionsTable" class="space-y-4">
+                    <p class="text-slate-400 text-sm italic">Synchronizing with cloud...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+async function loadPending() {
+    try {
+        const res = await fetch("/api/admin/all");
+        const data = await res.json();
+        
+        const pt = document.getElementById("problemsTable");
+        const st = document.getElementById("solutionsTable");
+
+        const pendingProbs = data.problems.filter(p => !p.approved);
+        const pendingSols = data.solutions.filter(s => !s.isApproved);
+
+        pt.innerHTML = pendingProbs.length ? pendingProbs.map(p => `
+            <div class="bg-white/50 p-4 rounded-xl border border-emerald-900/10 flex justify-between items-center transition-all hover:bg-white">
+                <div>
+                    <h4 class="font-bold text-emerald-900">${p.title}</h4>
+                    <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">${p.category} | ${p.owner}</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="approve('problem', '${p._id}')" class="bg-emerald-600 text-white p-2 rounded-lg hover:bg-emerald-700 transition-all font-bold text-xs">Approve</button>
+                    <button onclick="deleteItem('problem', '${p._id}')" class="bg-red-50 text-red-600 p-2 rounded-lg hover:bg-red-100 transition-all font-bold text-xs"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+                </div>
+            </div>`).join("") : '<p class="text-slate-400 text-sm">No pending problems found.</p>';
+
+        st.innerHTML = pendingSols.length ? pendingSols.map(s => `
+            <div class="bg-white/50 p-4 rounded-xl border border-emerald-900/10 flex justify-between items-center transition-all hover:bg-white">
+                <div>
+                    <h4 class="font-bold text-indigo-900">${s.title}</h4>
+                    <p class="text-[10px] text-slate-500 font-bold uppercase tracking-widest">${s.author}</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="approve('solution', '${s._id}')" class="bg-emerald-600 text-white p-2 rounded-lg hover:bg-emerald-700 transition-all font-bold text-xs">Approve</button>
+                    <button onclick="deleteItem('solution', '${s._id}')" class="bg-red-50 text-red-600 p-2 rounded-lg hover:bg-red-100 transition-all font-bold text-xs"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+                </div>
+            </div>`).join("") : '<p class="text-slate-400 text-sm">No pending solutions found.</p>';
+
+    } catch (err) {
+        console.error(err);
+    }
+}
+
+async function approve(type, id) {
+    if (!confirm(`Are you sure you want to approve this ${type}?`)) return;
+    try {
+        const res = await fetch(`/api/approve/${type}/${id}`, { method: "POST" });
+        if (res.ok) {
+            alert(`${type} approved and published!`);
+            loadPending();
+        }
+    } catch (err) { alert("Failed to approve."); }
+}
+
+async function deleteItem(type, id) {
+    if (!confirm(`Permanently remove this ${type}?`)) return;
+    try {
+        const url = type === "problem" ? `/api/problems/${id}` : `/api/solutions/${id}`;
+        const res = await fetch(url, { method: "DELETE" });
+        if (res.ok) {
+            alert(`${type} removed.`);
+            loadPending();
+        }
+    } catch (err) { alert("Failed to remove."); }
+}
+
+// Initial Load
+loadPending();
+</script>
+</body>
+</html>

@@ -1,0 +1,159 @@
+{
+  "users": [
+    {
+      "id": "1774907185509",
+      "name": "Test User",
+      "institution": "Kirinyaga University",
+      "role": "Researcher",
+      "email": "test@test.com",
+      "password": "$2b$10$viQft2LXys8EohIvlBlOcOi8Aij5pIcFMHZVlqxrQNrVpjAchbyiy",
+      "createdAt": "2026-03-30T21:46:26.214Z"
+    }
+  ],
+  "problems": [
+    {
+      "id": "p1",
+      "title": "Post-Harvest Grain Loss in Mwea",
+      "category": "Agriculture",
+      "location": "Mwea, Kirinyaga",
+      "description": "Farmers lose up to 30% of harvested grain due to poor storage systems and inadequate preservation techniques.",
+      "owner": "System",
+      "approved": true,
+      "createdAt": "2026-03-31T09:00:00.000Z"
+    },
+    {
+      "id": "p2",
+      "title": "Coffee Waste Water Pollution",
+      "category": "Environment",
+      "location": "Kirinyaga Central",
+      "description": "Coffee processing runoff is polluting nearby rivers and affecting downstream water quality significantly.",
+      "owner": "System",
+      "approved": true,
+      "createdAt": "2026-03-31T09:00:00.000Z"
+    },
+    {
+      "id": 1774955496404,
+      "title": "water shortage",
+      "category": "Environment",
+      "location": "kagio",
+      "description": "nnanananan",
+      "owner": "Test User",
+      "file": null,
+      "approved": true,
+      "date": "2026-03-31T11:11:36.404Z",
+      "status": "Open",
+      "createdAt": "2026-03-31T11:11:36.489Z"
+    },
+    {
+      "id": 1774955498531,
+      "title": "water shortage",
+      "category": "Environment",
+      "location": "kagio",
+      "description": "nnanananan",
+      "owner": "Test User",
+      "file": null,
+      "approved": true,
+      "date": "2026-03-31T11:11:38.531Z",
+      "status": "Open",
+      "createdAt": "2026-03-31T11:11:38.542Z"
+    },
+    {
+      "id": 1774955499711,
+      "title": "water shortage",
+      "category": "Environment",
+      "location": "kagio",
+      "description": "nnanananan",
+      "owner": "Test User",
+      "file": null,
+      "approved": true,
+      "date": "2026-03-31T11:11:39.711Z",
+      "status": "Open",
+      "createdAt": "2026-03-31T11:11:39.718Z"
+    }
+  ],
+  "solutions": [
+    {
+      "id": "s1",
+      "title": "Biotech-Enhanced Maize Resistance Framework",
+      "linkedProblem": "Post-Harvest Grain Loss in Mwea",
+      "tags": [
+        "Agriculture",
+        "High Impact"
+      ],
+      "desc": "A molecular-level strategy utilizing localized genetic profiling to develop pest-resistant maize varieties specifically for the Mwea environment.",
+      "author": "Dr. Jane Doe",
+      "shape": "large",
+      "createdAt": "2026-03-31T09:10:00.000Z"
+    },
+    {
+      "id": "s2",
+      "title": "Circular Nutrient Recovery Loop",
+      "linkedProblem": "Coffee Waste Water Pollution",
+      "tags": [
+        "Sustainability",
+        "Regional Economy"
+      ],
+      "desc": "Implementing a decentralized anaerobic digestion network to convert market organic waste into high-grade liquid fertilizer.",
+      "author": "Eng. Michael Tanui",
+      "shape": "medium",
+      "createdAt": "2026-03-31T09:10:00.000Z"
+    },
+    {
+      "id": "1774951211729",
+      "title": "testing",
+      "linkedProblem": "sample1",
+      "tags": [
+        "Agriculture"
+      ],
+      "desc": "nnnn",
+      "author": "Test User",
+      "file": "Gemini_Generated_Image_eqvmfteqvmfteqvm.png",
+      "shape": "medium",
+      "date": "2026-03-31T10:00:11.618Z",
+      "createdAt": "2026-03-31T10:00:11.731Z"
+    }
+  ],
+  "subscribers": [
+    {
+      "email": "test@kyu.ac.ke",
+      "createdAt": "2026-03-30T21:25:26.978Z"
+    }
+  ],
+  "researchers": [],
+  "discussions": [
+    {
+      "id": "1774907222293",
+      "topic": "Post-Harvest Grain Loss in Mwea",
+      "user": "Test User",
+      "role": "Researcher",
+      "text": "I think we should focus on hermetic storage bags for Mwea rice farmers.",
+      "timestamp": "2026-03-30T21:47:02.293Z"
+    },
+    {
+      "id": "1774907736172",
+      "topic": "Direct_Chat_Eng. Michael Tanui",
+      "user": "Test User",
+      "role": "Researcher",
+      "text": "hi",
+      "timestamp": "2026-03-30T21:55:36.172Z"
+    },
+    {
+      "id": "1774908103264",
+      "topic": "Coffee Waste Water Pollution",
+      "user": "Test User",
+      "role": "Researcher",
+      "text": "this is rude",
+      "timestamp": "2026-03-30T22:01:43.264Z"
+    },
+    {
+      "id": "1774951255071",
+      "topic": "testing",
+      "user": "Test User",
+      "role": "Researcher",
+      "text": "nnnn\\",
+      "timestamp": "2026-03-31T10:00:55.071Z"
+    }
+  ],
+  "feedbacks": [],
+  "opportunities": []
+}

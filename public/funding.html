@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Funding & Grants | Kirinyaga Research Hub</title>
+<meta name="description" content="Explore current research funding opportunities, grant deadlines, and research news for Kirinyaga Hub researchers."/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&family=Public+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+tailwind.config = {
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+              "cream-yellow": "#FFFBEB",
+              "emerald-scholar": "#022C22",
+        "primary": "#004725", "on-primary": "#ffffff", "primary-container": "#1f5f3a",
+        "primary-fixed": "#aff2c1", "on-primary-fixed": "#00210e",
+        "secondary": "#715c00", "on-secondary": "#ffffff",
+        "secondary-fixed": "#ffe17a", "on-secondary-fixed": "#231b00", "secondary-fixed-dim": "#e4c451",
+        "tertiary": "#18442b", "tertiary-fixed": "#beeeca", "on-tertiary-fixed": "#00210f",
+        "surface": "#f9faf8", "on-surface": "#191c1b",
+        "surface-container-low": "#f3f4f2", "surface-container": "#edeeec",
+        "surface-container-high": "#e7e8e6", "surface-container-lowest": "#ffffff",
+        "on-surface-variant": "#404941", "outline-variant": "#c0c9bf",
+        "error": "#ba1a1a"
+      },
+      fontFamily: { "headline": ["Manrope"], "body": ["Public Sans"], "label": ["Public Sans"] },
+      borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }
+    }
+  }
+}
+</script>
+<style>
+  .material-symbols-outlined { font-variation-settings: 'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24; }
+  .glass-panel { background: rgba(255,255,255,0.6); backdrop-filter: blur(12px); border: 1px solid rgba(192,201,191,0.2); }
+  .hero-gradient { background: linear-gradient(135deg,#004725 0%,#1f5f3a 60%,#004725 100%); }
+  .deadline-urgent { border-left-color: #ba1a1a; }
+  .deadline-soon { border-left-color: #715c00; }
+  .deadline-ok { border-left-color: #c0c9bf; }
+  @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.4} }
+  .live-dot { animation: pulse-dot 1.5s infinite; }
+  .news-skeleton { background: linear-gradient(90deg,#e7e8e6 25%,#edeeec 50%,#e7e8e6 75%); background-size: 200% 100%; animation: shimmer 1.5s infinite; }
+  @keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+</style>
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/ai-guide.css">
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+<!-- ===== TOP NAV ===== -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-zinc-950/95 backdrop-blur-3xl flex justify-between items-center px-6 lg:px-10 h-18 py-4 shadow-lg">
+  <div class="flex items-center gap-6">
+    <a href="index.html" class="flex items-center gap-2 text-emerald-100/70 hover:text-white transition-colors font-semibold text-sm">
+      <span class="material-symbols-outlined text-base">arrow_back</span>
+      <span class="hidden sm:inline">Back to Hub</span>
+    </a>
+    <span class="text-white/20">|</span>
+    <span class="text-lg font-bold tracking-tighter text-emerald-50 font-headline">Kirinyaga Research Hub</span>
+  </div>
+  <nav class="hidden md:flex items-center gap-6 text-sm font-semibold font-headline">
+    <a class="text-yellow-400 border-b-2 border-yellow-400 pb-0.5" href="funding.html">Funding</a>
+    <a class="text-emerald-100/70 hover:text-white transition-colors" href="problems.html">Problems</a>
+    <a class="text-emerald-100/70 hover:text-white transition-colors" href="researchers.html">Researchers</a>
+    <a class="text-emerald-100/70 hover:text-white transition-colors" href="contact.html">Contact</a>
+    <a class="text-emerald-100/70 hover:text-white transition-colors" href="index.html">Home</a>
+  </nav>
+  <div class="flex items-center gap-3">
+    <button id="applyHeroBtn" class="bg-primary hover:bg-primary-container text-on-primary px-5 py-2 rounded-lg font-headline font-bold text-sm transition-all active:scale-95">Apply Now</button>
+    <a href="dashboard.html" class="w-9 h-9 rounded-full border-2 border-emerald-100/20 overflow-hidden flex items-center justify-center bg-emerald-800 hover:border-yellow-400 transition-colors" title="Dashboard">
+      <span class="material-symbols-outlined text-white text-sm">person</span>
+    </a>
+  </div>
+</header>
+
+<!-- ===== LEFT SIDEBAR ===== -->
+<aside class="hidden lg:flex flex-col fixed left-0 top-[73px] bottom-0 py-6 w-60 border-r border-emerald-900/10 bg-stone-50/90 backdrop-blur-lg z-40">
+  <div class="px-5 mb-6">
+    <div class="flex items-center gap-2 mb-1">
+      <div class="w-7 h-7 bg-primary rounded flex items-center justify-center">
+        <span class="material-symbols-outlined text-on-primary text-sm">account_balance</span>
+      </div>
+      <span class="font-headline font-extrabold text-emerald-900 text-sm">Research Hub</span>
+    </div>
+    <p class="text-[10px] uppercase tracking-widest text-stone-400">The Modern Archivist</p>
+  </div>
+  <nav class="flex-1 space-y-0.5 px-2">
+    <a href="funding.html" class="flex items-center gap-3 px-4 py-2.5 text-emerald-900 font-bold border-l-4 border-yellow-500 bg-emerald-50/80 rounded-r-lg text-xs uppercase tracking-wider">
+      <span class="material-symbols-outlined text-base">account_balance</span> Funding
+    </a>
+    <a href="problems.html" class="flex items-center gap-3 px-4 py-2.5 text-stone-500 hover:text-emerald-800 hover:bg-stone-100/60 rounded-r-lg text-xs uppercase tracking-wider transition-colors">
+      <span class="material-symbols-outlined text-base">report_problem</span> Problems
+    </a>
+    <a href="researchers.html" class="flex items-center gap-3 px-4 py-2.5 text-stone-500 hover:text-emerald-800 hover:bg-stone-100/60 rounded-r-lg text-xs uppercase tracking-wider transition-colors">
+      <span class="material-symbols-outlined text-base">science</span> Researchers
+    </a>
+    <a href="solutions.html" class="flex items-center gap-3 px-4 py-2.5 text-stone-500 hover:text-emerald-800 hover:bg-stone-100/60 rounded-r-lg text-xs uppercase tracking-wider transition-colors">
+      <span class="material-symbols-outlined text-base">lightbulb</span> Solutions
+    </a>
+    <a href="contact.html" class="flex items-center gap-3 px-4 py-2.5 text-stone-500 hover:text-emerald-800 hover:bg-stone-100/60 rounded-r-lg text-xs uppercase tracking-wider transition-colors">
+      <span class="material-symbols-outlined text-base">mail</span> Contact
+    </a>
+    <a href="index.html" class="flex items-center gap-3 px-4 py-2.5 text-stone-500 hover:text-emerald-800 hover:bg-stone-100/60 rounded-r-lg text-xs uppercase tracking-wider transition-colors">
+      <span class="material-symbols-outlined text-base">home</span> Home
+    </a>
+  </nav>
+  <div class="px-4 pt-4 mt-auto border-t border-emerald-900/10 space-y-3">
+    <button id="sidebarSubmitBtn" class="w-full py-2.5 bg-secondary-fixed text-on-secondary-fixed rounded-lg font-bold text-xs tracking-widest uppercase hover:brightness-105 active:scale-95 transition-all">
+      Submit Research
+    </button>
+    <div class="flex justify-around py-1">
+      <button id="shareBtn" title="Share page" class="text-stone-400 hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-xl">share</span>
+      </button>
+      <button id="printBtn" title="Print page" class="text-stone-400 hover:text-primary transition-colors">
+        <span class="material-symbols-outlined text-xl">print</span>
+      </button>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== MAIN ===== -->
+<main class="lg:pl-60 pt-[73px] pb-24 lg:pb-0">
+
+  <!-- HERO -->
+  <section class="relative min-h-[520px] hero-gradient flex items-center px-8 lg:px-16 overflow-hidden">
+    <div class="absolute inset-0 opacity-5 pointer-events-none bg-[radial-gradient(circle_at_20%_50%,rgba(255,255,255,0.3)_0%,transparent_60%)]"></div>
+    <div class="max-w-3xl relative z-10 py-16">
+      <span class="text-secondary-fixed font-bold tracking-widest uppercase text-xs mb-4 block">Funding &amp; Support · Updated March 2026</span>
+      <h1 class="text-white text-4xl lg:text-6xl font-headline font-extrabold tracking-tighter leading-tight mb-6">
+        Empowering Research <br/>Through <span class="text-secondary-fixed">Strategic Investment</span>
+      </h1>
+      <p class="text-emerald-100/80 text-lg font-body max-w-xl leading-relaxed mb-10">
+        Discover 2026 grant opportunities, live funding calls, and research news — curated for Kirinyaga's scholarly community.
+      </p>
+      <div class="flex flex-wrap gap-4">
+        <button id="scrollToGrantsBtn" class="bg-secondary-fixed text-on-secondary-fixed px-8 py-4 rounded-lg font-headline font-bold hover:scale-105 transition-transform active:scale-95 shadow-lg">
+          View Active Grants
+        </button>
+        <a href="contact.html" class="text-white border border-white/30 px-8 py-4 rounded-lg font-headline font-bold hover:bg-white/10 transition-colors backdrop-blur-sm">
+          Research Guidelines
+        </a>
+      </div>
+    </div>
+    <!-- Live counter -->
+    <div class="absolute right-8 lg:right-16 bottom-8 hidden lg:flex items-center gap-2 text-emerald-200/60 text-xs font-body">
+      <span class="w-2 h-2 rounded-full bg-green-400 live-dot"></span>
+      <span id="liveGrantCount">Loading grants...</span>
+    </div>
+  </section>
+
+  <!-- BENTO FEATURE GRID -->
+  <section class="px-8 lg:px-16 py-16 bg-surface">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+      <!-- Funding Guidance -->
+      <a href="contact.html" class="md:col-span-2 bg-surface-container-lowest p-8 rounded-xl shadow-sm border border-outline-variant/10 group hover:shadow-lg transition-all block">
+        <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:bg-primary group-hover:text-white transition-colors">
+          <span class="material-symbols-outlined">explore</span>
+        </div>
+        <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Funding Guidance</h3>
+        <p class="text-on-surface-variant font-body leading-relaxed mb-6">Step-by-step navigation through internal and external funding opportunities for every career stage.</p>
+        <span class="text-primary font-bold inline-flex items-center gap-2 group-hover:gap-4 transition-all">
+          Contact Advisory Team <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </span>
+      </a>
+      <!-- Application Tips -->
+      <div class="bg-emerald-900 text-on-primary p-8 rounded-xl shadow-lg relative overflow-hidden group">
+        <div class="absolute -right-4 -top-4 opacity-10 group-hover:scale-110 transition-transform">
+          <span class="material-symbols-outlined text-9xl">tips_and_updates</span>
+        </div>
+        <h3 class="text-xl font-headline font-bold mb-4 relative z-10">Application Tips</h3>
+        <p class="text-primary-fixed/80 text-sm font-body leading-relaxed relative z-10 mb-6">Expert advice on crafting winning proposals and meeting compliance benchmarks.</p>
+        <button id="appTipsBtn" class="bg-secondary-fixed text-on-secondary-fixed px-4 py-2 rounded-lg font-bold text-xs relative z-10 hover:brightness-110 active:scale-95 transition-all">Learn More</button>
+      </div>
+      <!-- Grant Management -->
+      <button id="grantMgmtBtn" class="bg-surface-container-low p-8 rounded-xl border border-outline-variant/10 group hover:bg-surface-container transition-colors text-left w-full">
+        <span class="material-symbols-outlined text-secondary text-4xl mb-4 block">account_balance_wallet</span>
+        <h3 class="text-xl font-headline font-bold text-on-surface mb-2">Grant Management</h3>
+        <p class="text-on-surface-variant text-sm font-body">Financial tracking and reporting tools for principal investigators.</p>
+      </button>
+      <!-- Policies Banner -->
+      <div class="md:col-span-4 bg-white/50 backdrop-blur-md p-8 rounded-xl border border-primary/10 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="max-w-xl">
+          <h3 class="text-2xl font-headline font-bold text-primary mb-2">Institutional Policies</h3>
+          <p class="text-on-surface-variant font-body text-sm">Review ethical standards, IP rights, and compliance regulations governing research at Kirinyaga Hub.</p>
+        </div>
+        <a href="contact.html" class="bg-primary text-on-primary px-10 py-4 rounded-lg font-headline font-bold whitespace-nowrap hover:bg-primary-container transition-colors shadow-lg shrink-0">
+          Read Policies
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVE GRANTS GRID -->
+  <section id="grantsSection" class="px-8 lg:px-16 py-16 bg-surface-container-low">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div>
+        <span class="text-secondary font-bold tracking-widest text-xs uppercase mb-2 block">Live Opportunities · 2026</span>
+        <h2 class="text-3xl font-headline font-extrabold text-primary tracking-tight">Active Funding Schemes</h2>
+      </div>
+      <div class="flex items-center gap-3">
+        <span class="text-sm font-body text-on-surface-variant">Filter:</span>
+        <select id="grantFilter" class="bg-white border-none rounded-lg text-sm font-semibold text-primary focus:ring-2 focus:ring-primary shadow-sm px-4 py-2">
+          <option value="all">All Disciplines</option>
+          <option value="agriculture">Agriculture &amp; Food</option>
+          <option value="health">Health &amp; Medicine</option>
+          <option value="energy">Energy &amp; Environment</option>
+          <option value="tech">Technology &amp; ICT</option>
+          <option value="education">Education &amp; Training</option>
+          <option value="water">Water &amp; Sanitation</option>
+        </select>
+      </div>
+    </div>
+    <div id="grantsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+      <!-- Injected by JS -->
+    </div>
+  </section>
+
+  <!-- NEWS + SIDEBAR -->
+  <section class="px-8 lg:px-16 py-16 flex flex-col xl:flex-row gap-12 bg-surface">
+    <!-- Research News -->
+    <div class="xl:w-2/3">
+      <div class="flex items-center gap-3 mb-8 pb-4 border-b border-primary/10">
+        <h2 class="text-2xl font-headline font-extrabold text-primary">Research News &amp; Updates</h2>
+        <span class="flex items-center gap-1 text-xs text-green-600 font-bold bg-green-50 px-2 py-1 rounded-full">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-500 live-dot"></span> LIVE
+        </span>
+      </div>
+      <div id="newsContainer" class="space-y-8">
+        <!-- Loading skeletons -->
+        <div class="flex gap-6 animate-pulse">
+          <div class="w-28 h-28 rounded-lg news-skeleton flex-shrink-0"></div>
+          <div class="flex-1 space-y-3 py-2"><div class="h-3 news-skeleton rounded w-1/4"></div><div class="h-5 news-skeleton rounded w-3/4"></div><div class="h-3 news-skeleton rounded w-full"></div><div class="h-3 news-skeleton rounded w-5/6"></div></div>
+        </div>
+        <div class="flex gap-6 animate-pulse">
+          <div class="w-28 h-28 rounded-lg news-skeleton flex-shrink-0"></div>
+          <div class="flex-1 space-y-3 py-2"><div class="h-3 news-skeleton rounded w-1/4"></div><div class="h-5 news-skeleton rounded w-2/3"></div><div class="h-3 news-skeleton rounded w-full"></div><div class="h-3 news-skeleton rounded w-4/5"></div></div>
+        </div>
+        <div class="flex gap-6 animate-pulse">
+          <div class="w-28 h-28 rounded-lg news-skeleton flex-shrink-0"></div>
+          <div class="flex-1 space-y-3 py-2"><div class="h-3 news-skeleton rounded w-1/4"></div><div class="h-5 news-skeleton rounded w-4/5"></div><div class="h-3 news-skeleton rounded w-full"></div><div class="h-3 news-skeleton rounded w-3/4"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar: Newsletter + Deadlines -->
+    <div class="xl:w-1/3 space-y-8">
+      <!-- Newsletter -->
+      <div class="bg-primary p-8 rounded-2xl text-on-primary">
+        <h4 class="text-xl font-headline font-bold mb-2">Funding Alerts</h4>
+        <p class="text-emerald-100/70 text-sm mb-6">Get weekly alerts on new calls, deadlines, and institutional breakthroughs.</p>
+        <div class="space-y-3">
+          <input id="newsEmail" class="w-full bg-emerald-800/60 border-none rounded-lg text-sm text-white placeholder:text-emerald-300/50 py-3 px-4 focus:ring-2 focus:ring-secondary-fixed" placeholder="your@institution.ac.ke" type="email"/>
+          <button id="subscribeBtn" class="w-full bg-secondary-fixed text-on-secondary-fixed py-3 rounded-lg font-bold text-sm hover:brightness-110 active:scale-95 transition-all">
+            Subscribe
+          </button>
+        </div>
+      </div>
+
+      <!-- Upcoming Deadlines -->
+      <div class="bg-surface-container-low p-8 rounded-2xl border border-outline-variant/20">
+        <h4 class="text-lg font-headline font-bold text-primary mb-6">Upcoming Deadlines</h4>
+        <div id="deadlinesList" class="space-y-4">
+          <!-- Injected by JS -->
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="bg-surface-container-lowest p-6 rounded-2xl border border-outline-variant/20 space-y-3">
+        <h4 class="text-sm font-headline font-bold text-on-surface uppercase tracking-widest mb-4">External Funding Bodies</h4>
+        <a href="https://www.nrf.go.ke" target="_blank" class="flex items-center gap-3 text-sm text-on-surface-variant hover:text-primary transition-colors group">
+          <span class="material-symbols-outlined text-base text-primary">open_in_new</span>
+          National Research Fund (Kenya)
+        </a>
+        <a href="https://www.gatesnotes.com/Development" target="_blank" class="flex items-center gap-3 text-sm text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-base text-primary">open_in_new</span>
+          Gates Foundation Grants
+        </a>
+        <a href="https://www.idrc.ca/en/funding" target="_blank" class="flex items-center gap-3 text-sm text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-base text-primary">open_in_new</span>
+          IDRC (Canada) — Africa Programs
+        </a>
+        <a href="https://www.adb.org/projects/operational" target="_blank" class="flex items-center gap-3 text-sm text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-base text-primary">open_in_new</span>
+          African Dev. Bank Projects
+        </a>
+        <a href="https://apply.usaid.gov" target="_blank" class="flex items-center gap-3 text-sm text-on-surface-variant hover:text-primary transition-colors">
+          <span class="material-symbols-outlined text-base text-primary">open_in_new</span>
+          USAID East Africa Grants
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- FLOATING "Check Eligibility" -->
+<a href="eligibility.html" class="fixed bottom-8 right-8 bg-primary text-on-primary px-7 py-4 rounded-full font-headline font-bold shadow-[0_16px_32px_rgba(0,71,37,0.25)] flex items-center gap-3 hover:scale-105 active:scale-95 transition-all z-50 no-underline">
+  <span class="material-symbols-outlined">verified_user</span>
+  Check Eligibility
+</a>
+
+<!-- MOBILE BOTTOM NAV -->
+<nav class="lg:hidden fixed bottom-0 left-0 w-full flex justify-around items-center px-4 py-3 bg-emerald-900/95 backdrop-blur-2xl rounded-t-3xl z-50 shadow-2xl">
+  <a href="index.html" class="flex flex-col items-center text-emerald-200/60 p-2 hover:text-white transition-colors">
+    <span class="material-symbols-outlined">home</span>
+    <span class="text-[10px] font-medium">Home</span>
+  </a>
+  <a href="funding.html" class="flex flex-col items-center bg-emerald-800 text-yellow-400 rounded-xl p-2">
+    <span class="material-symbols-outlined">monetization_on</span>
+    <span class="text-[10px] font-medium">Funding</span>
+  </a>
+  <a href="problems.html" class="flex flex-col items-center text-emerald-200/60 p-2 hover:text-white transition-colors">
+    <span class="material-symbols-outlined">report_problem</span>
+    <span class="text-[10px] font-medium">Problems</span>
+  </a>
+  <a href="dashboard.html" class="flex flex-col items-center text-emerald-200/60 p-2 hover:text-white transition-colors">
+    <span class="material-symbols-outlined">person</span>
+    <span class="text-[10px] font-medium">Profile</span>
+  </a>
+</nav>
+
+<!-- APPLY MODAL -->
+<div id="applyModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-emerald-950/80 backdrop-blur-sm p-6 hidden">
+  <div class="bg-surface w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+    <div class="bg-primary p-6 flex justify-between items-center text-on-primary flex-shrink-0">
+      <div>
+        <h3 class="text-xl font-headline font-bold">Grant Application</h3>
+        <p id="modalRef" class="text-primary-fixed/70 text-xs font-body mt-1">Reference: KH-2026-XXXX</p>
+      </div>
+      <button id="modalCloseBtn" class="w-9 h-9 rounded-full hover:bg-white/10 flex items-center justify-center transition-colors">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+    <div class="p-6 overflow-y-auto flex-1">
+      <div class="space-y-5">
+        <div>
+          <label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2 block">Grant Program</label>
+          <div id="modalGrantTitle" class="w-full bg-surface-container-high px-4 py-3 rounded-lg text-primary font-bold text-sm">—</div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div>
+            <label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2 block">Your Name *</label>
+            <input id="modalName" class="w-full border-outline-variant/30 rounded-lg py-2.5 text-sm focus:ring-primary" type="text" placeholder="Dr. Jane Doe"/>
+          </div>
+          <div>
+            <label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2 block">Institution *</label>
+            <input id="modalInstitution" class="w-full border-outline-variant/30 rounded-lg py-2.5 text-sm focus:ring-primary" type="text" placeholder="Kirinyaga University"/>
+          </div>
+        </div>
+        <div>
+          <label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2 block">Email *</label>
+          <input id="modalEmail" class="w-full border-outline-variant/30 rounded-lg py-2.5 text-sm focus:ring-primary" type="email" placeholder="you@institution.ac.ke"/>
+        </div>
+        <div>
+          <label class="text-xs font-bold text-on-surface-variant uppercase tracking-wider mb-2 block">Research Abstract *</label>
+          <textarea id="modalAbstract" class="w-full border-outline-variant/30 rounded-lg text-sm font-body focus:ring-primary" placeholder="Briefly describe your research aims and methodology..." rows="4"></textarea>
+        </div>
+        <div class="flex items-start gap-2 p-4 bg-secondary-fixed/20 rounded-lg">
+          <span class="material-symbols-outlined text-secondary text-base mt-0.5">info</span>
+          <p class="text-xs text-on-surface-variant font-body">Final submission requires institutional ethics approval. Your draft is saved automatically.</p>
+        </div>
+      </div>
+    </div>
+    <div class="p-6 border-t border-outline-variant/10 flex justify-end gap-3 bg-surface-container-lowest flex-shrink-0">
+      <button id="saveDraftBtn" class="text-primary font-bold px-5 py-2.5 hover:bg-primary/5 rounded-lg transition-colors text-sm">Save Draft</button>
+      <button id="submitApplicationBtn" class="bg-primary text-on-primary px-8 py-2.5 rounded-lg font-bold hover:bg-primary-container transition-all text-sm">Submit for Review</button>
+    </div>
+  </div>
+</div>
+
+<!-- APPLICATION TIPS MODAL -->
+<div id="tipsModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-emerald-950/80 backdrop-blur-sm p-6 hidden">
+  <div class="bg-surface w-full max-w-lg rounded-2xl shadow-2xl overflow-hidden">
+    <div class="bg-emerald-900 p-6 flex justify-between items-center text-white">
+      <h3 class="text-xl font-headline font-bold">Application Tips</h3>
+      <button class="tipsClose w-9 h-9 rounded-full hover:bg-white/10 flex items-center justify-center"><span class="material-symbols-outlined">close</span></button>
+    </div>
+    <div class="p-6 space-y-4">
+      <div class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><div><p class="font-bold text-sm text-on-surface">Start Early</p><p class="text-xs text-on-surface-variant">Begin your application at least 6 weeks before the deadline to allow for institutional approvals.</p></div></div>
+      <div class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><div><p class="font-bold text-sm text-on-surface">Align with Funder Priorities</p><p class="text-xs text-on-surface-variant">Read the call for proposals carefully and align your abstract with the stated objectives.</p></div></div>
+      <div class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><div><p class="font-bold text-sm text-on-surface">Quantify Impact</p><p class="text-xs text-on-surface-variant">Include measurable outcomes and a clear theory of change. Funders want to see tangible results.</p></div></div>
+      <div class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><div><p class="font-bold text-sm text-on-surface">Budget Transparency</p><p class="text-xs text-on-surface-variant">Provide a detailed, justifiable budget. Unexplained line items are the most common rejection reason.</p></div></div>
+      <div class="flex gap-3"><span class="material-symbols-outlined text-primary text-xl mt-0.5">check_circle</span><div><p class="font-bold text-sm text-on-surface">Contact the Advisory Team</p><p class="text-xs text-on-surface-variant">Our research office can review your proposal before submission. Use the Contact page to book a session.</p></div></div>
+      <a href="contact.html" class="block mt-2 text-center bg-primary text-on-primary px-6 py-3 rounded-lg font-bold text-sm hover:bg-primary-container transition-colors">Book Advisory Session</a>
+    </div>
+  </div>
+</div>
+
+<script>
+// ===== TOAST =====
+function showToast(msg, type = "success") {
+  const colors = { success: "bg-emerald-900", error: "bg-red-700", info: "bg-blue-800" };
+  const t = document.createElement("div");
+  t.innerText = msg;
+  t.className = `fixed bottom-6 right-6 ${colors[type] || "bg-emerald-900"} text-white px-6 py-3 rounded-xl shadow-2xl z-[300] text-sm font-body max-w-sm`;
+  t.style.animation = "slideIn 0.3s ease";
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 4000);
+}
+
+// ===== 2026 GRANTS DATA =====
+const GRANTS_2026 = [
+  {
+    id: 1, title: "USAID East Africa Food Security Initiative", category: "agriculture",
+    amount: "$3.5M Pool", type: "International", typeColor: "bg-blue-100 text-blue-800",
+    deadline: "2026-05-30", daysLeft: null,
+    description: "Funding for innovative agricultural interventions addressing food insecurity across East African smallholder farming communities.",
+    link: "https://apply.usaid.gov", org: "USAID"
+  },
+  {
+    id: 2, title: "Gates Foundation Grand Challenges Africa 2026", category: "health",
+    amount: "$100k–$1M", type: "Open", typeColor: "bg-green-100 text-green-800",
+    deadline: "2026-06-15", daysLeft: null,
+    description: "Innovative solutions to global health problems including vaccine delivery, diagnostics and maternal health in low-resource settings.",
+    link: "https://gcgh.grandchallenges.org", org: "Bill & Melinda Gates Foundation"
+  },
+  {
+    id: 3, title: "African Development Bank — SEAH Research Grant", category: "energy",
+    amount: "$500k Cap", type: "Collaborative", typeColor: "bg-amber-100 text-amber-800",
+    deadline: "2026-07-31", daysLeft: null,
+    description: "Sustainable Energy for All in Africa: Research on geothermal, solar mini-grids, and energy storage for off-grid communities.",
+    link: "https://www.afdb.org/en/topics-and-sectors/initiatives-partnerships/sustainable-energy-fund-for-africa", org: "AfDB"
+  },
+  {
+    id: 4, title: "National Research Fund Kenya — Priority Areas 2026", category: "tech",
+    amount: "KES 5M–20M", type: "National", typeColor: "bg-red-100 text-red-800",
+    deadline: "2026-04-30", daysLeft: null,
+    description: "NRF priority calls covering ICT, biotechnology, food systems, and climate adaptation aligned with Kenya's Vision 2030 goals.",
+    link: "https://www.nrf.go.ke", org: "NRF Kenya"
+  },
+  {
+    id: 5, title: "IDRC — Climate-Resilient Food Systems", category: "agriculture",
+    amount: "CAD $750k", type: "Competitive", typeColor: "bg-purple-100 text-purple-800",
+    deadline: "2026-08-20", daysLeft: null,
+    description: "Canada's IDRC supports researchers in Africa developing climate-smart agriculture and food systems for smallholder communities.",
+    link: "https://www.idrc.ca/en/funding", org: "IDRC Canada"
+  },
+  {
+    id: 6, title: "WHO/TDR — Implementation Research Grants", category: "health",
+    amount: "USD $50k–$200k", type: "Rolling", typeColor: "bg-teal-100 text-teal-800",
+    deadline: "2026-09-01", daysLeft: null,
+    description: "Implementation research to improve delivery of existing health tools and interventions in low- and middle-income countries.",
+    link: "https://www.who.int/tdr/grants/en", org: "WHO/TDR"
+  },
+  {
+    id: 7, title: "EU Horizon Africa — Digital Education", category: "education",
+    amount: "€200k–€1M", type: "EU-Funded", typeColor: "bg-indigo-100 text-indigo-800",
+    deadline: "2026-10-15", daysLeft: null,
+    description: "Supporting digital inclusion and innovative education technologies connecting African universities with the EU research network.",
+    link: "https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls", org: "EU Horizon"
+  },
+  {
+    id: 8, title: "UNICEF — WASH Innovation Grant", category: "water",
+    amount: "$250k Pool", type: "Innovation", typeColor: "bg-cyan-100 text-cyan-800",
+    deadline: "2026-11-30", daysLeft: null,
+    description: "Funding for research on low-cost water purification, sanitation behavior change, and rural water infrastructure in Sub-Saharan Africa.",
+    link: "https://www.unicef.org/innovation/innovation-fund", org: "UNICEF"
+  },
+  {
+    id: 9, title: "Wellcome Trust — African Research Programmes", category: "health",
+    amount: "Up to £1M", type: "Open", typeColor: "bg-green-100 text-green-800",
+    deadline: "2026-12-10", daysLeft: null,
+    description: "Supports African-led research improving human health, including infectious diseases, non-communicable diseases, and mental health.",
+    link: "https://wellcome.org/grant-funding/schemes", org: "Wellcome Trust"
+  }
+];
+
+// Calculate days left
+function calcDays(deadline) {
+  const d = new Date(deadline);
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return Math.ceil((d - today) / 86400000);
+}
+
+GRANTS_2026.forEach(g => { g.daysLeft = calcDays(g.deadline); });
+
+// ===== RENDER GRANTS =====
+function renderGrants(filter = "all") {
+  const grid = document.getElementById("grantsGrid");
+  const visible = filter === "all" ? GRANTS_2026 : GRANTS_2026.filter(g => g.category === filter);
+  
+  // Live Pulse Update
+  document.getElementById("liveGrantCount").innerHTML = `
+    <span class="flex items-center gap-2">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        ${visible.length} SCHOLARLY OPPORTUNITIES LIVE
+    </span>
+  `;
+
+  if (!visible.length) {
+    grid.innerHTML = `<div class="col-span-full text-center py-20 text-emerald-900/40">
+        <span class="material-symbols-outlined text-6xl mb-4 block">research_panel</span>
+        <p class="font-headline font-bold text-xl uppercase tracking-widest">No active grants in this sector</p>
+    </div>`;
+    return;
+  }
+
+  // Set grid to 12-col bento
+  grid.className = "grid grid-cols-1 md:grid-cols-12 gap-8";
+
+  grid.innerHTML = visible.map((g, index) => {
+    const days = g.daysLeft;
+    const urgency = days <= 7 ? "text-red-600" : days <= 21 ? "text-amber-600" : "text-emerald-700";
+    const urgencyBg = days <= 7 ? "bg-red-50 border-red-100" : days <= 21 ? "bg-amber-50 border-amber-100" : "bg-emerald-50 border-emerald-100";
+    
+    // Bento spans
+    const spans = [3, 4, 5, 5, 4, 3, 6, 6, 12];
+    const span = spans[index % spans.length];
+
+    return `
+    <div class="md:col-span-${span} p-10 rounded-3xl hover-lift border border-emerald-900/5 group flex flex-col h-full bg-white/40 backdrop-blur-2xl transition-all duration-700 reveal shadow-xl shadow-emerald-950/5">
+      <div class="flex justify-between items-start mb-10">
+        <div class="flex flex-col">
+            <span class="text-[10px] font-bold uppercase tracking-widest text-emerald-900/60 mb-1">${g.org}</span>
+            <span class="px-3 py-1 rounded-full bg-emerald-100/50 border border-emerald-200 text-[9px] font-bold uppercase tracking-tighter text-emerald-800 w-fit">${g.category}</span>
+        </div>
+        <span class="text-emerald-950 font-black text-2xl tracking-tighter">${g.amount}</span>
+      </div>
+      
+      <h4 class="text-2xl font-headline font-bold text-emerald-950 mb-4 leading-tight group-hover:text-amber-600 transition-colors uppercase tracking-tight">${g.title}</h4>
+      <p class="text-zinc-600 text-sm font-body mb-8 flex-1 leading-relaxed line-clamp-3">${g.description}</p>
+      
+      <div class="flex flex-col gap-6 pt-8 border-t border-emerald-900/5">
+        <div class="flex items-center justify-between">
+            <div class="${urgencyBg} border px-4 py-2 rounded-2xl flex items-center gap-3">
+                <span class="material-symbols-outlined text-sm ${urgency}">event_available</span>
+                <span class="text-xs font-bold ${urgency} tracking-widest uppercase">${days < 0 ? 'Closed' : days + ' Days Remaining'}</span>
+            </div>
+            <div class="flex gap-3">
+                <button onclick="openApplyModal(${g.id})" class="text-white bg-emerald-950 px-6 py-2.5 rounded-xl font-bold text-xs hover:bg-amber-600 transition-all shadow-lg active:scale-95">Initiate Application</button>
+                <a href="${g.link}" target="_blank" class="w-10 h-10 bg-white border border-emerald-100 rounded-xl flex items-center justify-center text-emerald-900 hover:bg-emerald-950 hover:text-white transition-all"><span class="material-symbols-outlined text-lg">open_in_new</span></a>
+            </div>
+        </div>
+      </div>
+    </div>`;
+  }).join("");
+}
+
+// ===== DEADLINE SIDEBAR =====
+function renderDeadlines() {
+  const container = document.getElementById("deadlinesList");
+  const sorted = [...GRANTS_2026].sort((a, b) => a.daysLeft - b.daysLeft).slice(0, 5);
+  container.innerHTML = sorted.map(g => {
+    const days = g.daysLeft;
+    const colorClass = days <= 7 ? "deadline-urgent" : days <= 21 ? "deadline-soon" : "deadline-ok";
+    const labelColor = days <= 7 ? "text-error" : days <= 21 ? "text-secondary" : "text-stone-400";
+    const label = days < 0 ? "CLOSED" : days === 0 ? "TODAY!" : days + " DAYS LEFT";
+    return `<div class="flex items-center gap-3 border-l-2 ${colorClass} pl-4 py-1.5">
+      <div class="flex-1 min-w-0">
+        <p class="text-[10px] font-bold ${labelColor} uppercase">${label}</p>
+        <p class="text-sm font-headline font-bold text-on-surface truncate">${g.title}</p>
+        <p class="text-xs text-stone-400">${g.org}</p>
+      </div>
+      <button onclick="openApplyModal(${g.id})" class="text-xs text-primary font-bold shrink-0 hover:underline">Apply</button>
+    </div>`;
+  }).join("");
+}
+
+// ===== APPLY MODAL =====
+function openApplyModal(grantId) {
+  const grant = GRANTS_2026.find(g => g.id === grantId);
+  if (!grant) return;
+  document.getElementById("modalGrantTitle").textContent = grant.title;
+  document.getElementById("modalRef").textContent = "Reference: KH-2026-" + String(grantId).padStart(4, "0") + "-" + Math.floor(100 + Math.random() * 900);
+
+  // Pre-fill from localStorage if logged in
+  const name = localStorage.getItem("userName") || "";
+  if (name) document.getElementById("modalName").value = name;
+
+  document.getElementById("applyModal").classList.remove("hidden");
+}
+
+document.getElementById("modalCloseBtn").onclick = () => document.getElementById("applyModal").classList.add("hidden");
+document.getElementById("applyModal").addEventListener("click", e => { if (e.target === document.getElementById("applyModal")) document.getElementById("applyModal").classList.add("hidden"); });
+
+document.getElementById("saveDraftBtn").onclick = () => {
+  const name = document.getElementById("modalName").value.trim();
+  const abstract = document.getElementById("modalAbstract").value.trim();
+  if (!name) { showToast("Please enter your name.", "error"); return; }
+  if (!abstract) { showToast("Please write a research abstract.", "error"); return; }
+  localStorage.setItem("grantDraft", JSON.stringify({
+    grant: document.getElementById("modalGrantTitle").textContent,
+    name, institution: document.getElementById("modalInstitution").value,
+    email: document.getElementById("modalEmail").value,
+    abstract, savedAt: new Date().toISOString()
+  }));
+  showToast("Draft saved locally!");
+};
+
+document.getElementById("submitApplicationBtn").onclick = async () => {
+  const name = document.getElementById("modalName").value.trim();
+  const email = document.getElementById("modalEmail").value.trim();
+  const abstract = document.getElementById("modalAbstract").value.trim();
+  if (!name || !email || !abstract) { showToast("Please fill in all required fields.", "error"); return; }
+  if (!email.includes("@")) { showToast("Please enter a valid email.", "error"); return; }
+
+  const btn = document.getElementById("submitApplicationBtn");
+  btn.disabled = true; btn.textContent = "Submitting...";
+
+  try {
+    // Try server; fallback to localStorage
+    const res = await fetch("/api/applications", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        grant: document.getElementById("modalGrantTitle").textContent,
+        name, institution: document.getElementById("modalInstitution").value, email, abstract
+      })
+    });
+    if (!res.ok) throw new Error("server-error");
+    showToast("Application submitted! You'll receive a confirmation email within 48 hours.");
+  } catch {
+    // Save to localStorage as fallback
+    const apps = JSON.parse(localStorage.getItem("applications") || "[]");
+    apps.push({ grant: document.getElementById("modalGrantTitle").textContent, name, email, abstract, submittedAt: new Date().toISOString() });
+    localStorage.setItem("applications", JSON.stringify(apps));
+    showToast("Application saved! Contact advisory@kirinyagahub.ac.ke to complete submission.");
+  } finally {
+    btn.disabled = false; btn.textContent = "Submit for Review";
+    document.getElementById("applyModal").classList.add("hidden");
+  }
+};
+
+// ===== LIVE RESEARCH NEWS via CrossRef API =====
+async function loadResearchNews() {
+  const container = document.getElementById("newsContainer");
+  const FALLBACK_NEWS = [
+    { title: "Kenya Secures KES 2.1B for Climate-Smart Agriculture Research", journal: "NRF Kenya", date: "March 2026", category: "Grants Awarded", link: "https://www.nrf.go.ke", abstract: "The National Research Fund has allocated KES 2.1 billion across 47 institutions for climate adaptation research targeting smallholder farmers in arid and semi-arid regions." },
+    { title: "Mwea Irrigation Scheme: New AI Crop Monitoring Pilot Underway", journal: "Kirinyaga County News", date: "March 2026", category: "Technology", link: "https://www.kirinyaga.go.ke", abstract: "Researchers at the Kirinyaga Research Hub have deployed IoT sensors across 200 acres of the Mwea Irrigation Scheme to optimize water usage and predict crop yields using machine learning." },
+    { title: "WHO Calls for Research Proposals on Cold-Chain Solutions for Rural Africa", journal: "WHO TDR", date: "February 2026", category: "Health Research", link: "https://www.who.int/tdr", abstract: "WHO's Special Programme for Research and Training in Tropical Diseases is accepting proposals for innovative cold-chain solutions to preserve vaccines and medicines in off-grid communities." },
+    { title: "Geothermal Energy Research Grant Opens for East African Institutions", journal: "African Development Bank", date: "February 2026", category: "Energy", link: "https://www.afdb.org", abstract: "The AfDB has opened applications for geothermal energy research across the East African Rift Valley, with priority given to proposals from Kenyan universities and research institutes." },
+    { title: "Digital Literacy Initiative: 60+ Secondary Schools Set to Benefit", journal: "Kirinyaga Education Dept.", date: "January 2026", category: "Education", link: "#", abstract: "A new public-private partnership targeting digital skills development will equip over 15,000 secondary school students in Kirinyaga County with computer literacy and coding fundamentals." }
+  ];
+
+  // Try CrossRef API for live Kenya-related research
+  try {
+    const res = await fetch("https://api.crossref.org/works?query=kenya+research+agriculture+health+funding&rows=4&filter=from-pub-date:2025-01-01&sort=published&order=desc", { signal: AbortSignal.timeout(5000) });
+    if (!res.ok) throw new Error("API error");
+    const data = await res.json();
+    const items = data.message?.items || [];
+    if (items.length < 2) throw new Error("insufficient data");
+
+    const combined = [
+      ...FALLBACK_NEWS.slice(0, 2),
+      ...items.slice(0, 3).map(item => ({
+        title: Array.isArray(item.title) ? item.title[0] : item.title || "Research Publication",
+        journal: item["container-title"]?.[0] || item.publisher || "Academic Journal",
+        date: item.published?.["date-parts"]?.[0]?.join("-") || "2026",
+        category: "Research",
+        link: item.URL || item.DOI ? "https://doi.org/" + item.DOI : "#",
+        abstract: item.abstract ? item.abstract.replace(/<[^>]+>/g, "").slice(0, 200) + "..." : "This peer-reviewed paper presents new findings relevant to research and development in the East African region."
+      })),
+      ...FALLBACK_NEWS.slice(2)
+    ].slice(0, 5);
+
+    renderNews(combined);
+  } catch {
+    renderNews(FALLBACK_NEWS);
+  }
+}
+
+function renderNews(items) {
+  const icons = ["grants_awarded", "technology", "health_research", "energy", "education"];
+  const catColors = ["text-secondary", "text-blue-600", "text-red-600", "text-amber-600", "text-purple-600"];
+  document.getElementById("newsContainer").innerHTML = items.map((item, i) => `
+    <article class="flex gap-5 group cursor-pointer hover:bg-surface-container-low p-4 rounded-xl -mx-4 transition-colors" onclick="window.open('${item.link}','_blank')">
+      <div class="w-24 h-24 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-600 flex items-center justify-center">
+        <span class="material-symbols-outlined text-white text-3xl opacity-70">description</span>
+      </div>
+      <div class="flex-1 min-w-0">
+        <span class="text-[10px] font-bold uppercase tracking-widest mb-1 block ${catColors[i % catColors.length]}">${item.category}</span>
+        <h3 class="text-base font-headline font-bold text-on-surface mb-2 group-hover:text-primary transition-colors leading-snug line-clamp-2">${item.title}</h3>
+        <p class="text-on-surface-variant text-xs font-body line-clamp-2 mb-2">${item.abstract}</p>
+        <span class="text-xs text-stone-400">${item.date} · ${item.journal}</span>
+      </div>
+      <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors self-start shrink-0 mt-1">open_in_new</span>
+    </article>
+  `).join("");
+}
+
+// ===== NEWSLETTER =====
+document.getElementById("subscribeBtn").onclick = async () => {
+  const email = document.getElementById("newsEmail").value.trim();
+  if (!email || !email.includes("@")) { showToast("Please enter a valid email address.", "error"); return; }
+  const btn = document.getElementById("subscribeBtn");
+  btn.disabled = true; btn.textContent = "Subscribing...";
+  try {
+    const res = await fetch("/api/subscribe", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email }) });
+    const result = await res.json();
+    showToast(result.message || "Subscribed!");
+  } catch {
+    let subs = JSON.parse(localStorage.getItem("subs") || "[]");
+    if (!subs.includes(email)) { subs.push(email); localStorage.setItem("subs", JSON.stringify(subs)); showToast("Subscribed! You'll receive funding alerts."); }
+    else showToast("Already subscribed!", "info");
+  } finally {
+    btn.disabled = false; btn.textContent = "Subscribe";
+    document.getElementById("newsEmail").value = "";
+  }
+};
+
+// ===== TIPS MODAL =====
+document.getElementById("appTipsBtn").onclick = () => document.getElementById("tipsModal").classList.remove("hidden");
+document.querySelectorAll(".tipsClose").forEach(b => b.onclick = () => document.getElementById("tipsModal").classList.add("hidden"));
+document.getElementById("tipsModal").addEventListener("click", e => { if (e.target === document.getElementById("tipsModal")) document.getElementById("tipsModal").classList.add("hidden"); });
+
+// ===== GRANT MANAGEMENT MODAL =====
+document.getElementById("grantMgmtBtn").onclick = () => openApplyModal(1);
+
+// ===== GRANT FILTER =====
+document.getElementById("grantFilter").addEventListener("change", e => renderGrants(e.target.value));
+
+// ===== HERO BUTTONS =====
+document.getElementById("applyHeroBtn").onclick = () => openApplyModal(1);
+document.getElementById("scrollToGrantsBtn").onclick = () => document.getElementById("grantsSection").scrollIntoView({ behavior: "smooth" });
+
+// ===== SIDEBAR =====
+document.getElementById("sidebarSubmitBtn").onclick = () => window.location.href = "logprob.html";
+document.getElementById("printBtn").onclick = () => window.print();
+document.getElementById("shareBtn").onclick = () => {
+  if (navigator.share) navigator.share({ title: "Kirinyaga Research Hub — Funding", url: window.location.href });
+  else { navigator.clipboard?.writeText(window.location.href); showToast("Page link copied to clipboard!"); }
+};
+
+// ===== INIT =====
+document.addEventListener("DOMContentLoaded", () => {
+  renderGrants();
+  renderDeadlines();
+  loadResearchNews();
+});
+</script>
+    <!-- Premium Institutional Footer -->
+    <footer class="bg-zinc-950 w-full py-20 px-8 border-t border-white/10 overflow-hidden relative mt-16">
+        <div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: radial-gradient(circle at 2px 2px, white 1px, transparent 0); background-size: 40px 40px;"></div>
+        <div class="max-w-7xl mx-auto relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="md:col-span-2 space-y-6 text-left">
+                    <div class="text-2xl font-bold text-white tracking-tighter font-headline">Kirinyaga Research Hub</div>
+                    <p class="text-zinc-400 text-sm leading-relaxed max-w-sm font-body">Empowering the next generation of Kirinyaga researchers through peer-reviewed excellence and global industry connectivity.</p>
+                </div>
+                <div class="space-y-6 text-left">
+                    <h4 class="text-amber-500 font-bold uppercase tracking-widest text-xs">Scholarly Resources</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm font-body">Grant Writing Hub</a></li>
+                        <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm font-body">Ethics Committee</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-6 text-left">
+                    <h4 class="text-amber-500 font-bold uppercase tracking-widest text-xs">Connectivity</h4>
+                    <ul class="space-y-4">
+                        <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm font-body">Privacy Protocol</a></li>
+                        <li><a href="#" class="text-zinc-400 hover:text-white transition-colors text-sm font-body">Terms of Research</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <p class="text-zinc-500 text-xs text-left">© 2024 Kirinyaga Research Hub. Scholarly Digital Atelier.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="js/ai-guide.js"></script>
+</body>
+</html>
